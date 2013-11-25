@@ -1,0 +1,162 @@
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.controls.DisplayPost.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.controls.ForumList.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.controls.smileys.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.error.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.active.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.activeusers.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.accessmasks.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.admin.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.attachments.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.bannedip.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.bannedip_edit.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.boards.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.boardsettings.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editaccessmask.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editboard.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editcategory.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editforum.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editgroup.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editnntpforum.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editnntpserver.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.editrank.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.edituser.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.eventlog.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.forums.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.groups.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.hostsettings.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.mail.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.pm.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.prune.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.ranks.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.reguser.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.replacewords.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.replacewords_edit.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.smilies.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.smilies_edit.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.smilies_import.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.admin.users.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.approve.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.attachments.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.avatar.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_editprofile.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_inbox.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_message.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_profile.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_signature.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.cp_subscriptions.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.emailtopic.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.error.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.forum.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.help.index.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.help.recover.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.im_aim.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.im_email.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.im_icq.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.im_yim.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.info.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.lastposts.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.login.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.logout.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.members.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.moderate0.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.moderate.forum.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.moderate.index.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.mod_forumuser.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.movetopic.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.pmessage.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.postmessage.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.posts.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.printtopic.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.profile.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.register.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.rsstopic.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.rules.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.search.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pages.topics.resources
+D:\Work\EntLib.com Forum\EntLibForum\obj\Debug\EntLibForum.csproj.GenerateResource.Cache
+D:\work\EntLib.com Forum\EntLibForum\bin\yaf.dll
+D:\work\EntLib.com Forum\EntLibForum\bin\yaf.pdb
+D:\work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.dll
+D:\work\EntLib.com Forum\EntLibForum\obj\Debug\yaf.pdb
+D:\EntLibForum1\bin\yaf.dll
+D:\EntLibForum1\bin\yaf.pdb
+D:\EntLibForum1\obj\Debug\ResolveAssemblyReference.cache
+D:\EntLibForum1\obj\Debug\yaf.controls.DisplayPost.resources
+D:\EntLibForum1\obj\Debug\yaf.controls.ForumList.resources
+D:\EntLibForum1\obj\Debug\yaf.controls.smileys.resources
+D:\EntLibForum1\obj\Debug\yaf.error.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.active.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.activeusers.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.accessmasks.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.admin.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.attachments.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.bannedip.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.bannedip_edit.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.boards.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.boardsettings.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editaccessmask.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editboard.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editcategory.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editforum.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editgroup.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editnntpforum.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editnntpserver.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.editrank.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.edituser.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.eventlog.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.forums.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.groups.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.hostsettings.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.mail.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.pm.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.prune.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.ranks.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.reguser.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.replacewords.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.replacewords_edit.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.smilies.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.smilies_edit.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.smilies_import.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.admin.users.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.approve.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.attachments.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.avatar.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_editprofile.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_inbox.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_message.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_profile.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_signature.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.cp_subscriptions.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.emailtopic.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.error.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.forum.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.help.index.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.help.recover.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.im_aim.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.im_email.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.im_icq.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.im_yim.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.info.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.lastposts.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.login.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.logout.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.members.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.moderate0.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.moderate.forum.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.moderate.index.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.mod_forumuser.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.movetopic.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.pmessage.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.postmessage.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.posts.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.printtopic.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.profile.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.register.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.rsstopic.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.rules.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.search.resources
+D:\EntLibForum1\obj\Debug\yaf.pages.topics.resources
+D:\EntLibForum1\obj\Debug\EntLibForum.csproj.GenerateResource.Cache
+D:\EntLibForum1\obj\Debug\yaf.dll
+D:\EntLibForum1\obj\Debug\yaf.pdb
