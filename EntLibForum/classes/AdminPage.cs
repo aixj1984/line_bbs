@@ -25,7 +25,7 @@ namespace yaf
 			{
 				controls.PageLinks ctl = new controls.PageLinks();
 				ctl.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
-				ctl.AddLink("Administration",Forum.GetLink(Pages.admin_admin));
+				ctl.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
 				Controls.AddAt(0,ctl);
 			}
 #endif

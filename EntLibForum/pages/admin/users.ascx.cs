@@ -20,8 +20,8 @@ namespace yaf.pages.admin
 		{
 			if(!IsPostBack) {
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
-				PageLinks.AddLink("Administration",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("Users","");
+				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
+				PageLinks.AddLink("查询用户","");
 
 				using(DataTable dt=DB.group_list(PageBoardID,null)) 
 				{

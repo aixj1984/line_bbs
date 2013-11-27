@@ -21,7 +21,7 @@ namespace yaf.pages.admin
 			if(!IsPostBack) 
 			{
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
-				PageLinks.AddLink("Administration","");
+				PageLinks.AddLink("后台管理","");
 				BindData();
 			}
 		}
