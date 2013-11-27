@@ -25,7 +25,7 @@ namespace yaf.pages.admin
 			{
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("板块设置","");
+				PageLinks.AddLink("论坛版块设置","");
 
 				BindData();
 			}

@@ -21,7 +21,7 @@ namespace yaf.pages.admin
 			if(!IsPostBack) {
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("PM Maintenance","");
+				PageLinks.AddLink("我的消息","");
 
 				Days1.Text = "60";
 				Days2.Text = "180";

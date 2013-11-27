@@ -21,7 +21,7 @@ namespace yaf.pages.admin
 			if(!IsPostBack) {
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("Banned IP Addresses","");
+				PageLinks.AddLink("IP黑名单设置","");
 
 				BindData();
 			}

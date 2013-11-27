@@ -22,7 +22,7 @@ namespace yaf.pages.admin
 			{
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("Groups","");
+                PageLinks.AddLink("组(角色)", "");
 
 				BindData();
 			}

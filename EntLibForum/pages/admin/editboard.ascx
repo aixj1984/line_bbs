@@ -7,7 +7,7 @@
 
 <table class=content cellSpacing=1 cellPadding=0 width="100%">
 <tr>
-	<td class=header1 colspan="2">Edit Board</td>
+	<td class=header1 colspan="2">±à¼­°æ¿é</td>
 </tr>
 <tr>
     <td width="50%" class="postheader"><b>Name:</b><br />The name of the board.</td>
