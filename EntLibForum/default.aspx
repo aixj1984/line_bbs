@@ -6,10 +6,10 @@
 
 <html>
 <head>
-    <meta name="Description" content="EntLib.com是电子商务解决方案的专业提供商，拥有丰富的经验、成熟的技术、实施方案和成功案例，提供全套的电子商务解决方案，包括定制化开发、实施和培训服务。" />
-    <meta name="Keywords" content="专业的电子商务系统, 网上商城, 网上商店, 在线购物平台, 仓库管理系统(Warehouse Management System)" />
+    <meta name="Description" content="E文谷社区，古玩社区" />
+    <meta name="Keywords" content="文谷社区，古玩社区" />
     <!-- If you don't want the forum to set the page title, you can remove runat and id -->
-    <title>EntLib.com Forum 开源论坛系统::专业电子商务解决方案</title>
+    <title>文谷社区，古玩社区</title>
 	<asp:Literal id="Style" runat="Server" />
     <script type="text/javascript">
 <!--
@@ -41,11 +41,11 @@
         align="center">
         <tr>
             <td>
-                <a href="http://www.entlib.com/">
-                    <img src="images/entlib.gif" runat="server" id="imgBanner" alt="EntLib.com" /></a>
+                <a href="http://www.hubeici.com/index.shtml">
+                    <img src="images/firstpage/logo_comp.png" runat="server" id="imgBanner" alt="文谷网" /></a>
             </td>
             <td style="text-align: right; vertical-align: bottom; color: #999999; font-size: 12px;">
-                基于Microsoft .Net Framework / ASP.Net / C# / AJAX 平台构建的标准电子商务系统
+                社区论坛
             </td>
         </tr>
         <tr>

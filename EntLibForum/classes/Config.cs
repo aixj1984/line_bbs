@@ -155,7 +155,7 @@ namespace yaf
                 }
                 catch
                 {
-                    return "http://www.EntLib.com";
+                    return "http://www.hubeici.com/index.shtml";
                 }
             }
         }
@@ -170,7 +170,7 @@ namespace yaf
                 }
                 catch
                 {
-                    return "http://Blog.EntLib.com";
+                    return "http://www.hubeici.com/index.shtml";
                 }
             }
         }

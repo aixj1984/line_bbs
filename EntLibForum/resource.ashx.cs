@@ -19,7 +19,7 @@ namespace yaf
 	/// <summary>
 	/// Summary description for $codebehindclassname$
 	/// </summary>
-	[WebService( Namespace = "http://www.entlib.com/" )]
+	[WebService( Namespace = "http://www.hubeici.com/index.shtml" )]
 	[WebServiceBinding( ConformsTo = WsiProfiles.BasicProfile1_1 )]
 	public class resource : IHttpHandler, IReadOnlySessionState
 	{
