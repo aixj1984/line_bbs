@@ -6,11 +6,12 @@
 
 <html>
 <head>
-    <meta name="Description" content="E文谷社区，古玩社区" />
+    <meta name="Description" content="文谷社区，古玩社区" />
     <meta name="Keywords" content="文谷社区，古玩社区" />
     <!-- If you don't want the forum to set the page title, you can remove runat and id -->
     <title>文谷社区，古玩社区</title>
 	<asp:Literal id="Style" runat="Server" />
+	<link rel="stylesheet" href="../editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <script type="text/javascript">
 <!--
         var arVersion = navigator.appVersion.split("MSIE");
@@ -36,16 +37,12 @@
     </script>
 
 </head>
-<body>
-    <table cellpadding="3" cellspacing="0" style="width: 1000px; background-color: White;"
-        align="center">
+<body class="mainbody">
+    <table width="95%" cellpadding="3" cellspacing="0" style="background-color: White;" align="center">
         <tr>
             <td>
-                <a href="http://www.hubeici.com/index.shtml">
-                    <img src="images/firstpage/logo_comp.png" runat="server" id="imgBanner" alt="文谷网" /></a>
-            </td>
-            <td style="text-align: right; vertical-align: bottom; color: #999999; font-size: 12px;">
-                社区论坛
+                <a href="http://www.hubeici.com">
+                    <img src="images/top.gif" runat="server" id="imgBanner" alt="湖北文化产业网" /></a>
             </td>
         </tr>
         <tr>

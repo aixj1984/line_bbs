@@ -482,8 +482,8 @@ namespace yaf.pages
                 //// updated by http://www.EntLib.com   
                 //// date: 2008.9.6 
 
-                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.WebSiteURL, "EntLib.com 首页", "<img src='images/common/homeicon.gif' alt='' />");
-                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.BlogURL, "技术博客", "<img src='images/common/pen.gif' alt='' align='bottom' />");
+                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.WebSiteURL, "湖北文化产业网 首页", "<img src='images/common/homeicon.gif' alt='' />");
+                //header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.BlogURL, "技术博客", "<img src='images/common/pen.gif' alt='' align='bottom' />");
                 ///////////////////////////////////////////
 
 				if ( !IsGuest )
@@ -521,8 +521,8 @@ namespace yaf.pages
                 //// updated by http://www.EntLib.com   
                 //// date: 2008.9.6 
 
-                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.WebSiteURL, "EntLib.com 首页", "<img src='images/common/homeicon.gif' alt='' />");
-                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.BlogURL, "技术博客", "<img src='images/common/pen.gif' alt='' align='bottom' />");
+                header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.WebSiteURL, "湖北文化产业网 首页", "<img src='images/common/homeicon.gif' alt='' />");
+                //header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.BlogURL, "技术博客", "<img src='images/common/pen.gif' alt='' align='bottom' />");
                 ///////////////////////////////////////////
 
 				header.AppendFormat( String.Format( "	<a href=\"{0}\">{1}</a> | ", Forum.GetLink( Pages.search ), GetText( "TOOLBAR", "SEARCH" ) ) );
@@ -589,7 +589,7 @@ namespace yaf.pages
                 if (BoardSettings.ShowPageGenerationTime)
                     footer.AppendFormat(GetText("COMMON", "GENERATED"), duration);
 
-                footer.AppendFormat(" Powered by: <a href='http://forum.entlib.com'target='_blank'>EntLib.com 论坛</a>");
+                footer.AppendFormat(" Powered by: <a href='http://www.hubeici.com/index.shtml'target='_blank'>湖北文化产业网</a>");
                 //footer.Append("<img src='images/powerby/powerby_entlibforum.gif' alt='开源 ASP.NET 论坛' class='powerbyimg'/>");
 
                 footer.AppendFormat("</div>");

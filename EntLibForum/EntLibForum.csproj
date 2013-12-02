@@ -156,6 +156,7 @@
     <Content Include="editors\FCKEditorV2\editor\css\behaviors\disablehandles.htc" />
     <Content Include="editors\FCKEditorV2\editor\css\behaviors\showtableborders.htc" />
     <Content Include="editors\FCKEditorV2\editor\css\fck_editorarea.css" />
+    <Content Include="editors\FCKEditorV2\editor\css\fck_editorarea1.css" />
     <Content Include="editors\FCKEditorV2\editor\css\fck_internal.css" />
     <Content Include="editors\FCKEditorV2\editor\css\fck_showtableborders_gecko.css" />
     <Content Include="editors\FCKEditorV2\editor\css\images\block_address.png" />
@@ -174,6 +175,7 @@
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_hiddenfield.gif" />
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_pagebreak.gif" />
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_plugin.gif" />
+    <Content Include="editors\FCKEditorV2\editor\css\public.css" />
     <Content Include="editors\FCKEditorV2\editor\dialog\common\fck_dialog_common.css" />
     <Content Include="editors\FCKEditorV2\editor\dialog\common\fck_dialog_common.js" />
     <Content Include="editors\FCKEditorV2\editor\dialog\common\images\locked.gif" />
@@ -457,7 +459,6 @@
     <Content Include="images\common\homeicon.gif" />
     <Content Include="images\common\linebreak.gif" />
     <Content Include="images\delete_icon.gif" />
-    <Content Include="images\entlib.gif" />
     <Content Include="images\eventError.gif" />
     <Content Include="images\eventInfo.gif" />
     <Content Include="images\eventWarning.gif" />
@@ -477,6 +478,7 @@
     <Content Include="images\ForumIcons\icon_wcf_wf.gif" />
     <Content Include="images\forum_locked_icon.gif" />
     <Content Include="images\forum_unlock_icon.gif" />
+    <Content Include="images\top.gif" />
     <Content Include="images\noavatar.gif" />
     <Content Include="images\powerby\Powerby_EntlibForum.gif" />
     <Content Include="images\rss.gif" />
@@ -489,7 +491,6 @@
     <Content Include="images\topics\digest_3.gif" />
     <Content Include="images\topics\sticky.gif" />
     <Content Include="Include\pagefooter.ascx" />
-    <Content Include="readme.txt" />
     <Content Include="languages\china.xml" />
     <Content Include="languages\english.xml" />
     <Content Include="pages\active.ascx" />

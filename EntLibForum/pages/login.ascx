@@ -19,8 +19,9 @@
 </tr>
 <tr>
 	<td class=postheader>验证码 (不区分大小写):</td>
-	<td class=post><cc1:SerialNumber ID="SerialNumber1" runat="server">
-        </cc1:SerialNumber>&nbsp;&nbsp;<asp:TextBox ID="snvTxt1" runat="server"></asp:TextBox></td>
+	<td class=post><asp:TextBox ID="snvTxt1" runat="server"></asp:TextBox>
+	<cc1:SerialNumber ID="SerialNumber1" runat="server">
+        </cc1:SerialNumber>&nbsp;&nbsp;</td>
 </tr>
 <tr>
 	<td class=postheader><%= GetText("auto") %></td>
@@ -50,8 +51,9 @@
 </tr>
 <tr>
 	<td class=postheader>验证码 (不区分大小写):</td>
-	<td class=post><cc1:SerialNumber ID="SerialNumber2" runat="server">
-        </cc1:SerialNumber>&nbsp;&nbsp;<asp:TextBox ID="snvTxt2" runat="server"></asp:TextBox></td>
+	<td class=post><asp:TextBox ID="snvTxt2" runat="server"></asp:TextBox>
+	<cc1:SerialNumber ID="SerialNumber2" runat="server">
+        </cc1:SerialNumber>&nbsp;&nbsp;</td>
 </tr>
 <tr>
 	<td class=footer1 colspan="2" align=middle><asp:button id="Recover" runat="server"/></td>

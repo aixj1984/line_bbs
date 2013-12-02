@@ -56,8 +56,8 @@
 	</tr>
 	<tr>
 	<td class=postheader>验证码 (不区分大小写):</td>
-	<td class=post><cc1:SerialNumber ID="SerialNumber1" runat="server">
-        </cc1:SerialNumber>&nbsp;&nbsp;<asp:TextBox ID="snvTxt1" runat="server"></asp:TextBox></td>
+	<td class=post><asp:TextBox ID="snvTxt1" runat="server"></asp:TextBox>
+	<cc1:SerialNumber ID="SerialNumber1" runat="server"></cc1:SerialNumber>&nbsp;&nbsp;</td>
 </tr>
 	<tr>
 		<td align="middle" colspan="2" class=footer1>

@@ -74,7 +74,7 @@ namespace yaf.controls
 			writer.WriteLine(@"</td></tr></table>");
 
             writer.WriteLine(@"<br />Powered by:<br />");
-            writer.WriteLine(@"<a href='http://forum.entlib.com' target='_blank'><img src='images/powerby/powerby_entlibforum.gif' alt='Powered by EntLib.com 论坛' /></a>");
+            writer.WriteLine(@"<a href='http://www.hubeici.com/index.shtml' target='_blank'><img src='images/powerby/powerby_entlibforum.gif' alt='Powered by 湖北文化产业网'/></a>");
 
 			writer.WriteLine(@"</td><td valign=""top"">&nbsp;&nbsp;");
 			writer.WriteLine(@"</td><td width=""90%"" valign=""top"">");

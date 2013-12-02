@@ -56,7 +56,8 @@
         </table>
     </FooterTemplate>
 </asp:Repeater>
-<div style="padding: 3px; margin-bottom: 5px; margin-top: 5px; text-align:center;" class="content">
+<hr />
+<%--<div style="padding: 3px; margin-bottom: 5px; margin-top: 5px; text-align:center;" class="content">
 
 <script type="text/javascript"><!--
     google_ad_client = "pub-7768717352490832";
@@ -69,7 +70,7 @@
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</div>
+</div>--%>
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
         <td width="65%" valign="top">
