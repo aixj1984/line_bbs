@@ -454,7 +454,7 @@
 	</tr-->
         <tr>
             <td class="postfooter" align="center" colspan="2">
-                <asp:Button ID="Save" runat="server" Text="Save" OnClick="Save_Click"></asp:Button>
+                <asp:Button ID="Save" runat="server" text="±£´æ" OnClick="Save_Click"></asp:Button>
             </td>
         </tr>
     </table>

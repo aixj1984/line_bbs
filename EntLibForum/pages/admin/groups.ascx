@@ -7,7 +7,7 @@
 
 <table class=content width="100%" cellspacing=1 cellpadding=0>
 <tr>
-	<td class=header1 colspan=6>Groups</td>
+	<td class=header1 colspan=6>用户组Groups</td>
 </tr>
 
 <asp:repeater id=GroupList runat="server">
@@ -48,7 +48,7 @@
 </asp:repeater>
 
 <tr>
-	<td class=footer1 colspan=6><asp:linkbutton id=NewGroup runat="server" onclick="NewGroup_Click">New Group</asp:linkbutton></td>
+	<td class=footer1 colspan=6><asp:linkbutton id=NewGroup runat="server" onclick="NewGroup_Click">新增用户组</asp:linkbutton></td>
 </tr>
 </table>
 

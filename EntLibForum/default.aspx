@@ -42,7 +42,7 @@
         <tr>
             <td>
                 <a href="http://www.hubeici.com">
-                    <img src="images/top.gif" runat="server" id="imgBanner" alt="湖北文化产业网" /></a>
+                    <img src="images/firstpage/banner.gif" runat="server" id="imgBanner" alt="湖北文化产业网" /></a>
             </td>
         </tr>
         <tr>

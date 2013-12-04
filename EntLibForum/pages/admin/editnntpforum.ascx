@@ -28,8 +28,8 @@
 
 	<tr>
 		<td class=postfooter align=middle colspan="2">
-			<asp:button id=Save runat="server" Text="Save" onclick="Save_Click" />&nbsp; 
-			<asp:button id=Cancel runat="server" Text="Cancel" onclick="Cancel_Click" />
+			<asp:button id=Save runat="server" text="±£´æ" onclick="Save_Click" />&nbsp; 
+			<asp:button id=Cancel runat="server" Text="È¡Ïû" onclick="Cancel_Click" />
 		</td>
 	</tr>
 

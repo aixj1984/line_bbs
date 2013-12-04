@@ -7,27 +7,27 @@
 
 <table class=content width=100% cellspacing=1 cellpadding=0>
 <tr>
-	<td class=header1 colspan="2">Edit Smiley</td>
+	<td class=header1 colspan="2">编辑微笑符Edit Smiley</td>
 </tr>
 <tr>
-	<td class=postheader width=50%><b>Code:</b></td>
+	<td class=postheader width=50%><b>编码Code:</b></td>
 	<td class=post width=50%><asp:textbox id=Code runat="server"/></td>
 </tr>
 <tr>
-	<td class=postheader width=50%><b>Icon:</b></td>
+	<td class=postheader width=50%><b>图标Icon:</b></td>
 	<td class=post width=50%>
 		<asp:dropdownlist id=Icon runat="server"/>
 		<img align="absmiddle" runat=server id=Preview/>
 	</td>
 </tr>
 <tr>
-	<td class=postheader width=50%><b>Emotion:</b></td>
+	<td class=postheader width=50%><b>情绪Emotion:</b></td>
 	<td class=post width=50%><asp:textbox id=Emotion runat="server"/></td>
 </tr>
 <tr>
 	<td class=footer1 colspan="2" align=center>
-		<asp:button id=save runat=server text="Save"/>
-		<asp:button id=cancel runat=server text="Cancel"/>
+		<asp:button id=save runat=server text="保存"/>
+		<asp:button id=cancel runat=server Text="取消"/>
 	</td>
 </tr>
 </table>

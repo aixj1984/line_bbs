@@ -31,8 +31,8 @@
 		<td class=post colspan=7><asp:textbox id="UserPass" runat="server" enabled="false"/></td>
 	</tr>
   <tr>
-    <td class=postfooter align=middle colspan=11><asp:button id=Save runat="server" Text="Save" onclick="Save_Click"></asp:button>&nbsp; 
-<asp:button id=Cancel runat="server" Text="Cancel" onclick="Cancel_Click"></asp:button></td></tr></table>
+    <td class=postfooter align=middle colspan=11><asp:button id=Save runat="server" text="±£´æ" onclick="Save_Click"></asp:button>&nbsp; 
+<asp:button id=Cancel runat="server" Text="È¡Ïû" onclick="Cancel_Click"></asp:button></td></tr></table>
 
 </yaf:adminmenu>
 

@@ -10,7 +10,7 @@
 	<td class=header1 colspan="2">编辑版块</td>
 </tr>
 <tr>
-    <td width="50%" class="postheader"><b>Name:</b><br />The name of the board.</td>
+    <td width="50%" class="postheader"><b>名称:</b><br />板块的名称.</td>
     <td width="50%" class="post"><asp:textbox id=Name runat="server" style="width:100%"></asp:textbox></td>
 </tr>
 	<tr>
@@ -19,26 +19,26 @@
 	</tr>
 <asp:placeholder runat="server" id="AdminInfo">
 <tr>
-	<td class="postheader"><b>User Name:</b><br/>This will be the administrator for the board.</td>
+	<td class="postheader"><b>用户名:</b><br/>这个模块的管理员名称.</td>
 	<td class="post"><asp:textbox runat="server" id="UserName"/></td>
 </tr>
 <tr>
-	<td class="postheader"><b>User Email:</b><br/>Email address for administrator.</td>
+	<td class="postheader"><b>用户邮箱:</b><br/>模块管理员的Email地址.</td>
 	<td class="post"><asp:textbox runat="server" id="UserEmail"/></td>
 </tr>
 <tr>
-	<td class="postheader"><b>Password:</b><br/>Enter password for administrator here.</td>
+	<td class="postheader"><b>密码:</b><br/>输入该模块管理员的密码.</td>
 	<td class="post"><asp:textbox runat="server" id="UserPass1" textmode="password"/></td>
 </tr>
 <tr>
-	<td class="postheader"><b>Verify Password:</b><br/>Verify the password.</td>
+	<td class="postheader"><b>验证码:</b><br/>验证码.</td>
 	<td class="post"><asp:textbox runat="server" id="UserPass2" textmode="password"/></td>
 </tr>
 </asp:placeholder>
 <tr>
 	<td class=postfooter align=middle colSpan="2">
-		<asp:button id=Save runat="server" Text="Save" onclick="Save_Click" />
-		<asp:Button id=Cancel runat="server" Text="Cancel" onclick="Cancel_Click" />
+		<asp:button id=Save runat="server" text="保存" onclick="Save_Click" />
+		<asp:Button id=Cancel runat="server" Text="取消" onclick="Cancel_Click" />
 	</td>
 </tr>
 </table>

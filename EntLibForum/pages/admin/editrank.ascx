@@ -7,10 +7,10 @@
 
 <table class=content cellSpacing=1 cellPadding=0 width="100%">
 	<tr>
-		<td class=header1 colspan=11>Edit Rank</td>
+		<td class=header1 colspan=11>编辑用户等级</td>
 	</tr>
   <tr>
-    <td class=postheader colspan=4><b>Name:</b><br/>Name of this rank.</td>
+    <td class=postheader colspan=4><b>名称:</b><br/>用户等级的名称.</td>
     <td class=post colspan=7><asp:textbox style="width:300px" id=Name runat="server"/></td></tr>
  
   <tr>
@@ -26,7 +26,7 @@
 		<td class=post colspan=7><asp:textbox id="MinPosts" runat="server"/></td>
 	</tr>
 	<tr>
-		<td class=postheader colspan=4><b>Rank Image:</b><br/>This image will be shown next to users of this rank.</td>
+		<td class=postheader colspan=4><b>等级图片Rank Image:</b><br/>This image will be shown next to users of this rank.</td>
 		<td class=post colspan=7>
 			<asp:dropdownlist id=RankImage runat="server" />
 			<img align="absmiddle" runat=server id="Preview" />
@@ -34,8 +34,8 @@
 	</tr>
 
   <tr>
-    <td class=postfooter align=middle colspan=11><asp:button id=Save runat="server" Text="Save" onclick="Save_Click"></asp:button>&nbsp; 
-<asp:button id=Cancel runat="server" Text="Cancel" onclick="Cancel_Click"></asp:button></td></tr></table>
+    <td class=postfooter align=middle colspan=11><asp:button id=Save runat="server" text="保存" onclick="Save_Click"></asp:button>&nbsp; 
+<asp:button id=Cancel runat="server" Text="取消" onclick="Cancel_Click"></asp:button></td></tr></table>
 
 </yaf:adminmenu>
 

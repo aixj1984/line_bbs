@@ -20,7 +20,7 @@ namespace yaf.pages.admin
 			if(!IsPostBack) {
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("Access Masks","");
+				PageLinks.AddLink("用户权限设置","");
 
 				BindData();
 				if(Request.QueryString["i"] != null) {

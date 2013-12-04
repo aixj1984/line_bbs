@@ -4,79 +4,79 @@
 <yaf:adminmenu runat="server" id="Adminmenu1">
 	<table class="content" cellspacing="1" cellpadding="0" width="100%">
 		<tr>
-			<td class="header1" colspan="2">Edit Forum:
+			<td class="header1" colspan="2">编辑论坛:
 				<asp:label id="ForumNameTitle" runat="server"></asp:label></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Category:</b><br />
-				What category to put the forum under.</td>
+			<td class="postheader"><b>栏目:</b><br />
+				该论坛将放在该栏目下：（What category to put the forum under.）</td>
 			<td class="post">
 				<asp:dropdownlist id="CategoryList" runat="server" OnSelectedIndexChanged="Category_Change" DataValueField="CategoryID" DataTextField="Name"></asp:dropdownlist></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Parent Forum:</b><br />
-				Will make this forum a sub forum of another forum.</td>
+			<td class="postheader"><b>父论坛:</b><br />
+				讲该论坛成为其他论坛的子论坛。（Will make this forum a sub forum of another forum.）</td>
 			<td class="post">
 				<asp:dropdownlist id="ParentList" runat="server"></asp:dropdownlist></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Name:</b><br />
-				The name of the forum.</td>
+			<td class="postheader"><b>论坛名称:</b><br />
+				论坛的名称.</td>
 			<td class="post">
 				<asp:textbox id="Name" runat="server" cssclass="edit"></asp:textbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Description:</b><br />
-				A description of the forum.</td>
+			<td class="postheader"><b>论坛描述:</b><br />
+				论坛的简单描述.</td>
 			<td class="post">
 				<asp:textbox id="Description" runat="server" cssclass="edit"></asp:textbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Remote URL:</b><br />
-				Enter a url here, and instead of going to the forum you will be taken to this 
+			<td class="postheader"><b>论坛超链接:</b><br />
+				输入链接，则会替代原有的论坛模块连接。Enter a url here, and instead of going to the forum you will be taken to this 
 				url instead.</td>
 			<td class="post">
 				<asp:textbox id="remoteurl" runat="server" cssclass="edit"></asp:textbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Theme :</b><br />
-				Choose a theme for this forum if its to differ from the standard Board theme.</td>
+			<td class="postheader"><b>主题:</b><br />
+				为论坛选择一个主体，使他不不同于其他标准板块的主题。（Choose a theme for this forum if its to differ from the standard Board theme.）</td>
 			<td class="post">
 				<asp:Dropdownlist id="ThemeList" runat="server"></asp:Dropdownlist></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>SortOrder:</b><br />
-				Sort order under this category.</td>
+			<td class="postheader"><b>排序编号:</b><br />
+				在改栏目下的排序编号。（Sort order under this category.）</td>
 			<td class="post">
 				<asp:textbox id="SortOrder" runat="server"></asp:textbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Hide if no access:</b><br />
-				Means that the forum will be hidden when the user don't have read access to it.</td>
+			<td class="postheader"><b>论坛查看控制Hide if no access:</b><br />
+				设置了不允许查看后，这该模块对用户不可见。Means that the forum will be hidden when the user don't have read access to it.</td>
 			<td class="post">
 				<asp:checkbox id="HideNoAccess" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Locked:</b><br />
-				If the forum is locked, no one can post or reply in this forum.</td>
+			<td class="postheader"><b>上锁Locked:</b><br />
+				如果论坛上锁，则表示没有人能够进行转发和回复。If the forum is locked, no one can post or reply in this forum.</td>
 			<td class="post">
 				<asp:checkbox id="Locked" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Is Test:</b><br />
-				If this is checked, posts in this forum will not count in the ladder system.</td>
+			<td class="postheader"><b>是否是测试论坛Is Test:</b><br />
+				如果该选项被选中，在这个论坛的帖子不会在天梯系统计数。If this is checked, posts in this forum will not count in the ladder system.</td>
 			<td class="post">
 				<asp:checkbox id="IsTest" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>Moderated:</b><br />
-				If the forum is moderated, posts have to be approved by a moderator.</td>
+			<td class="postheader"><b>过滤Moderated:</b><br />
+				如果论坛被过滤，职位必须由主持人批准。If the forum is moderated, posts have to be approved by a moderator.</td>
 			<td class="post">
 				<asp:checkbox id="Moderated" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr id="NewGroupRow" runat="server">
-			<td class="postheader"><b>Initial Access Mask:</b><br />
-				The initial access mask for all forums.</td>
+			<td class="postheader"><b>初次访问掩码Initial Access Mask:</b><br />
+				所有论坛的初始访问掩码。The initial access mask for all forums.</td>
 			<td class="post">
 				<asp:dropdownlist id="AccessMaskID" ondatabinding="BindData_AccessMaskID" runat="server"></asp:dropdownlist></td>
 		</tr>
@@ -106,8 +106,8 @@
 		</asp:repeater>
 		<tr>
 			<td class="postfooter" align="center" colspan="2">
-				<asp:button id="Save" runat="server" Text="Save"></asp:button>&nbsp;
-				<asp:Button id="Cancel" runat="server" Text="Cancel"></asp:Button></td>
+				<asp:button id="Save" runat="server" text="保存"></asp:button>&nbsp;
+				<asp:Button id="Cancel" runat="server" Text="取消"></asp:Button></td>
 		</tr>
 	</table>
 </yaf:adminmenu>

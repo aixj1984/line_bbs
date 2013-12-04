@@ -7,10 +7,10 @@
 
 <table class=content width=100% cellspacing=1 cellpadding=0>
 <tr>
-	<td class=header1 colspan="2">Edit Banned IP Address</td>
+	<td class=header1 colspan="2">编辑黑名单IP地址</td>
 </tr>
 <tr>
-	<td class=postheader width=50%><b>Mask:</b><br />The ip address to ban. You can use wildcards (127.0.0.*).</td>
+	<td class=postheader width=50%><b>地址Mask:</b><br />输入IP地址，你可以使用通配符The ip address to ban. You can use wildcards (127.0.0.*).</td>
 	<td class=post width=50%><asp:textbox id=mask runat=server></asp:textbox></td>
 </tr>
 <tr>

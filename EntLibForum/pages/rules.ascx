@@ -13,7 +13,7 @@
 	<tr>
 		<td align="middle">
 			<asp:Button id=Accept runat="server" Text="Accept" onclick="Accept_Click" />
-			<asp:Button id=Cancel runat="server" Text="Cancel" onclick="Cancel_Click" />
+			<asp:Button id=Cancel runat="server" Text="È¡Ïû" onclick="Cancel_Click" />
 		</td>
 	</tr>
 </table>

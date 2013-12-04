@@ -22,14 +22,14 @@
 				<asp:checkbox id="AllowThreaded" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>论坛 Theme:</b><br />
-				设置版块的Theme.</td>
+			<td class="postheader"><b>论坛:</b><br />
+				设置版块的主题.</td>
 			<td class="post">
 				<asp:dropdownlist id="Theme" runat="server"></asp:dropdownlist></td>
 		</tr>
 		<tr>
-			<td class="postheader"><b>显示Theme的Logo :</b><br />
-				从Theme文件中读取并显示 Logo (不适用于portal).</td>
+			<td class="postheader"><b>显示主题的Logo :</b><br />
+				从主题文件中读取并显示 Logo (不适用于portal).</td>
 			<td class="post">
 				<asp:checkbox id="AllowThemedLogo" runat="server"></asp:checkbox></td>
 		</tr>
@@ -47,7 +47,7 @@
 		</tr>
 		<tr>
 			<td class="postfooter" align="center" colSpan="2">
-				<asp:Button id="Save" runat="server" Text="Save" onclick="Save_Click"></asp:Button></td>
+				<asp:Button id="Save" runat="server" text="保存" onclick="Save_Click"></asp:Button></td>
 		</tr>
 	</table>
 </yaf:adminmenu>
