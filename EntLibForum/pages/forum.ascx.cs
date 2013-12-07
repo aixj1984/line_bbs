@@ -160,7 +160,12 @@ namespace yaf.pages
 
 			DataBind();
 		}
-
+        // add by zhiweiw 20131206
+        private void HotContentGenerate()
+        {
+            //
+            lblHotInfo.Text += "<table>";
+        }
 		protected string FormatLastPost( System.Data.DataRow row )
 		{
 			if ( !row.IsNull( "LastPosted" ) )

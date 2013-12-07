@@ -105,22 +105,22 @@ namespace yaf.pages.admin
 		{
 			if ( CategoryList.SelectedValue.Trim().Length == 0 )
 			{
-				AddLoadMessage( "You must select a category for the forum." );
+				AddLoadMessage( "必须选择一个目录You must select a category for the forum." );
 				return;
 			}
 			if ( Name.Text.Trim().Length == 0 )
 			{
-				AddLoadMessage( "You must enter a name for the forum." );
+				AddLoadMessage( "比如输入论坛的名称You must enter a name for the forum." );
 				return;
 			}
 			if ( Description.Text.Trim().Length == 0 )
 			{
-				AddLoadMessage( "You must enter a description for the forum." );
+				AddLoadMessage( "必须输入论坛的描述You must enter a description for the forum." );
 				return;
 			}
 			if ( SortOrder.Text.Trim().Length == 0 )
 			{
-				AddLoadMessage( "You must enter a value for sort order." );
+				AddLoadMessage( "必须输入一个序号。You must enter a value for sort order." );
 				return;
 			}
 

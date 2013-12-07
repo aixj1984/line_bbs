@@ -1,7 +1,11 @@
 <%@ Control Language="c#" CodeBehind="forum.ascx.cs" AutoEventWireup="True" Inherits="yaf.pages.forum" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf.controls" Assembly="yaf" %>
 <%@ Register TagPrefix="yaf" TagName="ForumList" Src="../controls/ForumList.ascx" %>
+<div>
+    <asp:Label ID="lblHotInfo" runat="server" Text="网站热点"></asp:Label>
+</div>
 <yaf:PageLinks runat="server" ID="PageLinks" />
+
 <div id="Welcome" runat="server">
     &nbsp;<img src="images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
         runat="server" />
@@ -11,9 +15,6 @@
 </div>
 <div id="divUnreadMsgs">
     <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="false" /></div>
-<!---ad-text area start--->
-<asp:Label ID="lblForumAd" runat="server" Text="欢迎访问EntLib.com论坛系统！"></asp:Label>
-<!---ad-text area end--->
 <asp:Repeater ID="CategoryList" runat="server" OnItemCommand="categoryList_ItemCommand"
     OnItemDataBound="CategoryList_ItemDataBound">
     <HeaderTemplate>
@@ -57,20 +58,9 @@
     </FooterTemplate>
 </asp:Repeater>
 <hr />
-<%--<div style="padding: 3px; margin-bottom: 5px; margin-top: 5px; text-align:center;" class="content">
-
-<script type="text/javascript"><!--
-    google_ad_client = "pub-7768717352490832";
-    /* 728x90, 创建于 09-9-27 */
-    google_ad_slot = "3891791154";
-    google_ad_width = 728;
-    google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>--%>
+<!---ad-text area start--->
+<asp:Label ID="lblForumAd" runat="server" Text="欢迎访问EntLib.com论坛系统！"></asp:Label>
+<!---ad-text area end--->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
         <td width="65%" valign="top">

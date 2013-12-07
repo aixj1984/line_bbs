@@ -27,11 +27,11 @@
 	<td class="post"><asp:textbox runat="server" id="UserEmail"/></td>
 </tr>
 <tr>
-	<td class="postheader"><b>密码:</b><br/>输入该模块管理员的密码.</td>
+	<td class="postheader"><b>管理员密码:</b><br/>输入该模块管理员的密码.</td>
 	<td class="post"><asp:textbox runat="server" id="UserPass1" textmode="password"/></td>
 </tr>
 <tr>
-	<td class="postheader"><b>验证码:</b><br/>验证码.</td>
+	<td class="postheader"><b>再次输入密码:</b><br/>再次输入管理员密码.</td>
 	<td class="post"><asp:textbox runat="server" id="UserPass2" textmode="password"/></td>
 </tr>
 </asp:placeholder>

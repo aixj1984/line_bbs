@@ -12,7 +12,7 @@
 	</tr>
 	<tr>
 		<td align="middle">
-			<asp:Button id=Accept runat="server" Text="Accept" onclick="Accept_Click" />
+			<asp:Button id=Accept runat="server" Text="接受" onclick="Accept_Click" />
 			<asp:Button id=Cancel runat="server" Text="取消" onclick="Cancel_Click" />
 		</td>
 	</tr>

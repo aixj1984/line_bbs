@@ -69,29 +69,29 @@ namespace yaf.pages.admin
 		{
 			if(Name.Text.Trim().Length==0) 
 			{
-				AddLoadMessage("You must enter a name for the board.");
+				AddLoadMessage("必须输入一个论坛板块的名称（You must enter a name for the board）.");
 				return;
 			}
 			if(Request.QueryString["b"] == null) 
 			{
 				if(UserName.Text.Trim().Length==0)
 				{
-					AddLoadMessage("You must enter the name of a administrator user.");
+					AddLoadMessage("必须输入一个管理员的用户名（You must enter the name of a administrator user）.");
 					return;
 				}
 				if(UserEmail.Text.Trim().Length==0) 
 				{
-					AddLoadMessage("You must enter the email address of the administrator user.");
+					AddLoadMessage("你必须输入管理员用户的邮箱（You must enter the email address of the administrator user）.");
 					return;
 				}
 				if(UserPass1.Text.Trim().Length==0)
 				{
-					AddLoadMessage("You must enter a password for the administrator user.");
+					AddLoadMessage("你必须输入一个管理员用户的密码（You must enter a password for the administrator user）.");
 					return;
 				}
 				if(UserPass1.Text!=UserPass2.Text)
 				{
-					AddLoadMessage("The passwords don't match.");
+					AddLoadMessage("密码不匹配，请重新输入（The passwords don't match）.");
 					return;
 				}
 			}

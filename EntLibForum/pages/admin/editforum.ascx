@@ -75,15 +75,15 @@
 				<asp:checkbox id="Moderated" runat="server"></asp:checkbox></td>
 		</tr>
 		<tr id="NewGroupRow" runat="server">
-			<td class="postheader"><b>初次访问掩码Initial Access Mask:</b><br />
-				所有论坛的初始访问掩码。The initial access mask for all forums.</td>
+			<td class="postheader"><b>初始化访问权限Initial Access Mask:</b><br />
+				所有论坛的初始化访问权限。The initial access mask for all forums.</td>
 			<td class="post">
 				<asp:dropdownlist id="AccessMaskID" ondatabinding="BindData_AccessMaskID" runat="server"></asp:dropdownlist></td>
 		</tr>
 		<asp:repeater id="AccessList" runat="server">
 			<HeaderTemplate>
 				<tr>
-					<td class="header1" colspan="2">Access</td>
+					<td class="header1" colspan="2">权限控制Access</td>
 				</tr>
 				<tr class="header2">
 					<td>Group</td>

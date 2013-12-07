@@ -178,6 +178,7 @@
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_hiddenfield.gif" />
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_pagebreak.gif" />
     <Content Include="editors\FCKEditorV2\editor\css\images\fck_plugin.gif" />
+    <Content Include="editors\FCKEditorV2\editor\css\NaviTop.css" />
     <Content Include="editors\FCKEditorV2\editor\css\public.css" />
     <Content Include="editors\FCKEditorV2\editor\dialog\common\fck_dialog_common.css" />
     <Content Include="editors\FCKEditorV2\editor\dialog\common\fck_dialog_common.js" />
@@ -341,6 +342,7 @@
     <Content Include="editors\FCKEditorV2\editor\js\fckadobeair.js" />
     <Content Include="editors\FCKEditorV2\editor\js\fckeditorcode_gecko.js" />
     <Content Include="editors\FCKEditorV2\editor\js\fckeditorcode_ie.js" />
+    <Content Include="editors\FCKEditorV2\editor\js\jquery.1.4.2-min.js" />
     <Content Include="editors\FCKEditorV2\editor\lang\en.js" />
     <Content Include="editors\FCKEditorV2\editor\lang\zh-cn.js" />
     <Content Include="editors\FCKEditorV2\editor\lang\zh.js" />
@@ -465,6 +467,14 @@
     <Content Include="images\eventError.gif" />
     <Content Include="images\eventInfo.gif" />
     <Content Include="images\eventWarning.gif" />
+    <Content Include="images\firstpage\banner.gif" />
+    <Content Include="images\firstpage\favicon.ico" />
+    <Content Include="images\firstpage\nav_bg.gif" />
+    <Content Include="images\firstpage\产业专区.gif" />
+    <Content Include="images\firstpage\创意发现.gif" />
+    <Content Include="images\firstpage\园区项目.gif" />
+    <Content Include="images\firstpage\nav_l.gif" />
+    <Content Include="images\firstpage\社区管理.gif" />
     <Content Include="images\folder.gif" />
     <Content Include="images\ForumIcons\icon_biztalk.gif" />
     <Content Include="images\ForumIcons\icon_ebook.gif" />
@@ -496,6 +506,8 @@
     <Content Include="Include\pagefooter.ascx" />
     <Content Include="languages\china.xml" />
     <Content Include="languages\english.xml" />
+    <Content Include="NaviTop.aspx" />
+    <Content Include="NaviTop.htm" />
     <Content Include="pages\active.ascx" />
     <Content Include="pages\activeusers.ascx" />
     <Content Include="pages\admin\accessmasks.ascx" />
@@ -1347,6 +1359,13 @@
     </Compile>
     <Compile Include="Include\pagefooter.ascx.designer.cs">
       <DependentUpon>pagefooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NaviTop.aspx.cs">
+      <DependentUpon>NaviTop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NaviTop.aspx.designer.cs">
+      <DependentUpon>NaviTop.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\active.ascx.cs">
       <DependentUpon>active.ascx</DependentUpon>

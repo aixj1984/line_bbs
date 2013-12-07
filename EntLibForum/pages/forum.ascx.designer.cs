@@ -14,6 +14,15 @@ namespace yaf.pages {
     public partial class forum {
         
         /// <summary>
+        /// lblHotInfo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHotInfo;
+        
+        /// <summary>
         /// PageLinks 控件。
         /// </summary>
         /// <remarks>
@@ -59,15 +68,6 @@ namespace yaf.pages {
         protected global::System.Web.UI.WebControls.HyperLink UnreadMsgs;
         
         /// <summary>
-        /// lblForumAd 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblForumAd;
-        
-        /// <summary>
         /// CategoryList 控件。
         /// </summary>
         /// <remarks>
@@ -75,6 +75,15 @@ namespace yaf.pages {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater CategoryList;
+        
+        /// <summary>
+        /// lblForumAd 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblForumAd;
         
         /// <summary>
         /// expandInformation 控件。
