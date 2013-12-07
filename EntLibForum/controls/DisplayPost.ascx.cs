@@ -33,19 +33,19 @@ namespace yaf.controls
 			// TODO localize tooltips
 			Attach.Visible = CanAttach;
 			Attach.Text = ForumPage.GetThemeContents( "BUTTONS", "ATTACHMENTS" );
-			Attach.ToolTip = "Attachments";
+			Attach.ToolTip = "附件";
 			Attach.NavigateUrl = Forum.GetLink( Pages.attachments, "m={0}", DataRow ["MessageID"] );
 			Edit.Visible = CanEditPost;
 			Edit.Text = ForumPage.GetThemeContents( "BUTTONS", "EDITPOST" );
-			Edit.ToolTip = "Edit this post";
+			Edit.ToolTip = "编辑Edit this post";
 			Edit.NavigateUrl = Forum.GetLink( Pages.postmessage, "m={0}", DataRow ["MessageID"] );
 			Delete.Visible = CanDeletePost;
 			Delete.Text = ForumPage.GetThemeContents( "BUTTONS", "DELETEPOST" );
-			Delete.ToolTip = "Delete this post";
+			Delete.ToolTip = "删除Delete this post";
 			Delete.Attributes ["onclick"] = string.Format( "return confirm('{0}')", ForumPage.GetText( "confirm_deletemessage" ) );
 			Quote.Visible = CanReply;
 			Quote.Text = ForumPage.GetThemeContents( "BUTTONS", "QUOTEPOST" );
-			Quote.ToolTip = "Reply with quote";
+			Quote.ToolTip = "引用回复Reply with quote";
 			Quote.NavigateUrl = Forum.GetLink( Pages.postmessage, "t={0}&f={1}&q={2}", ForumPage.PageTopicID, ForumPage.PageForumID, DataRow ["MessageID"] );
 
 			// private messages

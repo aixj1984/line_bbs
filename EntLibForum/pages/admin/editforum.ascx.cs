@@ -46,6 +46,9 @@ namespace yaf.pages.admin
 							ThemeList.SelectedValue = row ["ThemeURL"].ToString();
 
 						remoteurl.Text = row ["RemoteURL"].ToString();
+                        //add  by aixj for icon 
+                        icon_path.Text = row["ForumIcon"].ToString(); 
+                        //add end
 					}
 					NewGroupRow.Visible = false;
 				}
@@ -144,7 +147,7 @@ namespace yaf.pages.admin
 			if ( ThemeList.SelectedValue.Length > 0 )
 				themeURL = ThemeList.SelectedValue;
 
-			ForumID = DB.forum_save( ForumID, CategoryList.SelectedValue, parentID, Name.Text, Description.Text, SortOrder.Text, Locked.Checked, HideNoAccess.Checked, IsTest.Checked, Moderated.Checked, AccessMaskID.SelectedValue, IsNull( remoteurl.Text ), themeURL, false );
+            ForumID = DB.forum_save(ForumID, CategoryList.SelectedValue, parentID, Name.Text, Description.Text, SortOrder.Text, Locked.Checked, HideNoAccess.Checked, IsTest.Checked, Moderated.Checked, AccessMaskID.SelectedValue, IsNull(remoteurl.Text), themeURL, IsNull(icon_path.Text), false);
 
 			// Access
 			if ( Request.QueryString ["f"] != null )

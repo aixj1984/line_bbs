@@ -25,9 +25,9 @@
 				<b><%# GetText("posted") %></b> <%# FormatDateTime((System.DateTime)((System.Data.DataRowView)Container.DataItem)["Created"]) %>
 			</td>
 			<td align=right>
-				<asp:linkbutton id="DeleteMessage" onload="DeleteMessage_Load" tooltip="Delete this message" runat=server commandname=delete commandargument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","DELETEPOST") %></asp:linkbutton>
-				<asp:linkbutton id="ReplyMessage" tooltip="Reply to this message" runat=server commandname=reply commandargument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","REPLYPM") %></asp:linkbutton>
-				<asp:LinkButton id="QuoteMessage" tooltip="Reply with quote" Runat=server CommandName=quote CommandArgument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","QUOTEPOST") %></asp:LinkButton>
+				<asp:linkbutton id="DeleteMessage" onload="DeleteMessage_Load" tooltip="删除Delete this message" runat=server commandname=delete commandargument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","DELETEPOST") %></asp:linkbutton>
+				<asp:linkbutton id="ReplyMessage" tooltip="回复Reply to this message" runat=server commandname=reply commandargument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","REPLYPM") %></asp:linkbutton>
+				<asp:LinkButton id="QuoteMessage" tooltip="引用回复Reply with quote" Runat=server CommandName=quote CommandArgument='<%# DataBinder.Eval(Container.DataItem,"UserPMessageID") %>'><%# GetThemeContents("BUTTONS","QUOTEPOST") %></asp:LinkButton>
 			</td>
 			</tr></table>
 		</td>

@@ -1260,7 +1260,7 @@ namespace yaf
 			}
 		}
 
-		static public long forum_save( object ForumID, object CategoryID, object parentID, object Name, object Description, object SortOrder, object Locked, object Hidden, object IsTest, object moderated, object accessMaskID, object remoteURL, object themeURL, bool dummy )
+		static public long forum_save( object ForumID, object CategoryID, object parentID, object Name, object Description, object SortOrder, object Locked, object Hidden, object IsTest, object moderated, object accessMaskID, object remoteURL, object themeURL,object iconPath,  bool dummy )
 		{
 			using ( SqlCommand cmd = new SqlCommand( "yaf_forum_save" ) )
 			{
@@ -1277,6 +1277,7 @@ namespace yaf
 				cmd.Parameters.AddWithValue( "@Moderated", moderated );
 				cmd.Parameters.AddWithValue( "@RemoteURL", remoteURL );
 				cmd.Parameters.AddWithValue( "@ThemeURL", themeURL );
+                cmd.Parameters.AddWithValue( "@ForumIcon", iconPath);
 				cmd.Parameters.AddWithValue( "@AccessMaskID", accessMaskID );
 				return long.Parse( ExecuteScalar( cmd ).ToString() );
 			}

@@ -92,7 +92,7 @@
 
 <tr>
 <td colspan="3" align="center">
-<a href="http://www.entlib.com/product/default.aspx"><img src="http://www.entlib.com/resources/images/google_adv.jpg" alt="EntLib.com 专业电子商务系统" title="EntLib.com 专业电子商务系统" /></a>
+<a href="http://www.hubeici.com/zp/zhop.html"><img src="http://www.hubeici.com/ggw/syggw/hxggs/201212/W020130924326679582821.jpg" alt="文古网" title="文古网" /></a>
 </td>
 </tr>
     <asp:PlaceHolder id="QuickReplyPlaceHolder" runat="server">

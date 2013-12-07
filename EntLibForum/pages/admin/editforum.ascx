@@ -38,6 +38,12 @@
 			<td class="post">
 				<asp:textbox id="remoteurl" runat="server" cssclass="edit"></asp:textbox></td>
 		</tr>
+        		<tr>
+			<td class="postheader"><b>论坛图标:</b><br />
+				论坛图标的文件名称，文件存放在EntLibForum\images\ForumIcons目录下.</td>
+			<td class="post">
+				<asp:textbox id="icon_path" runat="server" cssclass="edit"></asp:textbox></td>
+		</tr>
 		<tr>
 			<td class="postheader"><b>主题:</b><br />
 				为论坛选择一个主体，使他不不同于其他标准板块的主题。（Choose a theme for this forum if its to differ from the standard Board theme.）</td>
