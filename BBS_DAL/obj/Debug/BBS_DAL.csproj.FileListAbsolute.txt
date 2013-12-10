@@ -1,9 +1,0 @@
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\DAL.dll
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\DAL.pdb
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\Common.dll
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\Model.dll
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\Common.pdb
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\bin\Debug\Model.pdb
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\obj\Debug\ResolveAssemblyReference.cache
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\obj\Debug\DAL.dll
-F:\01 project\09 99999\bbs\line_bbs\BBS_DAL\obj\Debug\DAL.pdb
