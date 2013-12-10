@@ -19,6 +19,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
         media="screen" />
 
+    <script src="./script/jquery-1.8.2/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="./script/forum.js" type="text/javascript"></script>
+
     <script type="text/javascript">
 <!--
         var arVersion = navigator.appVersion.split("MSIE");
@@ -45,10 +48,11 @@
 
 </head>
 <body class="mainbody">
-    <div>
-        <img src="images/firstpage/banner.gif" style="height: 100px; width: 100%" />
+    <div style="text-align:center;">
+        <img src="images/firstpage/banner.gif" alt= "" style="height: 100px; width:1002px;" />
     </div>
-    <div class="wrapper">
+    <div style=" text-align:center; ">
+    <div class="wrapper" style="width:1002px; text-align:left; ">
         <div class="innerWrapper">
             <ul id="navigator">
                 <li class="youAreHere"><a href="">社区首页 </a><span class="sep">|</span></li>
@@ -61,8 +65,9 @@
         <div class="shadowWrapper">
         </div>
     </div>
+    </div>
 
-    <table width="90%" cellpadding="3" cellspacing="0" style="background-color: White;"
+    <table width="1002px" cellpadding="3" cellspacing="0" style="background-color: White;"
         align="center">
         <tr>
             <td colspan="2">

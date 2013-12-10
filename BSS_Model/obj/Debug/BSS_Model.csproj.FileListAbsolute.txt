@@ -1,0 +1,10 @@
+F:\01 project\09 99999\bbs\line_bbs\EntLibForum\BSS_Model\bin\Debug\Model.dll
+F:\01 project\09 99999\bbs\line_bbs\EntLibForum\BSS_Model\bin\Debug\Model.pdb
+F:\01 project\09 99999\bbs\line_bbs\EntLibForum\BSS_Model\obj\Debug\ResolveAssemblyReference.cache
+F:\01 project\09 99999\bbs\line_bbs\EntLibForum\BSS_Model\obj\Debug\Model.dll
+F:\01 project\09 99999\bbs\line_bbs\EntLibForum\BSS_Model\obj\Debug\Model.pdb
+F:\01 project\09 99999\bbs\line_bbs\BSS_Model\bin\Debug\Model.dll
+F:\01 project\09 99999\bbs\line_bbs\BSS_Model\bin\Debug\Model.pdb
+F:\01 project\09 99999\bbs\line_bbs\BSS_Model\obj\Debug\ResolveAssemblyReference.cache
+F:\01 project\09 99999\bbs\line_bbs\BSS_Model\obj\Debug\Model.dll
+F:\01 project\09 99999\bbs\line_bbs\BSS_Model\obj\Debug\Model.pdb

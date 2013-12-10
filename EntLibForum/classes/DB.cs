@@ -934,7 +934,7 @@ namespace yaf
 		/// <param name="CategoryID">CategoryID so save changes to</param>
 		/// <param name="Name">Name of the category</param>
 		/// <param name="SortOrder">Sort Order</param>
-		static public void category_save( object boardID, object CategoryID, object Name, object SortOrder )
+		static public void category_save( object boardID, object CategoryID, object Name, object SortOrder, object IconName )
 		{
 			using ( SqlCommand cmd = new SqlCommand( "yaf_category_save" ) )
 			{
@@ -943,6 +943,7 @@ namespace yaf
 				cmd.Parameters.AddWithValue( "@CategoryID", CategoryID );
 				cmd.Parameters.AddWithValue( "@Name", Name );
 				cmd.Parameters.AddWithValue( "@SortOrder", SortOrder );
+                cmd.Parameters.AddWithValue("@IconName", IconName);
 				ExecuteNonQuery( cmd );
 			}
 		}

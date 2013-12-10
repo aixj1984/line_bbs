@@ -19,6 +19,11 @@
 		<td class=post>
 <asp:TextBox id=SortOrder runat="server"></asp:TextBox></td>
 	</tr>
+    	<tr>
+		<td class=post>µ¼º½Í¼Æ¬:</td>
+		<td class=post>
+<asp:TextBox id=IconName runat="server"></asp:TextBox></td>
+	</tr>
 	<tr>
 		<td class=postfooter colspan="2" align=middle>
 <asp:Button id=Save runat="server" text="±£´æ" onclick="Save_Click"></asp:Button>&nbsp;

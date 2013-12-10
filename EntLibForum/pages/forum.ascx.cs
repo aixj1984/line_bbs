@@ -93,7 +93,7 @@ namespace yaf.pages
 		private void BindData()
 		{
 			DataSet ds = DB.board_layout( PageBoardID, PageUserID, PageCategoryID, null );
-			CategoryList.DataSource = ds.Tables ["yaf_Category"];
+			//CategoryList.DataSource = ds.Tables ["yaf_Category"];
 
 			// Active users
 			// Call this before forum_stats to clean up active users
@@ -101,7 +101,7 @@ namespace yaf.pages
 
 			// Latest forum posts
 			// Shows the latest n number of posts on the main forum list page
-			LatestPosts.DataSource = DB.topic_latest( PageBoardID, 7, PageUserID );
+			//LatestPosts.DataSource = DB.topic_latest( PageBoardID, 7, PageUserID );
 
 			// Forum statistics
 			string key = string.Format( "BoardStats.{0}", PageBoardID );
@@ -115,14 +115,15 @@ namespace yaf.pages
 			Stats.Text = String.Format( GetText( "stats_posts" ), stats ["posts"], stats ["topics"], stats ["forums"] );
 			Stats.Text += "<br/>";
 
-			if ( !stats.IsNull( "LastPost" ) )
-			{
-				Stats.Text += String.Format( GetText( "stats_lastpost" ),
-					FormatDateTimeTopic( ( DateTime ) stats ["LastPost"] ),
-					String.Format( "<a href=\"{0}\">{1}</a>", Forum.GetLink( Pages.profile, "u={0}", stats ["LastUserID"] ), Server.HtmlEncode( stats ["LastUser"].ToString() ) )
-				);
-				Stats.Text += "<br/>";
-			}
+            //屏蔽掉了：最后由 {1} 发表于 {0}.
+            //if (!stats.IsNull("LastPost"))
+            //{
+            //    Stats.Text += String.Format(GetText("stats_lastpost"),
+            //        FormatDateTimeTopic((DateTime)stats["LastPost"]),
+            //        String.Format("<a href=\"{0}\">{1}</a>", Forum.GetLink(Pages.profile, "u={0}", stats["LastUserID"]), Server.HtmlEncode(stats["LastUser"].ToString()))
+            //    );
+            //    Stats.Text += "<br/>";
+            //}
 
 			if ( BoardSettings.ShowMemberStats )
 			{
@@ -243,8 +244,8 @@ namespace yaf.pages
 
 		private void UpdateActiveDiscussionsPanel()
 		{
-			expandActiveDiscussions.ImageUrl = GetCollapsiblePanelImageURL( "ActiveDiscussions", PanelSessionState.CollapsiblePanelState.Expanded );
-			ActiveDiscussionTBody.Visible = ( Mession.PanelState ["ActiveDiscussions"] == PanelSessionState.CollapsiblePanelState.Expanded );
+			//expandActiveDiscussions.ImageUrl = GetCollapsiblePanelImageURL( "ActiveDiscussions", PanelSessionState.CollapsiblePanelState.Expanded );
+			//ActiveDiscussionTBody.Visible = ( Mession.PanelState ["ActiveDiscussions"] == PanelSessionState.CollapsiblePanelState.Expanded );
 		}
 
 		private void UpdateInformationPanel()

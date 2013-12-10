@@ -1,0 +1,11 @@
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\BLL.dll
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\BLL.pdb
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\Common.dll
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\DAL.dll
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\Model.dll
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\Common.pdb
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\DAL.pdb
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\bin\Debug\Model.pdb
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\obj\Debug\ResolveAssemblyReference.cache
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\obj\Debug\BLL.dll
+F:\01 project\09 99999\bbs\line_bbs\BBS_BLL\obj\Debug\BLL.pdb

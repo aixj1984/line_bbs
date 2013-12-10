@@ -1,20 +1,177 @@
 <%@ Control Language="c#" CodeBehind="forum.ascx.cs" AutoEventWireup="True" Inherits="yaf.pages.forum" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf.controls" Assembly="yaf" %>
 <%@ Register TagPrefix="yaf" TagName="ForumList" Src="../controls/ForumList.ascx" %>
+<style type="text/css">
+    .forum_table
+    {
+        border: 1px solid rgb(68, 68, 68);
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .tbody_tr
+    {
+        text-align: left;
+        border-bottom: 1px dotted black;
+        line-height: 27px;
+    }
+    .notopic
+    {
+        width: 20%;
+    }
+    .notoinfo
+    {
+        width: 29.99%;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: 8px 50%;
+        font-weight: normal;
+    }
+    .th_h2
+    {
+        font-size: 12px;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        -webkit-margin-after: 0.83em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    .th_h2_a
+    {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .th_h2_em
+    {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .th_h2_em_strong
+    {
+        color: rgb(242, 108, 79);
+    }
+    .th_p
+    {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        font: 12px/1.5 ,Helvetica,Arial,sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        margin: 0px;
+        padding: 0px;
+    }
+    .th_p_a
+    {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        font-size: 12px;
+    }
+    
+    .th_p_em
+    {
+    }
+</style>
 <div>
     <asp:Label ID="lblHotInfo" runat="server" Text="网站热点"></asp:Label>
 </div>
 <yaf:PageLinks runat="server" ID="PageLinks" />
-
 <div id="Welcome" runat="server">
-    &nbsp;<img src="images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
+    &nbsp;<img src="../images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
         runat="server" />
     <span style="padding-left: 20px;">
-        <img src="images/common/arrow2.gif" alt="" />
+        <img src="../images/common/arrow2.gif" alt="" />
         <asp:Label ID="TimeLastVisit" runat="server" /></span>
 </div>
 <div id="divUnreadMsgs">
-    <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="false" /></div>
+    <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="true" /></div>
+<!--topic-->
+<div class="main" id="wp" style="width: 1002px;">
+    <div class="mainbox" id = "category_forum">
+        <%--<div class="titlebar" style="height: 39px; background-image: url('images/firstpage/产业专区.gif');
+            background-repeat: no-repeat;">
+        </div>
+        <div id="category_69" class="fi" style="">
+            <table cellspacing="0" cellpadding="0" class="forum_table">
+                <tbody>
+                    <tr class="tbody_tr">
+                        <th class="notopic">
+                            <img src="../images/ForumIcons/forumicon_235.jpg" border="0" align="left" hspace="5"
+                                style="margin-left: 0px; float: left;" alt="攻城掠地" />
+                        </th>
+                        <th class="notoinfo">
+                            <h2 class="th_h2">
+                                <a href="#" class="th_h2_a">攻城掠地</a> <em class="th_h2_em">(今日:<strong class="th_h2_em_strong">12</strong>)</em>
+                            </h2>
+                            <p class="th_p">
+                                主题:455, 帖数:1333</p>
+                            <p class="th_p">
+                                最后: <a href="#" title="酷玩吧【攻城掠地】30区论坛活动" class="th_p_a"><em class="th_p_em">1小时前</em></a>
+                                by <a class="th_p_a" href="#" target="_blank">game9090</a>
+                            </p>
+                        </th>
+                        <th style="width: 20%;" class="notopic ">
+                            <img src="../images/ForumIcons/forumicon_214.jpg" border="0" align="left" hspace="5"
+                                alt="斗破乾坤" />
+                        </th>
+                        <th class="notoinfo">
+                            <h2 class="th_h2">
+                                <a href="#" class="th_h2_a">攻城掠地</a> <em class="th_h2_em">(今日:<strong class="th_h2_em_strong">12</strong>)</em>
+                            </h2>
+                            <p class="th_p">
+                                主题:455, 帖数:1333</p>
+                            <p class="th_p">
+                                最后: <a href="#" title="酷玩吧【攻城掠地】30区论坛活动" class="th_p_a"><em class="th_p_em">1小时前</em></a>
+                                by <a class="th_p_a" href="#" target="_blank">game9090</a>
+                            </p>
+                        </th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="tbody_tr">
+                        <th class="notopic">
+                            <img src="../images/ForumIcons/forumicon_235.jpg" border="0" align="left" hspace="5"
+                                style="margin-left: 0px; float: left;" alt="攻城掠地" />
+                        </th>
+                        <th class="notoinfo">
+                            <h2 class="th_h2">
+                                <a href="#" class="th_h2_a">攻城掠地</a> <em class="th_h2_em">(今日:<strong class="th_h2_em_strong">12</strong>)</em>
+                            </h2>
+                            <p class="th_p">
+                                主题:455, 帖数:1333</p>
+                            <p class="th_p">
+                                最后: <a href="#" title="酷玩吧【攻城掠地】30区论坛活动" class="th_p_a"><em class="th_p_em">1小时前</em></a>
+                                by <a class="th_p_a" href="#" target="_blank">game9090</a>
+                            </p>
+                        </th>
+                        <th style="width: 20%;" class="notopic ">
+                            <img src="../images/ForumIcons/forumicon_214.jpg" border="0" align="left" hspace="5"
+                                alt="斗破乾坤" />
+                        </th>
+                        <th class="notoinfo">
+                            <h2 class="th_h2">
+                                <a href="#" class="th_h2_a">攻城掠地</a> <em class="th_h2_em">(今日:<strong class="th_h2_em_strong">12</strong>)</em>
+                            </h2>
+                            <p class="th_p">
+                                主题:455, 帖数:1333</p>
+                            <p class="th_p">
+                                最后: <a href="#" title="酷玩吧【攻城掠地】30区论坛活动" class="th_p_a"><em class="th_p_em">1小时前</em></a>
+                                by <a class="th_p_a" href="#" target="_blank">game9090</a>
+                            </p>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>--%>
+        
+    </div>
+</div>
+<!--topic-->
+<%--
 <asp:Repeater ID="CategoryList" runat="server" OnItemCommand="categoryList_ItemCommand"
     OnItemDataBound="CategoryList_ItemDataBound">
     <HeaderTemplate>
@@ -42,7 +199,11 @@
     </HeaderTemplate>
     <ItemTemplate>
         <tr>
-            <td class="header2" colspan="6">
+            <td class="header2" colspan="6"  style="<%# yaf.Forum.GetForumIconPath(DataBinder.Eval(Container.DataItem, "IconName"))%>">
+            </td>
+        </tr>
+        <tr>
+            <td class="header2" colspan="6" style="background-image: url('images/firstpage/产业专区.gif');background-repeat: no-repeat;" >
                 <asp:ImageButton runat="server" ID="expandCategory" BorderWidth="0" ImageAlign="Baseline"
                     CommandName="panel" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "CategoryID") %>'>
                 </asp:ImageButton>
@@ -56,14 +217,14 @@
     <FooterTemplate>
         </table>
     </FooterTemplate>
-</asp:Repeater>
+</asp:Repeater>--%>
 <hr />
 <!---ad-text area start--->
-<asp:Label ID="lblForumAd" runat="server" Text="欢迎访问EntLib.com论坛系统！"></asp:Label>
+<asp:Label ID="lblForumAd" runat="server" Text="欢迎访问文古论坛！"></asp:Label>
 <!---ad-text area end--->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
-        <td width="65%" valign="top">
+        <td width="100%" valign="top">
             <table class="content" cellspacing="1" cellpadding="0" width="100%">
                 <tr>
                     <td class="header1" colspan="2">
@@ -111,7 +272,7 @@
                 </tbody>
             </table>
         </td>
-        <td width="10">
+        <%--<td width="10">
             &nbsp;
         </td>
         <td width="34%" valign="top" height="100%">
@@ -141,7 +302,7 @@
                     </tr>
                 </tbody>
             </table>
-        </td>
+        </td>--%>
     </tr>
 </table>
 <table style="padding: 2px; margin: 2px" width="99%">

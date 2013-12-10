@@ -49,6 +49,15 @@ namespace yaf.pages.admin {
         protected global::System.Web.UI.WebControls.TextBox SortOrder;
         
         /// <summary>
+        /// IconName 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IconName;
+        
+        /// <summary>
         /// Save 控件。
         /// </summary>
         /// <remarks>

@@ -1,0 +1,57 @@
+﻿.th_h2_em {
+    font-style: normal;
+    font-weight: 400;
+}
+.notoinfo
+ {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    font-weight: normal;
+}
+.th_h2 
+{
+    background-color:Red;
+    font-size: 12px;  
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.th_p {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font:12px/1.5 "Lucida Grande",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.th_h2_em_strong {
+    color: rgb(242, 108, 79);
+}
+
+.th_h2_p {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    font:12px/1.5 "Lucida Grande",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.th_h2_a 
+{
+    background-color:Red;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+

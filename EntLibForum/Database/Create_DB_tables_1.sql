@@ -60,15 +60,15 @@ GO
  SET IDENTITY_INSERT [yaf_Board] OFF
 
  if exists (select * from sysobjects where id = OBJECT_ID('[yaf_Category]') and OBJECTPROPERTY(id, 'IsUserTable') = 1) DROP TABLE [yaf_Category] 
- CREATE TABLE [yaf_Category] (  [CategoryID] [int] IDENTITY (1, 1) NOT NULL ,  [BoardID] [int] NOT NULL , [Name] [nvarchar] (128) NOT NULL , [SortOrder] [smallint] NOT NULL )
+ CREATE TABLE [yaf_Category] (  [CategoryID] [int] IDENTITY (1, 1) NOT NULL ,  [BoardID] [int] NOT NULL , [Name] [nvarchar] (128) NOT NULL , [SortOrder] [smallint] NOT NULL , [IconName] [nvarchar] (128) NOT NULL )
  ALTER TABLE [yaf_Category] WITH NOCHECK ADD CONSTRAINT [PK_yaf_Category] PRIMARY KEY  NONCLUSTERED ( [CategoryID] )
  CREATE UNIQUE INDEX [IX_yaf_Category] ON [yaf_Category] ( BoardID , Name ) 
 
  SET IDENTITY_INSERT [yaf_Category] ON
 
- INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] ) VALUES ( 1 , 1 , 'EntLib.com专业的电子商务系统' , 1 )
- INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] ) VALUES ( 6 , 1 , 'Enterprise Library 微软企业类库' , 2 )
- INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] ) VALUES ( 7 , 1 , '其他开源项目' , 3 )
+ INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] , [IconName] ) VALUES ( 1 , 1 , 'EntLib.com专业的电子商务系统' , 1 ,  '产业专区.gif')
+ INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] , [IconName] ) VALUES ( 6 , 1 , 'Enterprise Library 微软企业类库' , 2 ,  '产业专区.gif')
+ INSERT [yaf_Category] ( [CategoryID] , [BoardID] , [Name] , [SortOrder] , [IconName] ) VALUES ( 7 , 1 , '其他开源项目' , 3 ,  '产业专区.gif')
 
  SET IDENTITY_INSERT [yaf_Category] OFF
 

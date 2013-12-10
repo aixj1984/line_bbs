@@ -22,7 +22,7 @@ namespace yaf.pages.admin
 			{
 				PageLinks.AddLink(BoardSettings.Name,Forum.GetLink(Pages.forum));
 				PageLinks.AddLink("后台管理",Forum.GetLink(Pages.admin_admin));
-				PageLinks.AddLink("Forums","");
+				PageLinks.AddLink("论坛管理","");
 
 				BindData();
 			}
@@ -62,6 +62,7 @@ namespace yaf.pages.admin
 					DataRow row = dt.Rows[0];
 					Name.Text = (string)row["Name"];
 					SortOrder.Text = row["SortOrder"].ToString();
+                    IconName.Text = row["IconName"].ToString();
 					CategoryNameTitle.Text = Name.Text;
 				}
 			}
@@ -72,7 +73,7 @@ namespace yaf.pages.admin
 			int CategoryID = 0;
 			if(Request.QueryString["c"] != null) CategoryID = int.Parse(Request.QueryString["c"]);
 
-			DB.category_save(PageBoardID,CategoryID,Name.Text,SortOrder.Text);
+			DB.category_save(PageBoardID,CategoryID,Name.Text,SortOrder.Text, IconName.Text);
 			Forum.Redirect(Pages.admin_forums);
 		}
 	}

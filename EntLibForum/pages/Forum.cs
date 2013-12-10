@@ -185,6 +185,11 @@ namespace yaf
 			return Config.UrlBuilder.BuildUrl( string.Format( "g={0}&{1}", page, string.Format( format, args ) ) );
 		}
 
+        static public string GetForumIconPath(object IconName)
+        {
+            return "background-image: url('images/firstpage/" + IconName + "');background-repeat: no-repeat;";
+        }
+
 		static public void Redirect( Pages page )
 		{
 			System.Web.HttpContext.Current.Response.Redirect( GetLink( page ) );
