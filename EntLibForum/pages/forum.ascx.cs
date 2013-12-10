@@ -104,6 +104,7 @@ namespace yaf.pages
 			//LatestPosts.DataSource = DB.topic_latest( PageBoardID, 7, PageUserID );
 
 			// Forum statistics
+            this.Page.ClientScript.RegisterStartupScript(GetType(), "", "SetGloabInfo('" + PageBoardID + "', '" + PageUserID + "')", true);
 			string key = string.Format( "BoardStats.{0}", PageBoardID );
 			DataRow stats = ( DataRow ) Cache [key];
 			if ( stats == null )

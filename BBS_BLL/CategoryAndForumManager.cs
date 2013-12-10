@@ -19,7 +19,7 @@ namespace Trilink.BLL
 		}
 
 		//安装板块ID，查询所有论坛
-        public List<Category> GetCategoryAndForumByBoardID(string BoradID, string CategoryID)
+        public List<Category> GetCategoryAndForumByBoardID(string BoradID, string CategoryID, string UserID)
 		{
             List<Category> categorys = new List<Category>();
             Category category = default(Category);
@@ -33,7 +33,7 @@ namespace Trilink.BLL
                 category.SortOrder = dr_category["sortOrder"].ToString();
                 category.IconName = dr_category["iconName"].ToString();
                 category.ForumList = new List<Forum>();
-                DataSet ds_forum = ForumData.GetForumInfos(category.CategoryID);
+                DataSet ds_forum = ForumData.GetForumInfos(category.CategoryID,UserID);
                 Forum forum = default(Forum);
                 foreach (DataRow dr_forum in ds_forum.Tables[0].Rows)
                 {

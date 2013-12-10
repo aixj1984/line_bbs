@@ -900,7 +900,7 @@ namespace yaf.pages
 					return long.Parse( m_pageinfo ["UploadAccess"].ToString() ) > 0;
 			}
 		}
-
+        //默认从web.config里面取<boardid>1</boardid>
 		public int PageBoardID
 		{
 			get

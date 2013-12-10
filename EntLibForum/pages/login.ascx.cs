@@ -141,10 +141,10 @@ namespace yaf.pages
 			if ( userID != DBNull.Value )
 			{
 				string idName = string.Format( "{0};{1};{2}", userID, PageBoardID, UserName.Text );
-
 				if ( Request.QueryString ["ReturnUrl"] != null )
 				{
-					FormsAuthentication.RedirectFromLoginPage( idName, AutoLogin.Checked );
+					FormsAuthentication.RedirectFromLoginPage( idName, AutoLogin.Checked );//写入登录信息，可以通过来获取  string userName = HttpContext.Current.User.Identity.Name;
+                    
 				}
 				else
 				{

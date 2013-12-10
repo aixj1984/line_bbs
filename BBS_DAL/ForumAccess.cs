@@ -18,7 +18,7 @@ namespace Trilink.DAL
 		}
 
         //获取论坛板块信息
-        public DataSet GetForumInfos(string CategoryID)
+        public DataSet GetForumInfos(string CategoryID, string UserID)
         {
             string SQL = @"SELECT   a.CategoryID,
                              Category = a.Name,
@@ -55,15 +55,17 @@ namespace Trilink.DAL
                     WHERE    a.BoardID = 1 and a.CategoryID = b.CategoryID
                     AND ((b.Flags & 2) = 0
                           OR x.ReadAccess <> 0)
-                    AND x.UserID = 1 {0}
-                    ORDER BY a.SortOrder,
-                             b.SortOrder";
+                     {0}    ORDER BY a.SortOrder, b.SortOrder";
             string condition = "";
             if (CategoryID.Length > 0)
             {
-                condition = " and a.CategoryID = " + CategoryID;
-
+                condition += " and a.CategoryID = " + CategoryID;
             }
+            if (UserID.Length > 0)
+            {
+                condition += " AND x.UserID =  " + UserID;
+            }
+
             return db.SelectDataEntLib_BBS(string.Format(SQL, condition));
         }
 

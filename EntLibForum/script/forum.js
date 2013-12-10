@@ -1,5 +1,15 @@
 ﻿///<reference path="./jquery-1.8.2/jquery-1.8.2.js">
 
+var g_BoardID = 1;
+var g_UserID = 1;
+
+//先执行这个，设置boardID,userID
+function SetGloabInfo(boardID, userID) {
+    g_BoardID = boardID;
+    g_UserID = userID;
+ } 
+
+
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
@@ -10,18 +20,17 @@ function getQueryString(name) {
 
 $(document).ready(function () {
     param = window.location.search;
-    var boardID = "1";
-    if (param == "" || param.indexOf("?g=forum")>= 0) {
-        get_forum_list(boardID, getQueryString("c"));
+    if (param == "" || param.indexOf("?g=forum") >= 0) {
+        get_forum_list(g_BoardID, getQueryString("c"), g_UserID);
     }
 });
 
-function get_forum_list(boardID, categoryID) {
+function get_forum_list(boardID, categoryID, userID) {
     try {
         $.ajax({
             type: "POST",
             url: "ForumService.asmx/GetForumList",
-            data: "{'BoardID':'" + boardID + "', 'CategoryID':'" + categoryID + "'}",
+            data: "{'BoardID':'" + boardID + "', 'CategoryID':'" + categoryID + "', 'UserID':'" + userID + "'}",
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: CallSucceed_split_by,

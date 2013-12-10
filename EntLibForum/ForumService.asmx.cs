@@ -60,11 +60,11 @@ namespace yaf
         }
 
         [WebMethod]
-        public string GetForumList(string BoardID, string CategoryID)
+        public string GetForumList(string BoardID, string CategoryID, string UserID)
         {
             CategoryAndForumManager categoryAndForumManager = new CategoryAndForumManager();
 
-            return getJsonStr(categoryAndForumManager.GetCategoryAndForumByBoardID(BoardID, CategoryID)); 
+            return getJsonStr(categoryAndForumManager.GetCategoryAndForumByBoardID(BoardID, CategoryID, UserID)); 
         }
 
         public string getJsonStr(object obj)

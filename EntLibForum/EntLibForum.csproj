@@ -508,7 +508,9 @@
     <Content Include="images\topics\digest_3.gif" />
     <Content Include="images\topics\sticky.gif" />
     <Content Include="Include\pagefooter.ascx" />
-    <Content Include="languages\china.xml" />
+    <Content Include="languages\china.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="languages\english.xml" />
     <Content Include="NaviTop.aspx" />
     <Content Include="NaviTop.htm" />
