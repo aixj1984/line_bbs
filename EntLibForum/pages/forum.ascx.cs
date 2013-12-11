@@ -169,16 +169,13 @@ namespace yaf.pages
         private void HotContentGenerate()
         {
             //
-            lblHotInfo.Text = "";
-            String lblHotInfo_HTML = "";
-
             lblHotInfo.Text += "<div class='main cl forumhot'>";
-            lblHotInfo_HTML += "<table width='100%' cellspacing='0' cellpadding='0'>";
-            lblHotInfo_HTML += "<tbody><tr> <td width='375px'>";
-            lblHotInfo_HTML += "<div class='title_bar xg2'>最新图片</div>";
-            lblHotInfo_HTML += "<div id='focusViwer'><div id='imgADPlayer'></div>";
-            lblHotInfo_HTML += "<script  type='text/javascript'>";
-            lblHotInfo_HTML += GetImageInfo();
+            lblHotInfo.Text += "<table width='100%' cellspacing='0' cellpadding='0'>";
+            lblHotInfo.Text += "<tbody><tr> <td width='375px'>";
+            lblHotInfo.Text += "<div class='title_bar xg2'>最新图片</div>";
+            lblHotInfo.Text += "<div id='focusViwer'><div id='imgADPlayer'></div>";
+            lblHotInfo.Text += "<script  type='text/javascript'>";
+            lblHotInfo.Text += GetImageInfo();
             // 需要动态生成 
             lblHotInfo.Text += "for (i = 0; i < hotimagesarray.length; i++) {";
             lblHotInfo.Text += "PImgPlayer.addItem(\"\" + hotimagesarray[i].title.substr(0,20) + \"\", \"\" + hotimagesarray[i].url + \"\", \"\" + hotimagesarray[i].img + \"\");";
@@ -226,7 +223,7 @@ namespace yaf.pages
             lblHotInfo.Text += "</tr>";
             lblHotInfo.Text += "</tbody>";
             lblHotInfo.Text += "</table>";
-            lblHotInfo.Text += "</div>";
+
         }
         protected string GetImageInfo()
         {

@@ -14,15 +14,11 @@
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <link rel="Stylesheet" href="editors/FCKEditorV2/editor/css/NaviTop.css" type="text/css" />
 
-    <!--<script type="text/javascript" src="editors/FCKEditorV2/editor/js/jquery.1.4.2-min.js"
-        charset="UTF-8"></script>-->
-
+    <script src="editors/FCKEditorV2/editor/js/jquery.1.4.2-min.js" type="text/javascript"></script>
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/common.js"></script>
-
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/slide.js"></script>
 
-    <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
-        media="screen" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"  media="screen" />
 
     <script src="./script/jquery-1.8.2/jquery-1.8.2.js" type="text/javascript"></script>
     <script src="./script/forum.js" type="text/javascript"></script>
