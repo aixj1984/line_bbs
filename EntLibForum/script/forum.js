@@ -19,7 +19,12 @@ function getQueryString(name) {
 }
 
 $(document).ready(function () {
-    alert("ttttttt");
+    $(".w_ctr .JQ-slide").Slide({
+        effect: "scroolX",
+        speed: "normal",
+        timer: 2000
+    });
+
     param = window.location.search;
     if (param == "" || param.indexOf("?g=forum") >= 0) {
         get_forum_list(g_BoardID, getQueryString("c"), g_UserID);

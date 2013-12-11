@@ -1,0 +1,19 @@
+/*----------- 图片banner特效左右滚动 ------------*/
+/* w_ctr */
+.w_ctr .JQ-slide{width:305px;height:190px;overflow:hidden;position:relative;}
+.w_ctr .JQ-slide-content{position:absolute;}/*必须要的元素*/
+.w_ctr .JQ-slide-content li{width:305px;height:190px;float:left;display:inline;position:relative;}
+.w_ctr .JQ-slide-content li img{width:305px;height:190px;}
+.w_ctr .JQ-slide-content li span{display:block;background:black;color:white;font-size:14px;font-weight:bold;padding:0 14px;line-height:28px;position:absolute;bottom:5px;left:0;z-index:10;width:275px;overflow:hidden;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;}
+.w_ctr .JQ-slide-nav{position:absolute;bottom:14px;right:8px;z-index:30;}
+.w_ctr .JQ-slide-nav li{float:left;display:inline;background:url(focus_li.png) no-repeat;width:10px;height:10px;text-indent:-999em;overflow:hidden;cursor:pointer;margin-right:5px;}
+.w_ctr .JQ-slide-nav li.on{background-position:-15px 0;}
+
+/* imgList */
+.imgList{float:none;overflow:hidden;zoom:1}
+.imgList li{float:left;display:inline;overflow:hidden;}
+.imgList li a{display:block;}
+.imgList li .img{border:1px solid #d8d8d8;padding:5px;}
+.imgList li a.img:hover{border-color:#b70000;}
+.imgList li .txt{text-align:center;overflow:hidden;}
+

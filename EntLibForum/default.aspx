@@ -14,28 +14,28 @@
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <link rel="Stylesheet" href="editors/FCKEditorV2/editor/css/NaviTop.css" type="text/css" />
 
-    <script src="editors/FCKEditorV2/editor/js/jquery.1.4.2-min.js" type="text/javascript"></script>
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/common.js"></script>
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/slide.js"></script>
-
-    <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"  media="screen" />
-
+    <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
+        media="screen" />
     <script src="./script/jquery-1.8.2/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="script/slide/jquery.slide.js" type="text/javascript"></script>
     <script src="./script/forum.js" type="text/javascript"></script>
+    <link href="script/slide/slide.css" rel="stylesheet" type="text/css" />
 
-     <script type="text/javascript">
-         function tabselect(id) {
-             $('hot_layer_' + id).style.display = ''
-             $('tab_li_' + id).className = 'current'
-             for (var i = 1; i <= 5; i++) {
-                 if (i != id) {
-                     if ($('tab_li_' + i)) {
-                         $('tab_li_' + i).className = 'switchNavItem'
-                         $('hot_layer_' + i).style.display = 'none';
-                     }
-                 }
-             }
-         }
+    <script type="text/javascript">
+        function tabselect(id) {
+            $('hot_layer_' + id).style.display = ''
+            $('tab_li_' + id).className = 'current'
+            for (var i = 1; i <= 5; i++) {
+                if (i != id) {
+                    if ($('tab_li_' + i)) {
+                        $('tab_li_' + i).className = 'switchNavItem'
+                        $('hot_layer_' + i).style.display = 'none';
+                    }
+                }
+            }
+        }
     </script>
     <script type="text/javascript">
         for (var i = 1; i <= 5; i++) {
@@ -49,7 +49,6 @@
             }
         }
     </script>
-
     <script type="text/javascript">
 <!--
         var arVersion = navigator.appVersion.split("MSIE");
@@ -73,30 +72,50 @@
         }
  -->
     </script>
-
 </head>
 <body class="mainbody">
-    <div style="text-align:center;">
-        <img src="images/firstpage/banner.gif" alt= "" style="height: 100px; width:1002px;" />
+    <div style="text-align: center;">
+        <img src="images/firstpage/banner.gif" alt="" style="height: 100px; width: 1002px;" />
     </div>
-    <div style=" text-align:center; ">
-    <div class="wrapper" style="width:1002px; text-align:left; ">
-        <div class="innerWrapper">
-            <ul id="navigator">
-                <li class="youAreHere"><a href="">社区首页 </a><span class="sep">|</span></li>
-                <li><a href="/blog">网站博客 </a><span class="sep">|</span></li>
-                <li><a href="/music">好听音乐 </a><span class="sep">|</span></li>
-                <li><a href="/code">网页特效 </a><span class="sep">|</span></li>
-                <li><a href="/about">关于我们 </a></li>
-            </ul>
+    <div style="text-align: center;">
+        <div class="wrapper" style="width: 1002px; text-align: left;">
+            <div class="innerWrapper">
+                <ul id="navigator">
+                    <li class="youAreHere"><a href="">社区首页 </a><span class="sep">|</span></li>
+                    <li><a href="/blog">网站博客 </a><span class="sep">|</span></li>
+                    <li><a href="/music">好听音乐 </a><span class="sep">|</span></li>
+                    <li><a href="/code">网页特效 </a><span class="sep">|</span></li>
+                    <li><a href="/about">关于我们 </a></li>
+                </ul>
+            </div>
+            <div class="shadowWrapper">
+            </div>
         </div>
-        <div class="shadowWrapper">
-        </div>
     </div>
-    </div>
-
     <table width="1002px" cellpadding="3" cellspacing="0" style="background-color: White;"
         align="center">
+                <tr>
+            <td>
+	<div class="w_ctr">
+		<div class="JQ-slide">
+			<ul class="JQ-slide-content">
+				<li><a href="#"><img src="useruploadfiles\admin\image\Desert.jpg" width="297" height="181" alt="asfsdfsafd" /><span>abc</span></a>	</li>
+				<li><a href="#"><img src="useruploadfiles\admin\image\2308.jpg" width="297" height="181" alt="ttttttttttt"/><span>ddddd</span></a></li>
+				<li><a href="#"><img src="useruploadfiles\admin\image\2304.jpg" width="297" height="181" alt="tttttttt" /><span>ttttttttttt</span></a></li>
+				<li><a href="#"><img src="useruploadfiles\admin\image\SQLServerProfiler_demo_2.gif" width="297" height="181" alt="ddddddddddddd" /><span>dddddddddddd</span></a></li>
+			</ul>
+			<ul class="JQ-slide-nav">
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</div>
+            </td>
+            <td>
+            </td>
+        </tr>
         <tr>
             <td colspan="2">
                 <form id="Form2" runat="server" enctype="multipart/form-data" class="nomargin">
@@ -104,6 +123,7 @@
                 </form>
             </td>
         </tr>
+
         <tr>
             <td colspan="2">
                 <uc1:pagefooter ID="Pagefooter1" runat="server"></uc1:pagefooter>
