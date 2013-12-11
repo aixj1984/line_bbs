@@ -480,6 +480,7 @@
     <Content Include="images\firstpage\园区项目.gif" />
     <Content Include="images\firstpage\nav_l.gif" />
     <Content Include="images\firstpage\社区管理.gif" />
+    <Content Include="script\slide\focus_li.png" />
     <Content Include="images\folder.gif" />
     <Content Include="images\ForumIcons\icon_biztalk.gif" />
     <Content Include="images\ForumIcons\icon_ebook.gif" />
@@ -597,17 +598,14 @@
     <Content Include="pages\register.ascx" />
     <Content Include="pages\rsstopic.ascx" />
     <Content Include="pages\rules.ascx" />
-    <Content Include="script\basic-jquery-slider-master\bjqs.css" />
-    <Content Include="script\basic-jquery-slider-master\demo.css" />
-    <Content Include="script\basic-jquery-slider-master\js\bjqs-1.3.js" />
-    <Content Include="script\basic-jquery-slider-master\js\bjqs-1.3.min.js" />
-    <Content Include="script\basic-jquery-slider-master\js\libs\jquery.secret-source.min.js" />
     <Content Include="script\forum.js" />
     <Content Include="script\jquery-1.8.2\jquery-1.8.2.js" />
     <Content Include="script\jquery-1.8.2\jquery-1.8.2.min.js" />
     <Content Include="pages\search.ascx" />
     <Content Include="pages\topics.ascx" />
     <Content Include="rss.xsl" />
+    <Content Include="script\slide\jquery.slide.js" />
+    <Content Include="script\slide\slide.css" />
     <Content Include="templates\changeemail.txt" />
     <Content Include="templates\emailtopic.txt" />
     <Content Include="templates\pmnotification.txt" />

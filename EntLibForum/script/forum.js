@@ -25,6 +25,9 @@ $(document).ready(function () {
         timer: 2000
     });
 
+    $("#tabs").tabs();
+    $("#tab_hot_user").tabs();
+
     param = window.location.search;
     if (param == "" || param.indexOf("?g=forum") >= 0) {
         get_forum_list(g_BoardID, getQueryString("c"), g_UserID);

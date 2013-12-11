@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/forumhot.css" type="text/css" />
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <link rel="Stylesheet" href="editors/FCKEditorV2/editor/css/NaviTop.css" type="text/css" />
-
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/common.js"></script>
     <script type="text/javascript" src="editors/FCKEditorV2/editor/js/slide.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
         media="screen" />
     <script src="./script/jquery-1.8.2/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="script/jquery-ui/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    <link href="script/jquery-ui/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
     <script src="script/slide/jquery.slide.js" type="text/javascript"></script>
     <script src="./script/forum.js" type="text/javascript"></script>
     <link href="script/slide/slide.css" rel="stylesheet" type="text/css" />
-
     <script type="text/javascript">
         function tabselect(id) {
             $('hot_layer_' + id).style.display = ''
@@ -94,26 +94,48 @@
     </div>
     <table width="1002px" cellpadding="3" cellspacing="0" style="background-color: White;"
         align="center">
-                <tr>
+        <tr>
             <td>
-	<div class="w_ctr">
-		<div class="JQ-slide">
-			<ul class="JQ-slide-content">
-				<li><a href="#"><img src="useruploadfiles\admin\image\Desert.jpg" width="297" height="181" alt="asfsdfsafd" /><span>abc</span></a>	</li>
-				<li><a href="#"><img src="useruploadfiles\admin\image\2308.jpg" width="297" height="181" alt="ttttttttttt"/><span>ddddd</span></a></li>
-				<li><a href="#"><img src="useruploadfiles\admin\image\2304.jpg" width="297" height="181" alt="tttttttt" /><span>ttttttttttt</span></a></li>
-				<li><a href="#"><img src="useruploadfiles\admin\image\SQLServerProfiler_demo_2.gif" width="297" height="181" alt="ddddddddddddd" /><span>dddddddddddd</span></a></li>
-			</ul>
-			<ul class="JQ-slide-nav">
-				<li class="on">1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-			</ul>
-		</div>
-	</div>
+                <div class="w_ctr">
+                    <div class="JQ-slide">
+                        <ul class="JQ-slide-content">
+                            <li><a href="#">
+                                <img src="useruploadfiles\admin\image\Desert.jpg" width="297" height="181" alt="asfsdfsafd" /><span>abc</span></a>
+                            </li>
+                            <li><a href="#">
+                                <img src="useruploadfiles\admin\image\2308.jpg" width="297" height="181" alt="ttttttttttt" /><span>ddddd</span></a></li>
+                            <li><a href="#">
+                                <img src="useruploadfiles\admin\image\2304.jpg" width="297" height="181" alt="tttttttt" /><span>ttttttttttt</span></a></li>
+                            <li><a href="#">
+                                <img src="useruploadfiles\admin\image\SQLServerProfiler_demo_2.gif" width="297" height="181"
+                                    alt="ddddddddddddd" /><span>dddddddddddd</span></a></li>
+                        </ul>
+                        <ul class="JQ-slide-nav">
+                            <li class="on">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>
             </td>
             <td>
+                <div id="tabs" style=" float:left; width:500px; height:192px;">
+	                <ul>
+		                <li><a href="#tabs-1">First</a></li>
+		                <li><a href="#tabs-2">Second</a></li>
+		                <li><a href="#tabs-3">Third</a></li>
+	                </ul>
+	                <div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+	                <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+	                <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+                </div>
+                <div id="tab_hot_user" style=" float:left;width:160px;height:192px; margin-left:8px;">
+	                <ul>
+		                <li><a href="#tabs-4">First</a></li>
+	                </ul>
+	                <div id="tabs-4">boris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
             </td>
         </tr>
         <tr>
@@ -123,7 +145,6 @@
                 </form>
             </td>
         </tr>
-
         <tr>
             <td colspan="2">
                 <uc1:pagefooter ID="Pagefooter1" runat="server"></uc1:pagefooter>
