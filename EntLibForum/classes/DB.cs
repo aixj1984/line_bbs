@@ -1151,6 +1151,66 @@ namespace yaf
 				return GetData( cmd );
 			}
 		}
+        // add by zhiweiw get 24 hour 
+        /// <summary>
+        /// Gets a list of topics in a forum
+        /// </summary>
+        /// <param name="boardID">boardID</param>
+        /// <param name="ForumID">forumID</param>
+        /// <returns>DataTable with list of topics from a forum</returns>
+        static public DataTable topic_list_least(object boardID)
+        {
+            using (SqlCommand cmd = new SqlCommand("yaf_topic_list_latest"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BoardID", boardID);
+                return GetData(cmd);
+            }
+        }
+        static public DataTable user_list_hot(object boardID)
+        {
+            using (SqlCommand cmd = new SqlCommand("yaf_topic_count_byuser"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BoardID", boardID);
+                return GetData(cmd);
+            }
+        }
+
+        
+        /// <summary>
+        /// Gets a list of topics in a forum
+        /// </summary>
+        /// <param name="boardID">boardID</param>
+        /// <param name="ForumID">forumID</param>
+        /// <returns>DataTable with list of topics from a forum</returns>
+        static public DataTable topic_list_hot(object boardID)
+        {
+            using (SqlCommand cmd = new SqlCommand("yaf_topic_list_hot"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BoardID", boardID);
+                return GetData(cmd);
+            }
+        }
+        static public DataTable topic_list_groom(object boardID)
+        {
+            using (SqlCommand cmd = new SqlCommand("yaf_topic_list_groom"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BoardID", boardID);
+                return GetData(cmd);
+            }
+        }
+        static public DataTable topic_message_image(object boardID)
+        {
+            using (SqlCommand cmd = new SqlCommand("yaf_get_image"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BoardID", boardID);
+                return GetData(cmd);
+            }
+        }
 		/// <summary>
 		/// Listes all forums accessible to a user
 		/// </summary>

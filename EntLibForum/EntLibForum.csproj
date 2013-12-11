@@ -146,6 +146,7 @@
       <SubType>UserControl</SubType>
     </Content>
     <Content Include="css\firstpage\firstpage.css" />
+    <Content Include="Database\存储过程.sql" />
     <Content Include="default.aspx" />
     <Content Include="defs\asm.def" />
     <Content Include="defs\asp.def" />
@@ -1204,6 +1205,7 @@
     <Compile Include="classes\IForumUser.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="classes\ImageUtility.cs" />
     <Compile Include="classes\Localizer.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2216,6 +2218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="cash\" />
     <Folder Include="images\avatars\" />
     <Folder Include="images\emoticons\" />
     <Folder Include="images\ranks\" />

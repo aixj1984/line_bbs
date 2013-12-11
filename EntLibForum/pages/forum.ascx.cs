@@ -8,6 +8,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.IO;
 
 namespace yaf.pages
 {
@@ -160,23 +162,235 @@ namespace yaf.pages
 			UpdateActiveDiscussionsPanel();
 			UpdateInformationPanel();
 
-			DataBind();
-		}
+            DataBind();
+            HotContentGenerate();
+        }
         // add by zhiweiw 20131206
         private void HotContentGenerate()
         {
             //
-            lblHotInfo.Text += "<table>";
+            lblHotInfo.Text = "";
+            String lblHotInfo_HTML = "";
+
+            lblHotInfo.Text += "<div class='main cl forumhot'>";
+            lblHotInfo_HTML += "<table width='100%' cellspacing='0' cellpadding='0'>";
+            lblHotInfo_HTML += "<tbody><tr> <td width='375px'>";
+            lblHotInfo_HTML += "<div class='title_bar xg2'>最新图片</div>";
+            lblHotInfo_HTML += "<div id='focusViwer'><div id='imgADPlayer'></div>";
+            lblHotInfo_HTML += "<script  type='text/javascript'>";
+            lblHotInfo_HTML += GetImageInfo();
+            // 需要动态生成 
+            lblHotInfo.Text += "for (i = 0; i < hotimagesarray.length; i++) {";
+            lblHotInfo.Text += "PImgPlayer.addItem(\"\" + hotimagesarray[i].title.substr(0,20) + \"\", \"\" + hotimagesarray[i].url + \"\", \"\" + hotimagesarray[i].img + \"\");";
+            lblHotInfo.Text += "} if(hotimagesarray.length>0) PImgPlayer.init(\"imgADPlayer\", 360, 270);";
+
+            lblHotInfo.Text += "</script></div></td>";
+            lblHotInfo.Text += "<td> <div class='title_bar xg2'>";
+            lblHotInfo.Text += "<ul id='tabswi1_A' class='tab_forumhot'>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_1'><a href='javascript:;'  onmousemove='tabselect(1)'>24小时新帖</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_2'><a href='javascript:;'  onmousemove='tabselect(2)'>热门帖子</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_3'><a href='javascript:;'  onmousemove='tabselect(3)'>推荐帖子</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_4'><a href='javascript:;'  onmousemove='tabselect(4)'>用户发帖排行</a></li>";
+            lblHotInfo.Text += "</ul></div>";
+            lblHotInfo.Text += "<div id='tabswi1_B' class='pd cl'>";
+            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_1' id='hot_layer_1'  style='display:none'>";
+            lblHotInfo.Text += "<ul class='hotlist'>";
+            lblHotInfo.Text += GetLeastInfo();
+            //lblHotInfo.Text += "<li><a href='/showforum-2.aspx' target='_blank'>【默认版块】</a><a href='/showtopic-3.aspx' target='_blank' class='xg2'>测试图片1</a></li>";
+
+            lblHotInfo.Text += "</div>";
+            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_2' id='hot_layer_2'  style='display:none'>";
+
+            //lblHotInfo.Text += "<dl class='i_hot'>";
+            ////<dt class="xg2"><a href="/showtopic-3.aspx" target="_blank">测试图片1</a></dt>
+            ////<dd>[图片]</dd>
+            //lblHotInfo.Text += "</dl>";
+            lblHotInfo.Text += "<ul class='hotlist'>";
+            //lblHotInfo.Text += "<li><a href='/showforum-2.aspx' target='_blank'>【默认版块】</a><a href='/showtopic-3.aspx' target='_blank' class='xg2'>南非15日举行世纪葬礼 规格预计不逊教皇</a></li>";
+            lblHotInfo.Text += GetHotInfo();
+            
+            lblHotInfo.Text += "</div>";
+            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_3' id='hot_layer_3'  style='display:none'>";
+            lblHotInfo.Text += "<ul class='hotlist'>";
+            lblHotInfo.Text += GetGroomInfo();
+            //动态加载
+            lblHotInfo.Text += "</div>";
+            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_4' id='hot_layer_4'  style='display:none'>";
+            lblHotInfo.Text += "<ul class='hotlist cl one'>";
+            lblHotInfo.Text += GetHotUser();
+
+            lblHotInfo.Text += "</div>";
+
+            lblHotInfo.Text += "</div>";
+            lblHotInfo.Text += "</td>";
+            lblHotInfo.Text += "</tr>";
+            lblHotInfo.Text += "</tbody>";
+            lblHotInfo.Text += "</table>";
+            lblHotInfo.Text += "</div>";
         }
-		protected string FormatLastPost( System.Data.DataRow row )
-		{
-			if ( !row.IsNull( "LastPosted" ) )
-			{
-				string minipost;
-				if ( DateTime.Parse( row ["LastPosted"].ToString() ) > Mession.LastVisit )
-					minipost = GetThemeContents( "ICONS", "ICON_NEWEST" );
-				else
-					minipost = GetThemeContents( "ICONS", "ICON_LATEST" );
+        protected string GetImageInfo()
+        {
+            int count = 0;
+            DataTable leastInfo = DB.topic_message_image(PageBoardID);
+            string return_str = null;
+            return_str = " var hotimagesarray = eval('[";
+            //lblHotInfo.Text += " var hotimagesarray = eval('[{title:\"测试图片2\",img:\"cache/rotatethumbnail/r_629191002125.jpg\",url:\"showtopic-4.aspx\"}]');";
+            int rowcount = leastInfo.Columns.Count;
+            int zcount = 0;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                zcount++;
+                if (count <= 5)
+                {
+                    //获得文件名
+                    string message = dr["Message"].ToString();
+                    string username = dr["name"].ToString();
+                    string title = dr["topic"].ToString();
+                    string topicId = dr["TopicID"].ToString();
+                    string path = "";
+                    string fileName = "";
+                    GetFilePathAndFileName(ref path, ref fileName, message, username);
+                    if (path != null && fileName != null)
+                    {
+                        string FilePath = Server.MapPath("./") + path;
+                        if (File.Exists(FilePath)) //判断当前JPG文件是否存在
+                        {
+                            string rarpath = Server.MapPath("./") + "cash/" + username + "/R_" + fileName;
+                            string rarfolorpath = Server.MapPath("./") + "cash/" + username;
+                            if (!File.Exists(rarpath))
+                            {
+                                Directory.CreateDirectory(rarfolorpath);
+                                ImageUtility.ThumbAsJPG(FilePath, rarpath, 360, 270);
+                            }
+                            if (count == 5 || zcount == rowcount)
+                            {
+                                return_str += "{title:\"" + title + "\",img:\"" + "cash/" + username + "/R_" + fileName + "\",url:\"default.aspx?g=posts&t=" + topicId + "\"}";
+                            }
+                            else
+                            {
+                                return_str += "{title:\"" + title + "\",img:\"" + "cash/" + username + "/R_" + fileName + "\",url:\"default.aspx?g=posts&t=" + topicId + "\"},";
+                            } 
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return_str += "]');";
+            return (return_str);
+        }
+        private void GetFilePathAndFileName(ref string path, ref string name, string message, string username)
+        {
+
+           //path = Regex.Replace(message, @"(?i)(<img[^>]*?src=(['""\s]?))((useruploadfiles/)?([^/\\]+[/\\])+?)([^\.]+\.[^'""]+)\2([^>]*?>)", @"$1file://\\Server\public\soft\$6$2$7");
+            int firstPos = message.IndexOf("useruploadfiles/" + username + "/image/");
+            string lower = message.ToLower();
+            //{ "bmp", "gif", "jpeg", "jpg", "png" }
+            int secondposjpg = lower.IndexOf(".jpg");
+            int seconfposgif = lower.IndexOf(".gif");
+            int seconfposjpeg = lower.IndexOf(".jpeg");
+            int seconfposbmp = lower.IndexOf(".bmp");
+            int secondPospng = lower.IndexOf(".png");
+            int small_pos = 0x7FFFFFFF;
+            int imglength = 0;
+            if (secondposjpg != -1 && small_pos > secondposjpg)
+            {
+                small_pos = secondposjpg;
+                imglength = 4;
+            }
+            if(seconfposgif != -1 && small_pos > seconfposgif)
+            {
+                 small_pos = seconfposgif;
+                 imglength = 4;
+            }
+            if (seconfposjpeg != -1 && small_pos > seconfposjpeg)
+            {
+                small_pos = seconfposjpeg;
+                imglength = 5;
+            }
+            if (seconfposbmp != -1 && small_pos > seconfposbmp)
+            {
+                small_pos = seconfposbmp;
+                imglength = 4;
+            }
+            if (secondPospng != -1 && small_pos > secondPospng)
+            {
+                small_pos = secondPospng;
+                imglength = 4;
+            }
+            if (small_pos != 0x7FFFFFFF)
+            {
+                path = message.Substring(firstPos, small_pos - firstPos + imglength);
+                name = path.Substring(path.LastIndexOf("/"), path.Length - path.LastIndexOf("/"));
+                name = name.Trim('/');
+                int j = 0;
+            }
+            else
+            {
+                path = null;
+                name = null;
+            }
+        }
+        protected string GetLeastInfo()
+        {
+            DataTable leastInfo = DB.topic_list_least(PageBoardID);
+            string return_str = null;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
+                return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
+                return_str += dr["Topic"].ToString() + "</a></li>";
+            }
+            return (return_str);
+        }
+        protected string GetHotInfo()
+        {
+            DataTable leastInfo = DB.topic_list_hot(PageBoardID);
+            string return_str = null;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
+                return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
+                return_str += dr["Topic"].ToString() + "</a></li>";
+            }
+            return (return_str);
+        }
+        protected string GetGroomInfo()
+        {
+            DataTable leastInfo = DB.topic_list_groom(PageBoardID);
+            string return_str = null;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
+                return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
+                return_str += dr["Topic"].ToString() + "</a></li>";
+            }
+            return (return_str);
+        }
+        protected string GetHotUser()
+        {
+            DataTable leastInfo = DB.user_list_hot(PageBoardID);
+            string return_str = null;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                return_str += "<li> <em>[ " + dr["count"].ToString() + "]</em>";
+                return_str += "<img src='/images/noavatar_small.gif' width='16' height='16'>";
+                return_str += "<a href='/default.aspx?g=profile&u=" + dr["userid"].ToString() + "' target='_blank'>" + dr["name"].ToString() + "</a></li>";
+            }
+            return (return_str);
+        }
+        // end add by zhiweiw 
+        protected string FormatLastPost(System.Data.DataRow row)
+        {
+            if (!row.IsNull("LastPosted"))
+            {
+                string minipost;
+                if (DateTime.Parse(row["LastPosted"].ToString()) > Mession.LastVisit)
+                    minipost = GetThemeContents("ICONS", "ICON_NEWEST");
+                else
+                    minipost = GetThemeContents("ICONS", "ICON_LATEST");
 
 				return String.Format( "{0}<br/>{1}<br/>{2}&nbsp;<a title=\"{4}\" href=\"{5}\"><img src=\"{3}\"></a>",
 					FormatDateTimeTopic( Convert.ToDateTime( row ["LastPosted"] ) ),

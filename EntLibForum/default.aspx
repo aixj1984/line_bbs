@@ -10,17 +10,49 @@
     <!-- If you don't want the forum to set the page title, you can remove runat and id -->
     <title>文谷社区</title>
     <asp:Literal ID="Style" runat="Server" />
+    <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/forumhot.css" type="text/css" />
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <link rel="Stylesheet" href="editors/FCKEditorV2/editor/css/NaviTop.css" type="text/css" />
 
-    <script type="text/javascript" src="editors/FCKEditorV2/editor/js/jquery.1.4.2-min.js"
-        charset="UTF-8"></script>
+    <!--<script type="text/javascript" src="editors/FCKEditorV2/editor/js/jquery.1.4.2-min.js"
+        charset="UTF-8"></script>-->
+
+    <script type="text/javascript" src="editors/FCKEditorV2/editor/js/common.js"></script>
+
+    <script type="text/javascript" src="editors/FCKEditorV2/editor/js/slide.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
         media="screen" />
 
     <script src="./script/jquery-1.8.2/jquery-1.8.2.js" type="text/javascript"></script>
     <script src="./script/forum.js" type="text/javascript"></script>
+
+     <script type="text/javascript">
+         function tabselect(id) {
+             $('hot_layer_' + id).style.display = ''
+             $('tab_li_' + id).className = 'current'
+             for (var i = 1; i <= 5; i++) {
+                 if (i != id) {
+                     if ($('tab_li_' + i)) {
+                         $('tab_li_' + i).className = 'switchNavItem'
+                         $('hot_layer_' + i).style.display = 'none';
+                     }
+                 }
+             }
+         }
+    </script>
+    <script type="text/javascript">
+        for (var i = 1; i <= 5; i++) {
+            try {
+                $('hot_layer_' + i).style.display = ''
+                $('tab_li_' + i).className = 'current'
+                break;
+            }
+            catch (e) {
+                continue;
+            }
+        }
+    </script>
 
     <script type="text/javascript">
 <!--

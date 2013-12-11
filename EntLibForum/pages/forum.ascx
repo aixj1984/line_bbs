@@ -76,8 +76,9 @@
     {
     }
 </style>
+
 <div>
-    <asp:Label ID="lblHotInfo" runat="server" Text="ÍøÕ¾ÈÈµã"></asp:Label>
+    <asp:Label ID="lblHotInfo" runat="server" Text=""></asp:Label>
 </div>
 <yaf:PageLinks runat="server" ID="PageLinks" />
 <div id="Welcome" runat="server">
