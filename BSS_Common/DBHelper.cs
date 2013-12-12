@@ -29,7 +29,10 @@ namespace Trilink.Common
         public DBHelper()
         {
             DataBaseConnectMap = new Dictionary<string, string>();
-            DataBaseConnectMap.Add("EntLib_BBS", "Data Source=192.168.186.237;Initial Catalog=EntLib_BBS;Persist Security Info=True;User ID=sa;Password=intple"); //BBS
+
+            string bbs_con_str = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["BBS_ConnectionString"].ToString();
+            //DataBaseConnectMap.Add("EntLib_BBS", "Data Source=192.168.186.237;Initial Catalog=EntLib_BBS;Persist Security Info=True;User ID=sa;Password=intple"); //BBS
+            DataBaseConnectMap.Add("EntLib_BBS", bbs_con_str); //BBS
             DataBaseConnectMap.Add("TPH", "Data Source=192.168.1.111;Initial Catalog=TPH;Persist Security Info=True;User ID=sa;Password=trilink123!@#");         //TPH数据库
             DataBaseConnectMap.Add("TPH_ATT", "Data Source=192.168.1.111;Initial Catalog=TPH_ATT;Persist Security Info=True;User ID=sa;Password=trilink123!@#");//考勤数据库
             DataBaseConnectMap.Add("Park_V1902W", "Data Source=192.168.1.111;Initial Catalog=Park_V1902W;Persist Security Info=True;User ID=sa;Password=trilink123!@#");//停车数据库
