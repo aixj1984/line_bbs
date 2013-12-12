@@ -11,12 +11,15 @@
     .tbody_tr
     {
         text-align: left;
-        border-bottom: 1px dotted black;
-        line-height: 27px;
+        border-bottom: 1px dotted black ;
+         _display:inline-block;/*’Î∂‘ie6*/
+        border-bottom-color:#ff0000;
+        line-height: 20px;
     }
     .notopic
     {
         width: 20%;
+        height:80px;
     }
     .notoinfo
     {

@@ -62,12 +62,16 @@ namespace yaf.pages
 					// PageLinks.AddLink( BoardSettings.Name, Forum.GetLink( Pages.forum ) );
                     PageLinks.AddLink(BoardSettings.Name, "/");
 
-					if ( PageCategoryID != 0 )
-					{
-						PageLinks.AddLink( PageCategoryName, Forum.GetLink( Pages.forum, "c={0}", PageCategoryID ) );
-						Welcome.Visible = false;
+                    if (PageCategoryID != 0)
+                    {
+                        PageLinks.AddLink(PageCategoryName, Forum.GetLink(Pages.forum, "c={0}", PageCategoryID));
+                        Welcome.Visible = false;
                         load_time_info = "";//Çå¿ÕdivÄÚÈÝ
-					}
+                    }
+                    else
+                    {
+                        PageLinks.Visible = false;
+                    }
 				}
                 LoadTimeInfo = load_time_info;
 

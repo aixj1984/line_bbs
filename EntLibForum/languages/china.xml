@@ -50,8 +50,8 @@
 	</page>
 	<page name="ICONLEGEND">
 		<!-- Common icon texts -->
-		<Resource tag="NEW_POSTS">有新贴</Resource>
-		<Resource tag="NO_NEW_POSTS">无新贴</Resource>
+		<Resource tag="NEW_POSTS">有新贴，新窗口打开</Resource>
+		<Resource tag="NO_NEW_POSTS">无新贴，新窗口打开</Resource>
 		<Resource tag="ANNOUNCEMENT">公告</Resource>
 		<Resource tag="ANNOUNCEMENT_NEW">公告 (有新贴)</Resource>
 		<Resource tag="NEW_POSTS_LOCKED">有新贴 (锁定)</Resource>

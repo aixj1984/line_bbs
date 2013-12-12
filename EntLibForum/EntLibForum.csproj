@@ -823,7 +823,9 @@
     <Content Include="themes\djrm1\vote_lcap.gif" />
     <Content Include="themes\djrm1\vote_rcap.gif" />
     <Content Include="themes\djrm1\voting_bar.gif" />
-    <Content Include="themes\flatearth.xml" />
+    <Content Include="themes\flatearth.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="themes\FlatEarth\bg_header2.png" />
     <Content Include="themes\FlatEarth\bg_header5.png" />
     <Content Include="themes\FlatEarth\b_attachments.png" />

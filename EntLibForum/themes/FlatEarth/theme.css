@@ -204,12 +204,16 @@ tr.post_alt:hover
 }
 
 table.content td {
-	padding: 5px;
+    padding: 8px 0px;
+    border-bottom: 1px dotted rgb(235, 235, 235);
 }
 
 /* links inside content table*/
-.content a			{ color: #579000; text-decoration: underline; }
-.content a:hover	{ color: #579000; text-decoration: none; }
+.content a			{ color: #579000; text-decoration: none; font-family: Tahoma,'Microsoft Yahei','Simsun'; font-size: 14px;}
+.content a:hover	{ color: #579000; text-decoration: none; font-family: Tahoma,'Microsoft Yahei','Simsun'; font-size: 14px; }
+
+
+
 
 /* used for quoting messages */
 .quote {

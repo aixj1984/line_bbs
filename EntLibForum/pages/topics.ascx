@@ -1,6 +1,7 @@
 <%@ Control Language="c#" Codebehind="topics.ascx.cs" AutoEventWireup="True" Inherits="yaf.pages.topics" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf.controls" Assembly="yaf" %>
 <%@ Register TagPrefix="yaf" TagName="ForumList" Src="../controls/ForumList.ascx" %>
+</style>
 <yaf:PageLinks runat="server" ID="PageLinks" />
 <asp:PlaceHolder runat="server" ID="SubForums" Visible="false">
     <table class="content" cellspacing="1" cellpadding="0" width="100%">
@@ -50,7 +51,7 @@
         <td class="header2" align="left" >
             话题
         </td>
-        <td class="header2" align="left" width="10%">
+        <td class="header2" align="left" width="17%">
             话题发起人
         </td>
         <td class="header2" align="middle" width="7%">
@@ -59,7 +60,7 @@
         <td class="header2" align="middle" width="7%">
             浏览
         </td>
-        <td class="header2" align="middle" width="25%">
+        <td class="header2" align="left" width="17%">
             最后发表</td>
     </tr>
     <asp:Repeater ID="Announcements" runat="server">

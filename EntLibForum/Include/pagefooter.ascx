@@ -1,26 +1,25 @@
-<%@ OutputCache Duration="600" VaryByParam="none" %>
+ï»¿<%@ OutputCache Duration="600" VaryByParam="none" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="pagefooter.ascx.cs"     Inherits="yaf.Include.pagefooter" %>
 <link rel="stylesheet" href="../editors/FCKEditorV2/editor/css/public.css" type="text/css" />
 <table width="100%" style="text-align: center; background-color:Gray;" cellspacing="0"
     cellpadding="1">
     <tr>
-        <td style="background-image: url(/images/background/navbar_bg.gif); background-repeat: repeat-x;
-            height: 35px;" class="textdesc">
-            <a href="http://www.hubeici.com/about_us/" target="_blank">¹ØÓÚÎÒÃÇ</a> | <a href="mailto:hubeici@163.com?subject=Contact Us&body=Contact Us"
-                target="_blank">ÁªÏµÎÒÃÇ</a> | <a href="http://weibo.com/hbci" target="_blank">ĞÂÀËÎ¢²©</a>
+        <td style="background-image: url(/images/background/navbar_bg.gif); background-repeat: repeat-x;" class="textdesc">
+            <a href="http://www.hubeici.com/about_us/" target="_blank">å…³äºæˆ‘ä»¬</a> | <a href="mailto:hubeici@163.com?subject=Contact Us&body=Contact Us"
+                target="_blank">è”ç³»æˆ‘ä»¬</a> | <a href="http://weibo.com/hbci" target="_blank">æ–°æµªå¾®åš</a>
         </td>
     </tr>
-    <tr>
+    <tr style="background: url('images/firstpage/bottom_line.gif'); background-repeat:repeat;width: 100%; ">
         <td>
             <div class="foot2_a2">
                 <div id="center">
-                    Ö÷¹Ü£ºÖĞ¹²ºş±±Ê¡Î¯Ğû´«²¿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ö÷°ì£ºÖĞ¹²ºş±±Ê¡Î¯Ğû´«²¿</div>
+                    ä¸»ç®¡ï¼šä¸­å…±æ¹–åŒ—çœå§”å®£ä¼ éƒ¨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ä¸»åŠï¼šä¸­å…±æ¹–åŒ—çœå§”å®£ä¼ éƒ¨</div>
                 <div id="center">
-                    ³Ğ°ì£ººş±±ÈÕ±¨´«Ã½¼¯ÍÅ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ºş±±Ê¡ÎÄ»¯²úÒµ·¢Õ¹ĞÅÏ¢ÖĞĞÄ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ºş±±ÎÄ¹ÈÎÄ»¯²úÒµ·¢Õ¹ÓĞÏŞ¹«Ë¾</div>
+                    æ‰¿åŠï¼šæ¹–åŒ—æ—¥æŠ¥ä¼ åª’é›†å›¢&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ¹–åŒ—çœæ–‡åŒ–äº§ä¸šå‘å±•ä¿¡æ¯ä¸­å¿ƒ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ¹–åŒ—æ–‡è°·æ–‡åŒ–äº§ä¸šå‘å±•æœ‰é™å…¬å¸</div>
                 <div id="center">
-                    Copyright ? 2012-2013 www.hubeici.com All Rights Reserved.</div>
+                    Copyright Â© 2012-2013 www.hubeici.com All Rights Reserved.</div>
                 <div id="center">
-                    ¶õICP±¸12015487ºÅ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    é„‚ICPå¤‡12015487å·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
         </td>
     </tr>
