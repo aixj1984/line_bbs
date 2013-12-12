@@ -77,7 +77,7 @@
 	</page>
 	<page name="DEFAULT">
 		<!-- default.aspx -->
-    <Resource tag="MAIN_FORUM_RSS">主论坛 RSS</Resource>
+    <Resource tag="MAIN_FORUM_RSS">主论坛</Resource>
 		<Resource tag="FORUM">论坛</Resource>
 		<Resource tag="TOPICS">话题</Resource>
 		<Resource tag="POSTS">贴数</Resource>
@@ -94,7 +94,7 @@
 		<Resource tag="NO_POSTS">无新贴</Resource>
 		<Resource tag="UNREAD1">您有 {0} 个未读悄悄话.</Resource>
 		<Resource tag="UNREAD0">您有 {0} 个未读悄悄话.</Resource>
-		<Resource tag="INFORMATION">信息</Resource>
+		<Resource tag="INFORMATION">站点统计</Resource>
 		<Resource tag="STATS">统计</Resource>
 		<Resource tag="ACTIVE_USERS">在线用户</Resource>
 		<Resource tag="ACTIVE_USERS_COUNT1">{0:N0} 人在线</Resource>

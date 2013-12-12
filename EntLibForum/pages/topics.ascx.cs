@@ -303,9 +303,12 @@ namespace yaf.pages
 			HandleWatchForum();
 		}
 
-		protected string GetSubForumTitle()
-		{
-			return string.Format( GetText( "SUBFORUMS" ), PageForumName );
-		}
+        protected string GetSubForumTitle()
+        {
+            //string forum_icon_html = "<div class=\"titlebar\" style=\"height: 39px; margin-top:2px;background-image: url('images/firstpage/" + PageForumIcon + "'); background-repeat: no-repeat;\" > </div> ";
+
+            //return forum_icon_html;
+            return string.Format( GetText( "SUBFORUMS" ), PageForumName );
+        }
 	}
 }

@@ -480,6 +480,22 @@
     <Content Include="images\firstpage\园区项目.gif" />
     <Content Include="images\firstpage\nav_l.gif" />
     <Content Include="images\firstpage\社区管理.gif" />
+    <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="script\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="script\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="script\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="script\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="script\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="script\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.css" />
+    <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.min.js" />
     <Content Include="script\slide\focus_li.png" />
     <Content Include="images\folder.gif" />
     <Content Include="images\ForumIcons\icon_biztalk.gif" />
@@ -517,7 +533,9 @@
     <Content Include="languages\china.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="languages\english.xml" />
+    <Content Include="languages\english.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="NaviTop.aspx" />
     <Content Include="NaviTop.htm" />
     <Content Include="pages\active.ascx" />

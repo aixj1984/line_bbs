@@ -8,7 +8,7 @@
             <td colspan="5">
                 <%=GetSubForumTitle()%>
             </td>
-        </tr>
+        </tr>>
         <tr class="header2">
             <td width="1%">
                 &nbsp;</td>
@@ -47,7 +47,7 @@
     <tr>
         <td class="header2" width="1%">
             &nbsp;</td>
-        <td class="header2" align="left">
+        <td class="header2" align="left" >
             ª∞Ã‚
         </td>
         <td class="header2" align="left" width="10%">

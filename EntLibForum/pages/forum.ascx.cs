@@ -32,10 +32,20 @@ namespace yaf.pages
 				{
 					Forum.Redirect( Pages.login, "ReturnUrl={0}", Request.RawUrl );
 				}
+                //显示时间控制
+                string load_time_info = " &nbsp;<img src=\"../images/common/arrow2.gif\" alt=\"\" />&nbsp; ";
+                load_time_info += String.Format( GetText( "CURRENT_TIME" ), FormatTime( DateTime.Now ) );
+                //if (PageUserID == 1)//如果是游客，则显示当前时间，否则，显示上次登录时间
+                {
+                    load_time_info += "<span style=\"padding-left: 20px;\">";
+                    load_time_info += "<img src=\"../images/common/arrow2.gif\" alt=\"\" />";
+                    load_time_info += String.Format(GetText("last_visit"), FormatDateTime(Mession.LastVisit));
+                    load_time_info += "    </span>";
+                }
 
-				TimeNow.Text = String.Format( GetText( "CURRENT_TIME" ), FormatTime( DateTime.Now ) );
-				TimeLastVisit.Text = String.Format( GetText( "last_visit" ), FormatDateTime( Mession.LastVisit ) );
-				MarkAll.Text = GetText( "MARKALL" );
+                //TimeNow.Text = String.Format( GetText( "CURRENT_TIME" ), FormatTime( DateTime.Now ) );
+                //TimeLastVisit.Text = String.Format( GetText( "last_visit" ), FormatDateTime( Mession.LastVisit ) );
+				//MarkAll.Text = GetText( "MARKALL" );
 
 				if ( UnreadPrivate > 0 )
 				{
@@ -56,8 +66,10 @@ namespace yaf.pages
 					{
 						PageLinks.AddLink( PageCategoryName, Forum.GetLink( Pages.forum, "c={0}", PageCategoryID ) );
 						Welcome.Visible = false;
+                        load_time_info = "";//清空div内容
 					}
 				}
+                LoadTimeInfo = load_time_info;
 
                 //load remembered forum categories collapse info
                 string[] catIDs = null;
@@ -168,6 +180,7 @@ namespace yaf.pages
         // add by zhiweiw 20131206
         private void HotContentGenerate()
         {
+            lblHotInfo.Text = "";
             //
             lblHotInfo.Text += "<div class='main cl forumhot'>";
             lblHotInfo.Text += "<table width='100%' cellspacing='0' cellpadding='0'>";
@@ -320,8 +333,10 @@ namespace yaf.pages
             if (small_pos != 0x7FFFFFFF)
             {
                 path = message.Substring(firstPos, small_pos - firstPos + imglength);
-                name = path.Substring(path.LastIndexOf("/"), path.Length - path.LastIndexOf("/"));
-                name = name.Trim('/');
+                path = System.Web.HttpUtility.UrlDecode(path, System.Text.Encoding.UTF8);
+                name= Path.GetFileName(path);
+                //name = path.Substring(path.LastIndexOf("/"), path.Length - path.LastIndexOf("/"));
+                //name = name.Trim('/');
                 int j = 0;
             }
             else
@@ -462,8 +477,8 @@ namespace yaf.pages
 
 		private void UpdateInformationPanel()
 		{
-			expandInformation.ImageUrl = GetCollapsiblePanelImageURL( "Information", PanelSessionState.CollapsiblePanelState.Expanded );
-			InformationTBody.Visible = ( Mession.PanelState ["Information"] == PanelSessionState.CollapsiblePanelState.Expanded );
+			//expandInformation.ImageUrl = GetCollapsiblePanelImageURL( "Information", PanelSessionState.CollapsiblePanelState.Expanded );
+			//InformationTBody.Visible = ( Mession.PanelState ["Information"] == PanelSessionState.CollapsiblePanelState.Expanded );
 		}
 
 		protected void expandActiveDiscussions_Click( object sender, ImageClickEventArgs e )
@@ -476,8 +491,9 @@ namespace yaf.pages
 		protected void expandInformation_Click( object sender, ImageClickEventArgs e )
 		{
 			// toggle the panel visability state...
-			Mession.PanelState.TogglePanelState( "Information", PanelSessionState.CollapsiblePanelState.Expanded );
-			BindData();
+            // delete by aixj  删除掉点击事件
+			//Mession.PanelState.TogglePanelState( "Information", PanelSessionState.CollapsiblePanelState.Expanded );
+			//BindData();
 		}
 
 		protected void categoryList_ItemCommand( object source, RepeaterCommandEventArgs e )

@@ -92,7 +92,7 @@
 
 <tr>
 <td colspan="3" align="center">
-<a href="http://www.hubeici.com/zp/zhop.html"><img src="http://www.hubeici.com/ggw/syggw/hxggs/201212/W020130924326679582821.jpg" alt="ÎÄ¹ÅÍø" title="ÎÄ¹ÅÍø" /></a>
+<a href="http://www.hubeici.com/zp/zhop.html"><img src="http://www.hubeici.com/ggw/syggw/hxggs/201212/W020130924326679582821.jpg" alt="ÎÄ¹ÅÍø" title="ÎÄ¹ÅÍø" style=" width:985px;" /></a>
 </td>
 </tr>
     <asp:PlaceHolder id="QuickReplyPlaceHolder" runat="server">

@@ -68,7 +68,7 @@ function get_forum_list(boardID, categoryID, userID) {
             var html_str = "";
             for (var i = 0; i < category_length; i++) {
                 var category_div = "";
-                category_div += "<div class=\"titlebar\" style=\"height: 39px; background-image: url('images/firstpage/" + result[i].IconName + "'); background-repeat: no-repeat;\" > </div> "
+                category_div += "<div class=\"titlebar\" style=\"height: 39px; margin-top:2px;background-image: url('images/firstpage/" + result[i].IconName + "'); background-repeat: no-repeat;\" > </div> "
                 category_div += "<div id=\"category_69\" class=\"fi\" style=\"\" >";
                 category_div += "<table cellspacing=\"0\" cellpadding=\"0\" class=\"forum_table\">";
                 //alert(result[i].ForumList.length)
@@ -117,7 +117,7 @@ function get_forum_list(boardID, categoryID, userID) {
         tbody_th += "<th class=\"notopic\">"
         tbody_th += " <img src=\"../images/ForumIcons/" + forum_info.ForumIcon + "\" border=\"0\" align=\"left\" hspace=\"5\"";
         tbody_th += "                style=\"margin-left: 0px; float: left;\" alt=\"" + forum_info.Name + "\" />";
-        tbody_th += "        </th>";
+        tbody_th += " </th>";
         tbody_th += "        <th class=\"notoinfo\">";
         tbody_th += "            <h2 class=\"th_h2\">";
         tbody_th += "                <a href=\"default.aspx?g=topics&f=" + forum_info.ForumID + "\" class=\"th_h2_a\">" + forum_info.Name + "</a> <em class=\"th_h2_em\">(今日:<strong class=\"th_h2_em_strong\">12</strong>)</em>";

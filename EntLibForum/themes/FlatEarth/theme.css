@@ -60,10 +60,11 @@ td.header1
 	background-color: #FFFFFF;
 	background-image: url(/images/background/bg_header1.png);
 	background-repeat: repeat-x;
-	color: #ffffff;
+	color: black;
 	font-weight: bold;
 	padding-left: 10px;
-	height: 32px;
+	font-size:16px;
+	height: 40px;
 }	
 
 .header1Title

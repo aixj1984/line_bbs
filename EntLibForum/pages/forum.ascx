@@ -82,11 +82,11 @@
 </div>
 <yaf:PageLinks runat="server" ID="PageLinks" />
 <div id="Welcome" runat="server">
-    &nbsp;<img src="../images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
+<%--    &nbsp;<img src="../images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
         runat="server" />
     <span style="padding-left: 20px;">
         <img src="../images/common/arrow2.gif" alt="" />
-        <asp:Label ID="TimeLastVisit" runat="server" /></span>
+        <asp:Label ID="TimeLastVisit" runat="server" /></span>--%>
 </div>
 <div id="divUnreadMsgs">
     <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="true" /></div>
@@ -219,7 +219,7 @@
         </table>
     </FooterTemplate>
 </asp:Repeater>--%>
-<hr />
+<%--<hr />--%>
 <!---ad-text area start--->
 <asp:Label ID="lblForumAd" runat="server" Text="欢迎访问文古论坛！"></asp:Label>
 <!---ad-text area end--->
@@ -227,12 +227,14 @@
     <tr>
         <td width="100%" valign="top">
             <table class="content" cellspacing="1" cellpadding="0" width="100%">
-                <tr>
-                    <td class="header1" colspan="2">
+                
+                    <div style=" height:39px; width:100%;  margin-top:2px; background-image:url('images/firstpage/站点统计.gif')"></div>
+                   <%--  <tr>
+                   <td class="header1" colspan="2">
                         <asp:ImageButton runat="server" ID="expandInformation" BorderWidth="0" ImageAlign="Baseline"
                             OnClick="expandInformation_Click" />&nbsp;&nbsp;<%= GetText("INFORMATION") %>
                     </td>
-                </tr>
+                </tr>--%>
                 <tbody id="InformationTBody" runat="server">
                     <tr>
                         <td class="header2" colspan="2">
@@ -306,7 +308,7 @@
         </td>--%>
     </tr>
 </table>
-<table style="padding: 2px; margin: 2px" width="99%">
+<%--<table style="padding: 2px; margin: 2px" width="99%;">
     <tr>
         <td>
             <img align="middle" src="<% =GetThemeContents("ICONS","FORUM_NEW") %>" alt="" />
@@ -320,5 +322,5 @@
             <asp:LinkButton runat="server" OnClick="MarkAll_Click" ID="MarkAll" />
         </td>
     </tr>
-</table>
+</table>--%>
 <yaf:SmartScroller ID="SmartScroller1" runat="server" />

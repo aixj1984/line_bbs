@@ -24,6 +24,7 @@ namespace yaf.pages
 		private bool m_bShowToolBar = true;
 		private bool m_checkSuspended = true;
 		private string m_adminMessage = string.Empty;
+        private string m_load_time_info = string.Empty;
 
 		#endregion
 		#region Constructor and events
@@ -101,8 +102,11 @@ namespace yaf.pages
 					banip = DB.bannedip_list( PageBoardID, null );
 					HttpContext.Current.Cache [key] = banip;
 				}
+                String remote_ip=HttpContext.Current.Request.ServerVariables ["REMOTE_ADDR"];
+                if (remote_ip == "::1")
+                    remote_ip = "127.0.0.1";
 				foreach ( DataRow row in banip.Rows )
-					if ( Utils.IsBanned( ( string ) row ["Mask"], HttpContext.Current.Request.ServerVariables ["REMOTE_ADDR"] ) )
+					if ( Utils.IsBanned( ( string ) row ["Mask"],  remote_ip) )
 						HttpContext.Current.Response.End();
 			}
 			catch ( Exception )
@@ -475,12 +479,10 @@ namespace yaf.pages
 
 			if ( User != null && User.IsAuthenticated )
 			{
-				header.AppendFormat( "<td class=header3 align=left><b>{0}</b></td>", String.Format( GetText( "TOOLBAR", "LOGGED_IN_AS" ) + " ", Server.HtmlEncode( PageUserName ) ) );
+                header.AppendFormat("<td class=header3 align=left><b>{0}</b></td>", String.Format(GetText("TOOLBAR", "LOGGED_IN_AS") + " ", Server.HtmlEncode(PageUserName)));
 				header.AppendFormat( "<td align=right valign=middle class=header3>" );
 
-                ////////////////////////////////////////////
-                //// updated by http://www.EntLib.com   
-                //// date: 2008.9.6 
+
 
                 header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.WebSiteURL, "湖北文化产业网 首页", "<img src='images/common/homeicon.gif' alt='' />");
                 //header.AppendFormat("<a href='{0}'>{2} {1}</a> | ", Config.BlogURL, "技术博客", "<img src='images/common/pen.gif' alt='' align='bottom' />");
@@ -513,7 +515,7 @@ namespace yaf.pages
 			}
 			else
 			{
-				header.AppendFormat( String.Format( "<td class=header3 align=left><b>{0}</b></td>", GetText( "TOOLBAR", "WELCOME_GUEST" ) ) );
+                header.AppendFormat(String.Format("<td class=header3 align=left><b>{0}</b></td>", GetText("TOOLBAR", "WELCOME_GUEST")));
 
 				header.AppendFormat( "<td align=right valign=middle class=header3>" );
 
@@ -537,7 +539,9 @@ namespace yaf.pages
 				}
 			}
 			header.AppendFormat( "</td></tr></table>" );
-			header.AppendFormat( "<br />" );
+			//header.AppendFormat( "<br />" );
+            header.AppendFormat("<div style=\"text-align:right;\">" + m_load_time_info + "</div>");
+
 			if ( ForumControl.Header != null )
 				ForumControl.Header.Info = header.ToString();
 			else
@@ -589,7 +593,7 @@ namespace yaf.pages
                 if (BoardSettings.ShowPageGenerationTime)
                     footer.AppendFormat(GetText("COMMON", "GENERATED"), duration);
 
-                footer.AppendFormat(" Powered by: <a href='http://www.hubeici.com/index.shtml'target='_blank'>湖北文化产业网</a>");
+                footer.AppendFormat(" 站点所有权: <a href='http://www.hubeici.com/index.shtml'target='_blank'>湖北文化产业网</a>");
                 //footer.Append("<img src='images/powerby/powerby_entlibforum.gif' alt='开源 ASP.NET 论坛' class='powerbyimg'/>");
 
                 footer.AppendFormat("</div>");
@@ -714,6 +718,14 @@ namespace yaf.pages
 				m_checkSuspended = value;
 			}
 		}
+
+        public string LoadTimeInfo
+        {
+            set
+            {
+                m_load_time_info = value;
+            }
+        }
 
 		static public object IsNull( string value )
 		{
@@ -968,6 +980,17 @@ namespace yaf.pages
 					return "";
 			}
 		}
+
+        public string PageForumIcon
+        {
+            get
+            {
+                if (m_pageinfo != null && !m_pageinfo.IsNull("ForumIcon"))
+                    return (string)m_pageinfo["ForumIcon"];
+                else
+                    return "";
+            }
+        }
 		/// <summary>
 		/// CategoryID for the current page, or 0 if not in any category
 		/// </summary>
@@ -1022,6 +1045,8 @@ namespace yaf.pages
 					return "";
 			}
 		}
+
+
 		public bool IsHostAdmin
 		{
 			get

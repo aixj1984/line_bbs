@@ -31,7 +31,7 @@ FlatEarth Theme Created by Jaben Cargman (&lt;a href='http://www.tinygecko.com'&
 	</page>
 	<page name="ICONS">
 		<Resource tag="TOPIC_NEW">~/topic_new.png</Resource>
-		<Resource tag="TOPIC">~/topic.png</Resource>
+		<Resource tag="TOPIC">~/folder_new.gif</Resource>
 		<Resource tag="TOPIC_ANNOUNCEMENT">~/topic_announce.png</Resource>
 		<Resource tag="TOPIC_ANNOUNCEMENT_NEW">~/topic_announce_new.png</Resource>
 		<Resource tag="TOPIC_NEW_LOCKED">~/topic_lock_new.png</Resource>

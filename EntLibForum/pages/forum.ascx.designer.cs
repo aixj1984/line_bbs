@@ -40,24 +40,6 @@ namespace yaf.pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Welcome;
         
         /// <summary>
-        /// TimeNow 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TimeNow;
-        
-        /// <summary>
-        /// TimeLastVisit 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TimeLastVisit;
-        
-        /// <summary>
         /// UnreadMsgs 控件。
         /// </summary>
         /// <remarks>
@@ -74,15 +56,6 @@ namespace yaf.pages {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblForumAd;
-        
-        /// <summary>
-        /// expandInformation 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton expandInformation;
         
         /// <summary>
         /// InformationTBody 控件。
@@ -119,15 +92,6 @@ namespace yaf.pages {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Stats;
-        
-        /// <summary>
-        /// MarkAll 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton MarkAll;
         
         /// <summary>
         /// SmartScroller1 控件。
