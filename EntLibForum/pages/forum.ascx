@@ -74,7 +74,7 @@
         text-decoration: none;
         font-size: 12px;
     }
-    
+    .title_bar{background-image:url(images/hotbg.png);height:30px;line-height:30px;border-top:1px solid #DCDCDC;padding-left:12px;}
     .th_p_em
     {
     }

@@ -1,7 +1,6 @@
 <%@ Control Language="c#" Codebehind="topics.ascx.cs" AutoEventWireup="True" Inherits="yaf.pages.topics" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf.controls" Assembly="yaf" %>
 <%@ Register TagPrefix="yaf" TagName="ForumList" Src="../controls/ForumList.ascx" %>
-</style>
 <yaf:PageLinks runat="server" ID="PageLinks" />
 <asp:PlaceHolder runat="server" ID="SubForums" Visible="false">
     <table class="content" cellspacing="1" cellpadding="0" width="100%">

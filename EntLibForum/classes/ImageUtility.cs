@@ -418,6 +418,10 @@ namespace yaf
                     xpos = 10;
                     ypos = height - WatermarkHeight - 10;
                     break;
+                case MarkPosition.MP_Bottom_Center:
+                    xpos = width/2 - WatermarkWidth/2;
+                    ypos = 10;
+                    break;
             }
             picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
             watermark.Dispose();
@@ -451,7 +455,13 @@ namespace yaf
             /// <summary>
             /// 右下角
             /// </summary>
-            MP_Right_Bottom
+            MP_Right_Bottom,
+
+            /**/
+            /// <summary>
+            /// 下中间
+            /// </summary>
+            MP_Bottom_Center
         }
     }
 }

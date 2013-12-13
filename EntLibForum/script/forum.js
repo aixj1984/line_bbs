@@ -24,7 +24,6 @@ $(document).ready(function () {
         speed: "normal",
         timer: 2000
     });
-
     $("#tabs").tabs();
     $("#tab_hot_user").tabs();
 

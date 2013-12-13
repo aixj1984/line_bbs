@@ -32,6 +32,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -166,6 +167,7 @@
     <Content Include="editors\FCKEditorV2\editor\css\fck_editorarea1.css" />
     <Content Include="editors\FCKEditorV2\editor\css\fck_internal.css" />
     <Content Include="editors\FCKEditorV2\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="editors\FCKEditorV2\editor\css\forumhot.css" />
     <Content Include="editors\FCKEditorV2\editor\css\images\block_address.png" />
     <Content Include="editors\FCKEditorV2\editor\css\images\block_blockquote.png" />
     <Content Include="editors\FCKEditorV2\editor\css\images\block_div.png" />
@@ -480,6 +482,9 @@
     <Content Include="images\firstpage\园区项目.gif" />
     <Content Include="images\firstpage\nav_l.gif" />
     <Content Include="images\firstpage\社区管理.gif" />
+    <Content Include="images\hotbg.png" />
+    <Content Include="images\noavatar_small.gif" />
+    <Content Include="script\common.js" />
     <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="script\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
@@ -496,6 +501,7 @@
     <Content Include="script\jquery-ui\images\ui-icons_ffffff_256x240.png" />
     <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.css" />
     <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="script\slide.js" />
     <Content Include="script\slide\focus_li.png" />
     <Content Include="images\folder.gif" />
     <Content Include="images\ForumIcons\icon_biztalk.gif" />
@@ -1940,7 +1946,9 @@
     <Content Include="useruploadfiles\admin\image\SQLServerProfiler_demo_2.gif" />
     <Content Include="useruploadfiles\admin\image\test\AcceleratedSQLServer2008.gif" />
     <Content Include="useruploadfiles\image\EntLibSystem.png" />
-    <Content Include="web.config" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <EmbeddedResource Include="controls\DisplayPost.ascx.resx">
       <DependentUpon>DisplayPost.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -26,9 +26,9 @@
     <link href="script/slide/slide.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
         function tabselect(id) {
-            GetId('hot_layer_' + id).style.display = ''
+            GetId('hot_layer_' + id).style = ''
             GetId('tab_li_' + id).className = 'current'
-            for (var i = 1; i <= 5; i++) {
+            for (var i = 1; i <= 3; i++) {
                 if (i != id) {
                     if (GetId('tab_li_' + i)) {
                         GetId('tab_li_' + i).className = 'switchNavItem'
@@ -39,7 +39,7 @@
         }
     </script>
     <script type="text/javascript">
-        for (var i = 1; i <= 5; i++) {
+        for (var i = 1; i <= 3; i++) {
             try {
                 GetId('hot_layer_' + i).style.display = ''
                 GetId('tab_li_' + i).className = 'current'
