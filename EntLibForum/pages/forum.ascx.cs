@@ -189,29 +189,26 @@ namespace yaf.pages
             lblHotInfo.Text += "<div class='main cl forumhot'>";
             lblHotInfo.Text += "<table width='100%' cellspacing='0' cellpadding='0'>";
             lblHotInfo.Text += "<tbody><tr> <td width='375px'>";
+            // modify by zhiweiew 
             lblHotInfo.Text += "<div class='title_bar xg2'>最新图片</div>";
-            lblHotInfo.Text += "<div id='focusViwer'><div id='imgADPlayer'></div>";
-            lblHotInfo.Text += "<script  type='text/javascript'>";
-            lblHotInfo.Text += GetImageInfo();
-            // 需要动态生成 
-            lblHotInfo.Text += "for (i = 0; i < hotimagesarray.length; i++) {";
-            lblHotInfo.Text += "PImgPlayer.addItem(\"\" + hotimagesarray[i].title.substr(0,20) + \"\", \"\" + hotimagesarray[i].url + \"\", \"\" + hotimagesarray[i].img + \"\");";
-            lblHotInfo.Text += "} if(hotimagesarray.length>0) PImgPlayer.init(\"imgADPlayer\", 360, 240);";
-
-            lblHotInfo.Text += "</script></div></td>";
+            lblHotInfo.Text += "<div class='flash'>";
+            lblHotInfo.Text += "<div id='KinSlideshow'>";
+            lblHotInfo.Text += " <script type='text/javascript' src='script/jquery.KinSlideshow-1.2.1.min.js'></script>";
+            lblHotInfo.Text += GetImageInfo2();
+            lblHotInfo.Text += "</div></div>";
+            // modify by zhiweiw
             lblHotInfo.Text += "<td width='450px'> <div class='title_bar xg2'>";
             lblHotInfo.Text += "<ul id='tabswi1_A' class='tab_forumhot'>";
-            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_1'><a href='javascript:;'  onclick='tabselect(1)'>24小时新帖</a></li>";
-            lblHotInfo.Text += "<li class='current' index='2' id='tab_li_2'><a href='javascript:;'  onclick='tabselect(2)'>热门帖子</a></li>";
-            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_3'><a href='javascript:;'  onclick='tabselect(3)'>推荐帖子</a></li>";
-            //lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_4'><a href='javascript:;'  onmousemove='tabselect(4)'>用户发帖排行</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_1'><a href='javascript:;'  onmousemove='tabselect(1)'>最新贴吧</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_2'><a href='javascript:;'  onmousemove='tabselect(2)'>热门帖子</a></li>";
+            lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_3'><a href='javascript:;'  onmousemove='tabselect(3)'>推荐帖子</a></li>";
             lblHotInfo.Text += "</ul></div>";
             lblHotInfo.Text += "<div id='tabswi1_B' class='pd cl'>";
             lblHotInfo.Text += "<div class='newHotB' name='hot_layer_1' id='hot_layer_1'  style='display:none'>";
             lblHotInfo.Text += "<ul class='hotlist'>";
             lblHotInfo.Text += GetLeastInfo();
             lblHotInfo.Text += "</div>";
-            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_2' id='hot_layer_2'  style=''>";
+            lblHotInfo.Text += "<div class='newHotB' name='hot_layer_2' id='hot_layer_2'  style='display:none'>";
 
             lblHotInfo.Text += "<ul class='hotlist'>";
             lblHotInfo.Text += GetHotInfo();
@@ -241,8 +238,49 @@ namespace yaf.pages
             lblHotInfo.Text += "</tbody>";
             lblHotInfo.Text += "</table>";
 
-            this.Page.ClientScript.RegisterStartupScript(GetType(), "", "tabselect(2);", true);
-
+        }
+        protected string GetImageInfo2()
+        {
+            int count = 0;
+            DataTable leastInfo = DB.topic_message_image(PageBoardID);
+            string return_str = null;
+            int rowcount = leastInfo.Columns.Count;
+            int zcount = 0;
+            foreach (DataRow dr in leastInfo.Rows)
+            {
+                zcount++;
+                if (count <= 6)
+                {
+                    //获得文件名
+                    string message = dr["Message"].ToString();
+                    string username = dr["name"].ToString();
+                    string title = dr["topic"].ToString();
+                    string topicId = dr["TopicID"].ToString();
+                    string path = "";
+                    string fileName = "";
+                    GetFilePathAndFileName(ref path, ref fileName, message, username);
+                    if (path != null && fileName != null)
+                    {
+                        string FilePath = Server.MapPath("./") + path;
+                        if (File.Exists(FilePath)) //判断当前JPG文件是否存在
+                        {
+                            string rarpath = Server.MapPath("./") + "cash/" + username + "/R_" + fileName;
+                            string rarfolorpath = Server.MapPath("./") + "cash/" + username;
+                            if (!File.Exists(rarpath))
+                            {
+                                Directory.CreateDirectory(rarfolorpath);
+                                ImageUtility.ThumbAsJPG(FilePath, rarpath, 360, 240);
+                            }
+                            return_str += "<a href='default.aspx?g=posts&t=" + topicId + "' target='_blank'><img src='" + "cash/" + username + "/R_" + fileName + "' alt = '" + title + "' width='360' height='240' /></a>"; 
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return (return_str);
         }
         protected string GetImageInfo()
         {
@@ -396,7 +434,15 @@ namespace yaf.pages
             foreach (DataRow dr in leastInfo.Rows)
             {
                 //return_str += "<li>发帖总数： <em> " + dr["count"].ToString() + "</em>";
-                return_str += "<li><img src='/images/noavatar_small.gif' width='16' height='16'>";
+                if (dr["avatar"].ToString() == "")
+                {
+                    return_str += "<li><img src='/images/noavatar_small.gif' width='16' height='16'>";
+                }
+                else
+                {
+                    return_str += "<li><img src='" + dr["avatar"].ToString() + "' width='16' height='16'>";
+                }
+                
                 return_str += "<a href='/default.aspx?g=profile&u=" + dr["userid"].ToString() + "' target='_blank'>" + dr["name"].ToString() + "</a>&nbsp;&nbsp;&nbsp;发帖总数:" + dr["count"].ToString() + "</li>";
             }
             return (return_str);

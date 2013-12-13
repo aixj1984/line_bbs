@@ -147,6 +147,7 @@
       <SubType>UserControl</SubType>
     </Content>
     <Content Include="css\firstpage\firstpage.css" />
+    <Content Include="css\firstpage\index_v7.css" />
     <Content Include="Database\存储过程.sql" />
     <Content Include="default.aspx" />
     <Content Include="defs\asm.def" />
@@ -501,6 +502,7 @@
     <Content Include="script\jquery-ui\images\ui-icons_ffffff_256x240.png" />
     <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.css" />
     <Content Include="script\jquery-ui\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="script\jquery.KinSlideshow-1.2.1.min.js" />
     <Content Include="script\slide.js" />
     <Content Include="script\slide\focus_li.png" />
     <Content Include="images\folder.gif" />

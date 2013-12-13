@@ -1,0 +1,19 @@
+@charset "gb2312";
+/*flahs...*/
+.report_r{width:344px;float:left;overflow:hidden;}
+.report_r .flash{margin:13px auto;width:320px;height:195px;background:url(http://img.ccoo.cn/x7/bbsv6/images/load_index.gif) no-repeat center;overflow:hidden;position:relative}
+#KinSlideshow{position:absolute;top:0;left:0}
+.report_r .flash a:hover{text-decoration:none}
+.img_dh{width:325px;overflow:hidden;margin:0 auto;border-top:2px solid #eee;border-bottom:2px solid #eee;padding:8px 0;}
+.report_r .fatie,.report_r .daka,.report_r .mood,.report_r .space,.report_r .huodong{background:url(http://img.ccoo.cn/x7/bbsv6/images/index_icon.gif) no-repeat;float:left;height:66px;text-indent:-999px;}
+.report_r .fatie a,.report_r .daka a,.report_r .mood a,.report_r .space a,.report_r .huodong a{display:block;height:66px;width:65px;text-decoration:none}
+.report_r .fatie{background-position:0 -80px;width:65px;}
+.report_r .daka{background-position:-65px -80px;width:65px;}
+.report_r .mood{background-position:0 -155px;width:65px;}
+.report_r .space{background-position:-65px -155px;width:65px;}
+.report_r .huodong{background-position:0 -233px;width:65px;}
+/*nav*/
+.box{width:980px;margin:0 auto;overflow:hidden;margin-bottom:10px;}
+.box_l{float:left;width:320px;}
+.box .flash{margin-top:5px;border:none;}
+.box .report_r{width:320px;}

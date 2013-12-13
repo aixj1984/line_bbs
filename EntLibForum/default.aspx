@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="editors/FCKEditorV2/editor/css/public.css" type="text/css" />
     <link rel="Stylesheet" href="editors/FCKEditorV2/editor/css/NaviTop.css" type="text/css" />
     <script type="text/javascript" src="script/common.js"></script>
+    <link rel="stylesheet" href="css/firstpage/index_v7.css" type="text/css" />
 
     <script type="text/javascript" src="script/slide.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/firstpage/favicon.ico"
@@ -24,9 +25,10 @@
     <script src="script/slide/jquery.slide.js" type="text/javascript"></script>
     <script src="./script/forum.js" type="text/javascript"></script>
     <link href="script/slide/slide.css" rel="stylesheet" type="text/css" />
+
     <script type="text/javascript">
         function tabselect(id) {
-            GetId('hot_layer_' + id).style = ''
+            GetId('hot_layer_' + id).style.display = ''
             GetId('tab_li_' + id).className = 'current'
             for (var i = 1; i <= 3; i++) {
                 if (i != id) {
@@ -38,18 +40,7 @@
             }
         }
     </script>
-    <script type="text/javascript">
-        for (var i = 1; i <= 3; i++) {
-            try {
-                GetId('hot_layer_' + i).style.display = ''
-                GetId('tab_li_' + i).className = 'current'
-                break;
-            }
-            catch (e) {
-                continue;
-            }
-        }
-    </script>
+    
     <script type="text/javascript">
 <!--
         var arVersion = navigator.appVersion.split("MSIE");
@@ -152,5 +143,17 @@
             </td>
         </tr>
     </table>
+    <script type="text/javascript">
+        for (var i = 1; i <= 3; i++) {
+            try {
+                GetId('hot_layer_' + i).style.display = ''
+                GetId('tab_li_' + i).className = 'current'
+                break;
+            }
+            catch (e) {
+                continue;
+            }
+        }
+    </script>
 </body>
 </html>
