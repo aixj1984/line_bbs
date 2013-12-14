@@ -188,7 +188,7 @@ namespace yaf.pages
             //
             lblHotInfo.Text += "<div class='main cl forumhot'>";
             lblHotInfo.Text += "<table width='100%' cellspacing='0' cellpadding='0'>";
-            lblHotInfo.Text += "<tbody><tr> <td width='375px'>";
+            lblHotInfo.Text += "<tbody><tr> <td width='360px'>";
             // modify by zhiweiew 
             lblHotInfo.Text += "<div class='title_bar xg2'>最新图片</div>";
             lblHotInfo.Text += "<div class='flash'>";
@@ -196,8 +196,9 @@ namespace yaf.pages
             lblHotInfo.Text += " <script type='text/javascript' src='script/jquery.KinSlideshow-1.2.1.min.js'></script>";
             lblHotInfo.Text += GetImageInfo2();
             lblHotInfo.Text += "</div></div>";
+            lblHotInfo.Text += "</td>";
             // modify by zhiweiw
-            lblHotInfo.Text += "<td width='450px'> <div class='title_bar xg2'>";
+            lblHotInfo.Text += "<td width='400px'> <div class='title_bar xg2'>";
             lblHotInfo.Text += "<ul id='tabswi1_A' class='tab_forumhot'>";
             lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_1'><a href='javascript:;'  onmousemove='tabselect(1)'>最新贴吧</a></li>";
             lblHotInfo.Text += "<li class='switchNavItem' index='2' id='tab_li_2'><a href='javascript:;'  onmousemove='tabselect(2)'>热门帖子</a></li>";
@@ -222,10 +223,10 @@ namespace yaf.pages
             lblHotInfo.Text += "</div>";
             lblHotInfo.Text += "</td>";
             //// add by zhiweiw
-            lblHotInfo.Text += "<td> <div class='title_bar xg2'>";
+            lblHotInfo.Text += "<td>";
             lblHotInfo.Text += "<div class='title_bar xg2'>文谷之星</div>";
-            lblHotInfo.Text += "<div>";
-            lblHotInfo.Text += "<ul>";
+            lblHotInfo.Text += "<div style='width:225px;height:228px; border-left:1.5px dashed #000;border-color:#ff0000; overflow:hidden; padding-top:10px;'>";
+            //lblHotInfo.Text += "<ul>";
             lblHotInfo.Text += GetHotUser();
 
             lblHotInfo.Text += "</div>";
@@ -395,11 +396,17 @@ namespace yaf.pages
         {
             DataTable leastInfo = DB.topic_list_least(PageBoardID);
             string return_str = null;
+            int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
+                count++;
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a></li>";
+                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
+                if(10 == count)
+                {
+                    break;
+                }
             }
             return (return_str);
         }
@@ -407,11 +414,17 @@ namespace yaf.pages
         {
             DataTable leastInfo = DB.topic_list_hot(PageBoardID);
             string return_str = null;
+            int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
+                count++;
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a></li>";
+                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
+                if (10 == count)
+                {
+                    break;
+                }
             }
             return (return_str);
         }
@@ -419,11 +432,17 @@ namespace yaf.pages
         {
             DataTable leastInfo = DB.topic_list_groom(PageBoardID);
             string return_str = null;
+            int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
+                count++;
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a></li>";
+                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
+                if (10 == count)
+                {
+                    break;
+                }
             }
             return (return_str);
         }
@@ -433,17 +452,24 @@ namespace yaf.pages
             string return_str = null;
             foreach (DataRow dr in leastInfo.Rows)
             {
+                return_str += "<div style='width:50%;float:left;margin:0 0 0 5px;padding-left:8px;height: 23px;line-height: 23px;'>";
                 //return_str += "<li>发帖总数： <em> " + dr["count"].ToString() + "</em>";
                 if (dr["avatar"].ToString() == "")
                 {
-                    return_str += "<li><img src='/images/noavatar_small.gif' width='16' height='16'>";
+                    return_str += "<img src='/images/noavatar_small.gif' width='16' height='16'>";
                 }
                 else
                 {
-                    return_str += "<li><img src='" + dr["avatar"].ToString() + "' width='16' height='16'>";
+                    return_str += "<img src='" + dr["avatar"].ToString() + "' width='16' height='16'>";
                 }
-                
-                return_str += "<a href='/default.aspx?g=profile&u=" + dr["userid"].ToString() + "' target='_blank'>" + dr["name"].ToString() + "</a>&nbsp;&nbsp;&nbsp;发帖总数:" + dr["count"].ToString() + "</li>";
+
+                return_str += "&nbsp;&nbsp;<a href='/default.aspx?g=profile&u=" + dr["userid"].ToString() + "' target='_blank'>" + dr["name"].ToString() + "</a>";
+
+                return_str += "</div>";
+                return_str += "<div style='width:40%;float:left;margin:0 0 0 5px;'>";
+                return_str += "发帖总数:" + dr["count"].ToString();
+                return_str += "</div>";
+                //return_str += "<hr style='border: 1px dashed #ccc; width: 100%; height: 1px;' />";
             }
             return (return_str);
         }

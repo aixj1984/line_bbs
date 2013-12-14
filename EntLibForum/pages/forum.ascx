@@ -74,7 +74,14 @@
         text-decoration: none;
         font-size: 12px;
     }
-    .title_bar{background-image:url(images/hotbg.png);height:30px;line-height:30px;border-top:1px solid #DCDCDC;padding-left:12px;}
+    .title_bar
+    {
+    	background-image:url(images/hotbg.png);
+    	height:30px;
+    	line-height:30px;
+    	border-top:1px solid #DCDCDC;
+    	padding-left:0px;
+    	}
     .th_p_em
     {
     }
@@ -224,7 +231,7 @@
 </asp:Repeater>--%>
 <%--<hr />--%>
 <!---ad-text area start--->
-<asp:Label ID="lblForumAd" runat="server" Text="»¶Ó­·ÃÎÊÎÄ¹ÅÂÛÌ³£¡"></asp:Label>
+<asp:Label ID="lblForumAd" runat="server" Text="»¶Ó­·ÃÎÊÎÄ¹ÈÂÛÌ³£¡"></asp:Label>
 <!---ad-text area end--->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>

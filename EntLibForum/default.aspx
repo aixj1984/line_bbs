@@ -74,7 +74,7 @@
             <div class="innerWrapper">
                 <ul id="navigator">
                     <li class="youAreHere"><a href="default.aspx?g=forum">社区首页 </a><span class="sep">|</span></li>
-                    <li><a href="http://www.hubeici.com/index.shtml">文古网首页 </a><span class="sep">|</span></li>
+                    <li><a href="http://www.hubeici.com/index.shtml">文谷网首页 </a><span class="sep">|</span></li>
                     <li><a href="http://www.hubeici.com/about_us">关于我们 </a></li>
                 </ul>
             </div>
