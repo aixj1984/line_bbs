@@ -401,7 +401,7 @@ namespace yaf.pages
             {
                 count++;
                 return_str += "  <tr>";
-                return_str += "   <td width=\"90%\">";
+                return_str += "   <td width=\"350px\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "¡¾" + dr["smallcate"].ToString() + "¡¿</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
                 return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
@@ -423,7 +423,7 @@ namespace yaf.pages
             {
                 count++;
                 return_str += "  <tr>";
-                return_str += "   <td width=\"90%\">";
+                return_str += "   <td width=\"350px\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "¡¾" + dr["smallcate"].ToString() + "¡¿</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
                 return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
@@ -445,7 +445,7 @@ namespace yaf.pages
             {
                 count++;
                 return_str +=  "  <tr>";
-                return_str += "   <td width=\"90%\">";
+                return_str += "   <td width=\"350px\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "¡¾" + dr["smallcate"].ToString() + "¡¿</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
                 return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
