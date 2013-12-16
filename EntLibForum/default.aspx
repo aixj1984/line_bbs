@@ -3,6 +3,7 @@
 <%@ Register Src="Include/pagefooter.ascx" TagName="pagefooter" TagPrefix="uc1" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf" Assembly="yaf" %>
 <%@ Register TagPrefix="yc" Namespace="yaf.controls" Assembly="yaf" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <meta name="Description" content="湖北文化产业网（http://www.hubeici.com）,又名文谷网，由湖北省委宣传部主管、主办，湖北日报传媒集团、湖北省文化产业发展信息中心承办，湖北文谷文化产业发展有限公司运营，是湖北省文化产业公共信息发布平台。" />
@@ -74,7 +75,7 @@
             <div class="innerWrapper">
                 <ul id="navigator">
                     <li class="youAreHere"><a href="default.aspx?g=forum">社区首页 </a></li>
-                    <li><a href="http://www.hubeici.com/index.shtml">文谷网首页 </a></li>
+                    <li><a href="http://www.hubeici.com/index.shtml">文谷首页 </a></li>
                     <li><a href="http://www.hubeici.com/about_us">关于我们 </a></li>
                 </ul>
             </div>

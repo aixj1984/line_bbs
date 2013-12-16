@@ -540,7 +540,7 @@ namespace yaf.pages
 			}
 			header.AppendFormat( "</td></tr></table>" );
 			//header.AppendFormat( "<br />" );
-            header.AppendFormat("<div style=\"text-align:right;\">" + m_load_time_info + "</div>");
+            header.AppendFormat("<div style=\"text-align:right;height: 23px;line-height: 23px;\">" + m_load_time_info + "</div>");
 
 			if ( ForumControl.Header != null )
 				ForumControl.Header.Info = header.ToString();

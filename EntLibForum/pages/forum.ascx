@@ -11,25 +11,26 @@
     .tbody_tr
     {
         text-align: left;
-        border-bottom: 1px dotted black ;
-         _display:inline-block;/*针对ie6*/
-        border-bottom-color:#ff0000;
+        border-bottom: 1px dotted black;
+        _display: inline-block; /*针对ie6*/
+        border-bottom-color: #ff0000;
         line-height: 20px;
     }
     .notopic
     {
-        width: 20%;
-        height:80px;
+        width: 5%;
+        height: 80px;
     }
     .notoinfo
     {
-        width: 29.99%;
+        width: 40%;
         margin: 0px;
         padding: 0px;
         overflow: hidden;
         background-repeat: no-repeat;
         background-position: 8px 50%;
         font-weight: normal;
+        text-align: left;
     }
     .th_h2
     {
@@ -76,23 +77,22 @@
     }
     .title_bar
     {
-    	background-image:url(images/hotbg.png);
-    	height:30px;
-    	line-height:30px;
-    	border-top:1px solid #DCDCDC;
-    	padding-left:0px;
-    	}
+        background-image: url(images/hotbg.png);
+        height: 30px;
+        line-height: 30px;
+        border-top: 1px solid #DCDCDC;
+        padding-left: 0px;
+    }
     .th_p_em
     {
     }
 </style>
-
 <div>
     <asp:Label ID="lblHotInfo" runat="server" Text=""></asp:Label>
 </div>
 <yaf:PageLinks runat="server" ID="PageLinks" />
 <div id="Welcome" runat="server">
-<%--    &nbsp;<img src="../images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
+    <%--    &nbsp;<img src="../images/common/arrow2.gif" alt="" />&nbsp;<asp:Label ID="TimeNow"
         runat="server" />
     <span style="padding-left: 20px;">
         <img src="../images/common/arrow2.gif" alt="" />
@@ -102,7 +102,7 @@
     <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="true" /></div>
 <!--topic-->
 <div class="main" id="wp" style="width: 1002px;">
-    <div class="mainbox" id = "category_forum">
+    <div class="mainbox" id="category_forum">
         <%--<div class="titlebar" style="height: 39px; background-image: url('images/firstpage/产业专区.gif');
             background-repeat: no-repeat;">
         </div>
@@ -178,7 +178,6 @@
                 </tbody>
             </table>
         </div>--%>
-        
     </div>
 </div>
 <!--topic-->
@@ -233,29 +232,23 @@
 <!---ad-text area start--->
 <asp:Label ID="lblForumAd" runat="server" Text="欢迎访问文谷论坛！"></asp:Label>
 <!---ad-text area end--->
+<div style="height: 39px; width: 100%; margin-top: 2px; background-image: url('images/firstpage/站点统计.gif')">
+</div>
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
     <tr>
-        <td width="100%" valign="top">
-            <table class="content" cellspacing="1" cellpadding="0" width="100%">
-                
-                    <div style=" height:39px; width:100%;  margin-top:2px; background-image:url('images/firstpage/站点统计.gif')"></div>
-                   <%--  <tr>
-                   <td class="header1" colspan="2">
-                        <asp:ImageButton runat="server" ID="expandInformation" BorderWidth="0" ImageAlign="Baseline"
-                            OnClick="expandInformation_Click" />&nbsp;&nbsp;<%= GetText("INFORMATION") %>
-                    </td>
-                </tr>--%>
+        <td width="49%" valign="top">
+            <table class="content" cellspacing="1" cellpadding="0" width="500px;">
                 <tbody id="InformationTBody" runat="server">
-                    <tr>
+                    <tr >
                         <td class="header2" colspan="2">
                             <%= GetText("ACTIVE_USERS") %>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="post" width="1%">
+                    <tr >
+                        <td class="post" width="40px;" align="center">
                             <img src="<%# GetThemeContents("ICONS","FORUM_USERS") %>" alt="" />
                         </td>
-                        <td class="post">
+                        <td class="post" height="65px;">
                             <asp:Label runat="server" ID="activeinfo" /><br />
                             <asp:Repeater runat="server" ID="ActiveList">
                                 <ItemTemplate>
@@ -269,23 +262,28 @@
                             </asp:Repeater>
                         </td>
                     </tr>
-                    <tr>
+                </tbody>
+            </table>
+        </td>
+        <td width="49%" valign="top">
+        <table class="content" cellspacing="1" cellpadding="0" width="500px;">
+                <tbody  runat="server">
+                    <tr >
                         <td class="header2" colspan="2">
                             <%= GetText("STATS") %>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="post" width="1%">
+                    <tr >
+                        <td class="post" width="40px" align="center" > 
                             <img src="<%# GetThemeContents("ICONS","FORUM_STATS") %>" alt="" />
                         </td>
-                        <td class="post">
+                        <td class="post" height="65px;">
                             <asp:Label ID="Stats" runat="server">Label</asp:Label>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </td>
-        
     </tr>
 </table>
 <yaf:SmartScroller ID="SmartScroller1" runat="server" />

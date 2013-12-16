@@ -115,7 +115,7 @@ function get_forum_list(boardID, categoryID, userID) {
         var tbody_th = "";
         tbody_th += "<th class=\"notopic\">"
         tbody_th += " <img src=\"../images/ForumIcons/" + forum_info.ForumIcon + "\" border=\"0\" align=\"left\" hspace=\"5\"";
-        tbody_th += "                style=\"margin-left: 0px; float: left;\" alt=\"" + forum_info.Name + "\" />";
+        tbody_th += "                style=\"margin-left: 13px; float: left;\" alt=\"" + forum_info.Name + "\" />";
         tbody_th += " </th>";
         tbody_th += "        <th class=\"notoinfo\">";
         tbody_th += "            <h2 class=\"th_h2\">";
@@ -125,8 +125,8 @@ function get_forum_list(boardID, categoryID, userID) {
         tbody_th += "                主题:"+forum_info.NumTopics+", 帖数:"+forum_info.NumPosts+"</p>";
         tbody_th += "            <p class=\"th_p\">";
         //tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + forum_info.LastPosted + "</em></a>";
-        tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + cutstr(forum_info.LastTopicName,16) + "</em></a>";
-        tbody_th += "                由 <a class=\"th_p_a\" href=\"#\" target=\"_blank\">" + forum_info.LastUserName + "</a>";
+        tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + cutstr(forum_info.LastTopicName,40) + "</em></a>";
+        tbody_th += "                由 <a class=\"th_p_a\" href=\"#\" target=\"_blank\">" + cutstr(forum_info.LastUserName, 10) + "</a>";
         tbody_th += "            </p>";
         tbody_th += " </th>";
         return tbody_th;

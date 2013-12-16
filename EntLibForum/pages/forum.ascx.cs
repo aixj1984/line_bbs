@@ -224,7 +224,7 @@ namespace yaf.pages
             lblHotInfo.Text += "</td>";
             //// add by zhiweiw
             lblHotInfo.Text += "<td>";
-            lblHotInfo.Text += "<div class='title_bar xg2'>文谷之星</div>";
+            lblHotInfo.Text += "<div class='title_bar xg2' style='padding-left: 12px;'>文谷之星</div>";
             //lblHotInfo.Text += "<div style='width:225px;height:228px; border-left:1.5px dashed #000;border-color:#ff0000; overflow:hidden; padding-top:10px;'>";
             lblHotInfo.Text += "<div style='width:225px;height:228px; overflow:hidden; padding-top:10px;'>";
             lblHotInfo.Text += GetHotUser();
@@ -395,55 +395,68 @@ namespace yaf.pages
         protected string GetLeastInfo()
         {
             DataTable leastInfo = DB.topic_list_least(PageBoardID);
-            string return_str = null;
+            string return_str = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\">";
             int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
                 count++;
+                return_str += "  <tr>";
+                return_str += "   <td width=\"90%\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
-                if(10 == count)
+                return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
+                return_str += "<td><a style=\"line-height: 23px;height: 23px;\">" + Convert.ToDateTime(dr["Posted"].ToString()).ToString("[MM-dd]") + "</a></td></tr>";
+                if (10 == count)
                 {
                     break;
                 }
             }
+            return_str += "</table>";
             return (return_str);
         }
         protected string GetHotInfo()
         {
             DataTable leastInfo = DB.topic_list_hot(PageBoardID);
-            string return_str = null;
+            string return_str = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\">";
             int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
                 count++;
+                return_str += "  <tr>";
+                return_str += "   <td width=\"90%\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
+                return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
+                return_str += "<td><a style=\"line-height: 23px;height: 23px;\">" + Convert.ToDateTime(dr["Posted"].ToString()).ToString("[MM-dd]") + "</a></td></tr>";
                 if (10 == count)
                 {
                     break;
                 }
             }
+            return_str += "</table>";
             return (return_str);
         }
         protected string GetGroomInfo()
         {
             DataTable leastInfo = DB.topic_list_groom(PageBoardID);
-            string return_str = null;
+            string return_str = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\">";
             int count = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
                 count++;
+                return_str +=  "  <tr>";
+                return_str += "   <td width=\"90%\">";
                 return_str += "<li><a href='/default.aspx?g=forum&f=" + dr["forumId"].ToString() + "' target='_blank'>";
                 return_str += "【" + dr["smallcate"].ToString() + "】</a><a href='/default.aspx?g=posts&t=" + dr["TopicID"].ToString() + "' target='_blank' class='xg2'>";
-                return_str += dr["Topic"].ToString() + "</a>---发布时间：" + dr["Posted"].ToString() + "</li>";
+                return_str += CutStr(dr["Topic"].ToString(), 40) + "</a></li></td>";
+                return_str += "<td><a style=\"line-height: 23px;height: 23px;\">" + Convert.ToDateTime(dr["Posted"].ToString()).ToString("[MM-dd]") + "</a></td></tr>";
                 if (10 == count)
                 {
                     break;
                 }
             }
+            return_str += "</table>";
+
             return (return_str);
         }
         protected string GetHotUser()
