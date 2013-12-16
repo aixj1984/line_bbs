@@ -479,7 +479,7 @@ namespace yaf.pages
                 return_str += "&nbsp;&nbsp;<a href='/default.aspx?g=profile&u=" + dr["userid"].ToString() + "' target='_blank'>" + dr["name"].ToString() + "</a>";
 
                 return_str += "</div>";
-                return_str += "<div style='width:40%;float:left;margin:0 0 0 5px;'>";
+                return_str += "<div style='width:40%;float:left;margin:0 0 0 5px;height: 23px;line-height: 23px;'>";
                 return_str += "·¢Ìû×ÜÊı:" + dr["count"].ToString();
                 return_str += "</div>";
                 //return_str += "<hr style='border: 1px dashed #ccc; width: 100%; height: 1px;' />";
