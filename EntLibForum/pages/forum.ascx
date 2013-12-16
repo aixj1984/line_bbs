@@ -285,52 +285,7 @@
                 </tbody>
             </table>
         </td>
-        <%--<td width="10">
-            &nbsp;
-        </td>
-        <td width="34%" valign="top" height="100%">
-            <table border="0" class="content" cellspacing="1" cellpadding="0" width="100%">
-                <tbody id="ActiveDiscussionTBody" runat="server">
-                    <tr>
-                        <td class="header1" colspan="2">
-                            <asp:ImageButton runat="server" ID="expandActiveDiscussions" BorderWidth="0" ImageAlign="Baseline"
-                                OnClick="expandActiveDiscussions_Click" />&nbsp;&nbsp;<%= GetText("ACTIVE_DISCUSSIONS") %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="header2" colspan="2">
-                            <%= GetText("LATEST_POSTS") %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="post" valign="top">
-                            <asp:Repeater runat="server" ID="LatestPosts">
-                                <ItemTemplate>
-                                    &nbsp;<a href='<%#yaf.Forum.GetLink(yaf.Pages.posts,"m={0}#{0}",DataBinder.Eval(Container.DataItem, "LastMessageID"))%>'><%# yaf.Utils.BadWordReplace(Convert.ToString(DataBinder.Eval(Container.DataItem, "Topic"))) %></a>
-                                    <a href="<%#yaf.Forum.GetLink(yaf.Pages.posts,"m={0}#{0}",DataBinder.Eval(Container.DataItem, "LastMessageID"))%>">
-                                        <img src="<%# GetThemeContents("ICONS","ICON_LATEST") %>" border="0" alt=""></a><br />
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>--%>
+        
     </tr>
 </table>
-<%--<table style="padding: 2px; margin: 2px" width="99%;">
-    <tr>
-        <td>
-            <img align="middle" src="<% =GetThemeContents("ICONS","FORUM_NEW") %>" alt="" />
-            <%# GetText("ICONLEGEND","New_Posts") %>
-            <img align="middle" src="<% =GetThemeContents("ICONS","FORUM") %>" alt="" />
-            <%# GetText("ICONLEGEND","No_New_Posts") %>
-            <img align="middle" src="<% =GetThemeContents("ICONS","FORUM_LOCKED") %>" alt="" />
-            <%# GetText("ICONLEGEND","Forum_Locked") %>
-        </td>
-        <td align="right">
-            <asp:LinkButton runat="server" OnClick="MarkAll_Click" ID="MarkAll" />
-        </td>
-    </tr>
-</table>--%>
 <yaf:SmartScroller ID="SmartScroller1" runat="server" />

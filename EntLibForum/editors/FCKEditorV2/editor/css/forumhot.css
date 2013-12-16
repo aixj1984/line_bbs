@@ -11,7 +11,7 @@
 	.i_hot dt{font-weight:700;font-size:16px;}
 	.i_hot dd{color:#666;padding:5px 0 10px;}
 .hotlist{overflow:hidden;float:left;width:99.5%;}
-	.hotlist li{overflow:hidden;height:23px;line-height:23px; float:left;}
+	.hotlist li{overflow:hidden;height:23px;line-height:23px; }
 	.hotlist li em{float:right;font-style:normal;padding-right:10px;}
 .one{background:url(images/sortnum.png) no-repeat 0 6px;}
 .two{background:url(images/sortnum.png) no-repeat 0 -225px;}

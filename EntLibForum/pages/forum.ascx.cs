@@ -225,8 +225,8 @@ namespace yaf.pages
             //// add by zhiweiw
             lblHotInfo.Text += "<td>";
             lblHotInfo.Text += "<div class='title_bar xg2'>文谷之星</div>";
-            lblHotInfo.Text += "<div style='width:225px;height:228px; border-left:1.5px dashed #000;border-color:#ff0000; overflow:hidden; padding-top:10px;'>";
-            //lblHotInfo.Text += "<ul>";
+            //lblHotInfo.Text += "<div style='width:225px;height:228px; border-left:1.5px dashed #000;border-color:#ff0000; overflow:hidden; padding-top:10px;'>";
+            lblHotInfo.Text += "<div style='width:225px;height:228px; overflow:hidden; padding-top:10px;'>";
             lblHotInfo.Text += GetHotUser();
 
             lblHotInfo.Text += "</div>";
@@ -628,5 +628,79 @@ namespace yaf.pages
 				tmpForumList.Visible = tmpForumList.Visible = ( Mession.PanelState ["categoryPanel" + tmpImage.CommandArgument] == PanelSessionState.CollapsiblePanelState.Expanded );
 			}
 		}
+
+        //--------------------------------
+        /// <summary>
+        /// 裁切字符串（中文按照两个字符计算）
+        /// </summary>
+        /// <param name="str">旧字符串</param>
+        /// <param name="len">新字符串长度</param>
+        /// <remarks>
+        /// <para>注意：<ol>
+        /// <li>若字符串被截断则会在末尾追加“...”，反之则直接返回原始字符串。</li>
+        /// <li>参数 <paramref name="HtmlEnable"/> 为 false 时会先调用<see cref="uoLib.Common.Functions.HtmlFilter"/>过滤掉 Html 标签再进行裁切。</li>
+        /// <li>中文按照两个字符计算。若指定长度位置恰好只获取半个中文字符，则会将其补全，如下面的例子：<br/>
+        /// <code><![CDATA[
+        /// string str = "感谢使用uoLib。";
+        /// string A = CutStr(str,4);   // A = "感谢..."
+        /// string B = CutStr(str,5);   // B = "感谢使..."
+        /// ]]></code></li>
+        /// </ol>
+        /// </para>
+        /// </remarks>
+        public static string CutStr(string str, int len)
+        {
+            if (str == null || str.Length == 0 || len <= 0) { return string.Empty; }
+
+            int l = str.Length;
+
+            #region 计算长度
+            int clen = 0;//当前长度 
+            while (clen < len && clen < l)
+            {
+                //每遇到一个中文，则将目标长度减一。
+                if ((int)str[clen] > 128) 
+                {
+                    len--;
+                }
+                clen++;
+            }
+            #endregion
+
+            if (clen < l)
+            {
+                return str.Substring(0, clen) + "...";
+            }
+            else
+            {
+                return str;
+            }
+        }
+        
+        /// <summary>
+        /// 获取字符串长度。与string.Length不同的是，该方法将中文作 2 个字符计算。
+        /// </summary>
+        /// <param name="str">目标字符串</param>
+        /// <returns></returns>
+        public static int GetLength(string str)
+        {
+            if (str == null || str.Length == 0) { return 0; }
+
+            int l = str.Length;
+            int realLen = l;
+
+            #region 计算长度
+            int clen = 0;//当前长度 
+            while (clen < l)
+            {
+                //每遇到一个中文，则将实际长度加一。
+                if ((int)str[clen] > 128) { realLen++; }
+                clen++;
+            }
+            #endregion
+
+            return realLen;
+        }
+        //--------------------------------------------
 	}
 }

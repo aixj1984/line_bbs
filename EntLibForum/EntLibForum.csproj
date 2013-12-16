@@ -478,13 +478,16 @@
     <Content Include="images\firstpage\banner.gif" />
     <Content Include="images\firstpage\favicon.ico" />
     <Content Include="images\firstpage\nav_bg.gif" />
+    <Content Include="images\firstpage\top_back.jpg" />
     <Content Include="images\firstpage\产业专区.gif" />
     <Content Include="images\firstpage\创意发现.gif" />
     <Content Include="images\firstpage\园区项目.gif" />
     <Content Include="images\firstpage\nav_l.gif" />
+    <Content Include="images\firstpage\导航.gif" />
     <Content Include="images\firstpage\社区管理.gif" />
     <Content Include="images\hotbg.png" />
     <Content Include="images\noavatar_small.gif" />
+    <Content Include="images\yetou.gif" />
     <Content Include="script\common.js" />
     <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="script\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />

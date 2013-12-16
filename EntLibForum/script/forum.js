@@ -124,12 +124,38 @@ function get_forum_list(boardID, categoryID, userID) {
         tbody_th += "            <p class=\"th_p\">";
         tbody_th += "                主题:"+forum_info.NumTopics+", 帖数:"+forum_info.NumPosts+"</p>";
         tbody_th += "            <p class=\"th_p\">";
-        tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + forum_info.LastPosted + "</em></a>";
-        tbody_th += "                by <a class=\"th_p_a\" href=\"#\" target=\"_blank\">" + forum_info.LastUserName + "</a>";
+        //tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + forum_info.LastPosted + "</em></a>";
+        tbody_th += "                最后: <a href=\"default.aspx?g=posts&t=" + forum_info.LastTopicID + "\" title=\"" + forum_info.LastTopicName + "\" class=\"th_p_a\"><em class=\"th_p_em\">" + cutstr(forum_info.LastTopicName,16) + "</em></a>";
+        tbody_th += "                由 <a class=\"th_p_a\" href=\"#\" target=\"_blank\">" + forum_info.LastUserName + "</a>";
         tbody_th += "            </p>";
         tbody_th += " </th>";
         return tbody_th;
     }
 
 
+}
+
+
+function cutstr(str, len) {
+    var str_length = 0;
+    var str_len = 0;
+    str_cut = new String();
+    str_len = str.length;
+    for (var i = 0; i < str_len; i++) {
+        a = str.charAt(i);
+        str_length++;
+        if (escape(a).length > 4) {
+            //中文字符的长度经编码之后大于4
+            str_length++;
+        }
+        str_cut = str_cut.concat(a);
+        if (str_length >= len) {
+            str_cut = str_cut.concat("...");
+            return str_cut;
+        }
+    }
+    //如果给定字符串小于指定长度，则返回源字符串；
+    if (str_length < len) {
+        return str;
+    }
 }

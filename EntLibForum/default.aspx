@@ -66,19 +66,17 @@
     </script>
 </head>
 <body class="mainbody">
-    <div style="text-align: center;">
+    <div style="text-align: center;background: url('images/firstpage/top_back.jpg') repeat-x scroll 0% 0% transparent;">
         <img src="images/firstpage/banner.gif" alt="" style="height: 100px; width: 1002px;" />
     </div>
-    <div style="text-align: center;">
-        <div class="wrapper" style="width: 1002px; text-align: left;">
+    <div style="width: 100%;background: url('images/firstpage/导航.gif') repeat-x scroll 0% 0% transparent;">
+        <div  style="width: 1002px; margin-left: auto;margin-right: auto;">
             <div class="innerWrapper">
                 <ul id="navigator">
-                    <li class="youAreHere"><a href="default.aspx?g=forum">社区首页 </a><span class="sep">|</span></li>
-                    <li><a href="http://www.hubeici.com/index.shtml">文谷网首页 </a><span class="sep">|</span></li>
+                    <li class="youAreHere"><a href="default.aspx?g=forum">社区首页 </a></li>
+                    <li><a href="http://www.hubeici.com/index.shtml">文谷网首页 </a></li>
                     <li><a href="http://www.hubeici.com/about_us">关于我们 </a></li>
                 </ul>
-            </div>
-            <div class="shadowWrapper">
             </div>
         </div>
     </div>
