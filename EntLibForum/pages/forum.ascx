@@ -100,6 +100,7 @@ type="text/css" href="css/style_4_forum_index.css">
     .th_p_em
     {
         font-family: "Î¢ÈíÑÅºÚ",Arial;
+        font-style: normal;
     }
 </style>
 <div>
