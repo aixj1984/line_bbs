@@ -118,7 +118,11 @@ function get_forum_list(boardID, categoryID, userID) {
         tbody_th += " </th>";
         tbody_th += "        <th class=\"notoinfo\">";
         tbody_th += "            <h2 class=\"th_h2\">";
-        tbody_th += "                <a href=\"default.aspx?g=topics&f=" + forum_info.ForumID + "\" class=\"th_h2_a\">" + forum_info.Name + "</a> <em class=\"th_h2_em\">(今日:<strong class=\"th_h2_em_strong\">12</strong>)</em>";
+        tbody_th += "                <a href=\"default.aspx?g=topics&f=" + forum_info.ForumID + "\" class=\"th_h2_a\">" + forum_info.Name + "</a> ";
+        if (parseInt(forum_info.TodayPostNum) > 0)
+        {
+            tbody_th += "<em class=\"th_h2_em\">(今日:<strong class=\"th_h2_em_strong\">" + forum_info.TodayPostNum + "</strong>)</em>";
+        }
         tbody_th += "            </h2>";
         tbody_th += "            <p class=\"th_p\">";
         tbody_th += "                主题:"+forum_info.NumTopics+", 帖数:"+forum_info.NumPosts+"</p>";

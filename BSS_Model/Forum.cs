@@ -36,6 +36,7 @@ namespace Trilink.Model
         private string forumIcon;
         private string lastUser;
         private string lastTopicName;
+        private string todayPostNum;
         #endregion
 
         #region math
@@ -134,6 +135,14 @@ namespace Trilink.Model
             get { return lastTopicName; }
             set { lastTopicName = value; }
         }
+
+
+        public string TodayPostNum
+        {
+            get { return todayPostNum; }
+            set { todayPostNum = value; }
+        }
+        
         
         #endregion
 

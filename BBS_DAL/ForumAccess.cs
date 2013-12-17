@@ -46,7 +46,8 @@ namespace Trilink.DAL
                                         WHERE  x.ForumID = b.ForumID),
                              b.RemoteURL,
                              x.ReadAccess,
-				             b.ForumIcon
+				             b.ForumIcon,
+				             today_post_num = (SELECT COUNT(*) as today_post_num FROM [EntLib_BBS].[dbo].[yaf_Topic] where datediff(d,Posted,getdate())=0 and ForumID = b.ForumID)
                     FROM     yaf_Category a
                              JOIN yaf_Forum b
                                ON b.CategoryID = a.CategoryID

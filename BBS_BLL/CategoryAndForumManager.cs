@@ -56,6 +56,7 @@ namespace Trilink.BLL
                     forum.ThemeURL = dr_forum["ThemeURL"].ToString();
                     forum.ForumIcon = dr_forum["ForumIcon"].ToString();
                     forum.LastTopicName = dr_forum["LastTopicName"].ToString();
+                    forum.TodayPostNum = dr_forum["today_post_num"].ToString();
                     category.ForumList.Add(forum);
                 }
                 categorys.Add(category);
