@@ -1,6 +1,9 @@
 <%@ Control Language="c#" CodeBehind="forum.ascx.cs" AutoEventWireup="True" Inherits="yaf.pages.forum" %>
 <%@ Register TagPrefix="yaf" Namespace="yaf.controls" Assembly="yaf" %>
 <%@ Register TagPrefix="yaf" TagName="ForumList" Src="../controls/ForumList.ascx" %>
+<META content="Yes" http-equiv="MSThemeCompatible"><LINK rel="stylesheet" type="text/css" 
+href="css/style_4_common.css"><LINK rel="stylesheet" 
+type="text/css" href="css/style_4_forum_index.css">
 <style type="text/css">
     .forum_table
     {
@@ -11,15 +14,21 @@
     .tbody_tr
     {
         text-align: left;
-        border-bottom: 1px dotted black;
+        border-top-color: rgb(205, 205, 205);
         _display: inline-block; /*’Î∂‘ie6*/
-        border-bottom-color: #ff0000;
+          border-top-width: 1px; 
+         border-top-style: dashed;       
         line-height: 20px;
     }
     .notopic
     {
         width: 5%;
         height: 80px;
+                border-top-color: rgb(205, 205, 205);
+        _display: inline-block; /*’Î∂‘ie6*/
+          border-top-width: 1px; 
+         border-top-style: dashed;     
+        
     }
     .notoinfo
     {
@@ -31,6 +40,10 @@
         background-position: 8px 50%;
         font-weight: normal;
         text-align: left;
+        border-top-color: rgb(205, 205, 205);
+        _display: inline-block; /*’Î∂‘ie6*/
+          border-top-width: 1px; 
+        border-top-style: dashed;     
     }
     .th_h2
     {
@@ -54,6 +67,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
+        
     }
     .th_h2_em_strong
     {
@@ -85,6 +99,7 @@
     }
     .th_p_em
     {
+        font-family: "Œ¢»Ì—≈∫⁄",Arial;
     }
 </style>
 <div>
@@ -98,8 +113,7 @@
         <img src="../images/common/arrow2.gif" alt="" />
         <asp:Label ID="TimeLastVisit" runat="server" /></span>--%>
 </div>
-<div id="divUnreadMsgs">
-    <asp:HyperLink runat="server" ID="UnreadMsgs" Visible="true" /></div>
+<%--<div id="divUnreadMsgs"><asp:HyperLink runat="server" ID="UnreadMsgs" Visible="true" /></div>--%>
 <!--topic-->
 <div class="main" id="wp" style="width: 1002px;">
     <div class="mainbox" id="category_forum">

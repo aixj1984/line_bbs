@@ -48,7 +48,7 @@ tr.header1 {
 	color: #ffffff;
 	font-weight: bold;
 	padding-left: 10px;
-	height: 32px;
+	height: 40px;
 }
 
 tr.header1 a { color: #ffffff;	text-decoration: none; }
@@ -64,7 +64,7 @@ td.header1
 	font-weight: bold;
 	padding-left: 10px;
 	font-size:16px;
-	height: 30px;
+	height: 40px;
 }	
 
 .header1Title

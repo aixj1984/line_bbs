@@ -46,16 +46,16 @@ namespace yaf.pages
                 //TimeNow.Text = String.Format( GetText( "CURRENT_TIME" ), FormatTime( DateTime.Now ) );
                 //TimeLastVisit.Text = String.Format( GetText( "last_visit" ), FormatDateTime( Mession.LastVisit ) );
 				//MarkAll.Text = GetText( "MARKALL" );
-
+                string unreadmsg_html = "";
 				if ( UnreadPrivate > 0 )
 				{
-					UnreadMsgs.Visible = true;
-					UnreadMsgs.NavigateUrl = Forum.GetLink( Pages.cp_inbox );
 					if ( UnreadPrivate == 1 )
-						UnreadMsgs.Text = String.Format( GetText( "unread1" ), UnreadPrivate );
+						unreadmsg_html =  "<a href=\""+Forum.GetLink( Pages.cp_inbox )+"\">"+ String.Format( GetText( "unread1" ), UnreadPrivate )+"</a>";
 					else
-						UnreadMsgs.Text = String.Format( GetText( "unread0" ), UnreadPrivate );
+					    unreadmsg_html =  "<a href=\""+Forum.GetLink( Pages.cp_inbox )+"\">"+ String.Format( GetText( "unread0" ), UnreadPrivate )+"</a>";
 				}
+
+                load_time_info = unreadmsg_html + load_time_info;
 
 				if ( ForumControl.LockedForum == 0 )
 				{
@@ -246,11 +246,10 @@ namespace yaf.pages
             DataTable leastInfo = DB.topic_message_image(PageBoardID);
             string return_str = null;
             int rowcount = leastInfo.Columns.Count;
-            int zcount = 0;
             foreach (DataRow dr in leastInfo.Rows)
             {
-                zcount++;
-                if (count <= 6)
+                
+                if (count < 5)
                 {
                     //获得文件名
                     string message = dr["Message"].ToString();
@@ -272,7 +271,8 @@ namespace yaf.pages
                                 Directory.CreateDirectory(rarfolorpath);
                                 ImageUtility.ThumbAsJPG(FilePath, rarpath, 360, 240);
                             }
-                            return_str += "<a href='default.aspx?g=posts&t=" + topicId + "' target='_blank'><img src='" + "cash/" + username + "/R_" + fileName + "' alt = '" + title + "' width='360' height='240' /></a>"; 
+                            return_str += "<a href='default.aspx?g=posts&t=" + topicId + "' target='_blank'><img src='" + "cash/" + username + "/R_" + fileName + "' alt = '" + title + "' width='360' height='240' /></a>";
+                            count++;
                         }
                     }
                 }

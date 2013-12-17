@@ -30,7 +30,7 @@ FlatEarth Theme Created by Jaben Cargman (&lt;a href='http://www.tinygecko.com'&
 		<Resource tag="ICQ">&lt;img align='absmiddle' src='~/p_icq.gif'/&gt;</Resource>
 	</page>
 	<page name="ICONS">
-		<Resource tag="TOPIC_NEW">~/folder_new.png</Resource>
+		<Resource tag="TOPIC_NEW">~/folder_new.gif</Resource>
 		<Resource tag="TOPIC">~/folder_common.gif</Resource>
 		<Resource tag="TOPIC_ANNOUNCEMENT">~/topic_announce.png</Resource>
 		<Resource tag="TOPIC_ANNOUNCEMENT_NEW">~/topic_announce_new.png</Resource>
