@@ -87,17 +87,17 @@ namespace yaf.pages.admin
 			
 			bool isLadder = ((int)dr["Flags"] & (int)RankFlags.IsLadder) == (int)RankFlags.IsLadder;
 			
-			string tmp = String.Format("{0}",isLadder);
+			string tmp = String.Format("{0}",isLadder?"ÊÇ":"·ñ");
 			if(isLadder) {
-				tmp += String.Format(" ({0} posts)",dr["MinPosts"]);
+                tmp += String.Format(" ({0} Ìû×Ó)", dr["MinPosts"]);
 			}
 			return tmp;
 		}
 
-		protected bool BitSet(object _o,int bitmask) 
+        protected string BitSet(object _o, int bitmask) 
 		{
 			int i = (int)_o;
-			return (i & bitmask)!=0;
+			return (i & bitmask)!=0?"ÊÇ":"·ñ";
 		}
 	}
 }

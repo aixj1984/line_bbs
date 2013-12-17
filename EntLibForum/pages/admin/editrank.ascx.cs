@@ -87,7 +87,7 @@ namespace yaf.pages.admin
 				DataRow dr = dt.NewRow();
 				dr["FileID"] = 0;
 				dr["FileName"] = "../spacer.gif"; // use blank.gif for Description Entry
-				dr["Description"] = "Select Rank Image";
+				dr["Description"] = "Ñ¡ÔñµÈ¼¶Í¼Æ¬";
 				dt.Rows.Add(dr);
 				
 				System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(Request.MapPath(String.Format("{0}images/ranks",Data.ForumRoot)));

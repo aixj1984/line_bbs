@@ -22,7 +22,7 @@
 	<td class=post><asp:checkbox id=IsGuestGroup runat="server"></asp:checkbox></td>
 </tr>
 <tr>
-	<td class=postheader><b>Is Start:</b><br/>If this is checked, all new users will be a member of this group.</td>
+	<td class=postheader><b>ÊÇ·ñ³õÊ¼×éIs Start:</b><br/>If this is checked, all new users will be a member of this group.</td>
 	<td class=post><asp:checkbox id=IsStart runat="server"></asp:checkbox></td>
 </tr>
 <tr>

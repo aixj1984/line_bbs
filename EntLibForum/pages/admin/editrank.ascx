@@ -14,15 +14,15 @@
     <td class=post colspan=7><asp:textbox style="width:300px" id=Name runat="server"/></td></tr>
  
   <tr>
-    <td class=postheader colspan=4><b>Is Start:</b><br/>Means that this is the rank that new users belong to. Only one rank should have this checked.</td>
+    <td class=postheader colspan=4><b>是否为初始组Is Start:</b><br/>只有一个组能选择该项，表示初始用户的等级。Means that this is the rank that new users belong to. Only one rank should have this checked.</td>
     <td class=post colspan=7><asp:checkbox id=IsStart runat="server"></asp:checkbox></td></tr>
     
   <tr>
-    <td class=postheader colspan=4><b>Is Ladder Group:</b><br/>If this is checked, this rank should be part of the ladder system where users advance as they post messages.</td>
+    <td class=postheader colspan=4><b>是否为阶梯组Is Ladder Group:</b><br/>If this is checked, this rank should be part of the ladder system where users advance as they post messages.</td>
     <td class=post colspan=7><asp:checkbox id="IsLadder" runat="server"></asp:checkbox></td></tr>
 
 	<tr>
-		<td class=postheader colspan=4><b>Minimum Posts:</b><br/>Minimum number of posts before users are advanced to this rank.</td>
+		<td class=postheader colspan=4><b>最低帖子数Minimum Posts:</b><br/>Minimum number of posts before users are advanced to this rank.</td>
 		<td class=post colspan=7><asp:textbox id="MinPosts" runat="server"/></td>
 	</tr>
 	<tr>

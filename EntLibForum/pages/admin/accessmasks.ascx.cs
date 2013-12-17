@@ -29,7 +29,7 @@ namespace yaf.pages.admin
 
 		protected void Delete_Load(object sender, System.EventArgs e) 
 		{
-			((LinkButton)sender).Attributes["onclick"] = "return confirm('Delete this access mask?')";
+			((LinkButton)sender).Attributes["onclick"] = "return confirm('确认删除这个吗?')";
 		}
 
 		private void BindData() 
@@ -70,7 +70,7 @@ namespace yaf.pages.admin
 					if(DB.accessmask_delete(e.CommandArgument))
 						BindData();
 					else
-						AddLoadMessage("You cannot delete this access mask because it is in use.");
+						AddLoadMessage("你不能删除一个在用的用户组。");
 					break;
 			}
 		}
@@ -80,10 +80,10 @@ namespace yaf.pages.admin
 			Forum.Redirect(Pages.admin_editaccessmask);
 		}
 
-		protected bool BitSet(object _o,int bitmask) 
+		protected string BitSet(object _o,int bitmask) 
 		{
 			int i = (int)_o;
-			return (i & bitmask)!=0;
+			return (i & bitmask)!=0?"是":"否";
 		}
 	}
 }

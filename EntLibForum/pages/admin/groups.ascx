@@ -13,12 +13,12 @@
 <asp:repeater id=GroupList runat="server">
 	<HeaderTemplate>
 		<tr>
-			<td class=header2>Name</td>
-			<td class=header2>Is Admin</td>
-			<td class=header2>Is Guest</td>
-			<td class=header2>Is Start</td>
-			<td class=header2>Is Forum Moderator</td>
-			<td class=header2>Command</td>
+			<td class=header2>名称</td>
+			<td class=header2>是否管理员</td>
+			<td class=header2>是否游客</td>
+			<td class=header2>是否为初始组</td>
+			<td class=header2>是否是版主</td>
+			<td class=header2>编辑</td>
 		</tr>
 	</HeaderTemplate>
 	<ItemTemplate>
@@ -39,9 +39,9 @@
 				<%# BitSet(DataBinder.Eval(Container.DataItem, "Flags"),8) %>
 			</td>
 			<td class=post>
-				<asp:linkbutton runat="server" commandname="edit" commandargument='<%# DataBinder.Eval(Container.DataItem, "GroupID") %>'>Edit</asp:linkbutton>
+				<asp:linkbutton runat="server" commandname="edit" commandargument='<%# DataBinder.Eval(Container.DataItem, "GroupID") %>'>编辑</asp:linkbutton>
 				|
-				<asp:linkbutton runat="server" onload="Delete_Load" commandname="delete" commandargument='<%# DataBinder.Eval(Container.DataItem, "GroupID") %>'>Delete</asp:linkbutton>
+				<asp:linkbutton runat="server" onload="Delete_Load" commandname="delete" commandargument='<%# DataBinder.Eval(Container.DataItem, "GroupID") %>'>删除</asp:linkbutton>
 			</td>
 		</tr>
 	</ItemTemplate>
