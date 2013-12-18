@@ -454,7 +454,7 @@ function OnUploadCompleted( errorNumber, fileUrl, fileName, customMsg )
 	switch ( errorNumber )
 	{
 		case 0 :	// No errors
-			alert( 'Your file has been successfully uploaded' ) ;
+			alert( '你的文件已经成功上传。' ) ;
 			break ;
 		case 1 :	// Custom error
 			alert( customMsg ) ;
@@ -463,19 +463,19 @@ function OnUploadCompleted( errorNumber, fileUrl, fileName, customMsg )
 			alert( customMsg ) ;
 			break ;
 		case 201 :
-			alert( 'A file with the same name is already available. The uploaded file has been renamed to "' + fileName + '"' ) ;
+			alert( '一个同名的文件已经存在，你上传的文件被重心命名为： "' + fileName + '"' ) ;
 			break ;
 		case 202 :
-			alert( 'Invalid file type' ) ;
+			alert( '非法的文件类型' ) ;
 			return ;
 		case 203 :
-			alert( "Security error. You probably don't have enough permissions to upload. Please check your server." ) ;
+			alert( "安全错误，你可能没有足够的权限上传，请检查服务器配置." ) ;
 			return ;
 		case 500 :
-			alert( 'The connector is disabled' ) ;
+			alert( '连接断开。' ) ;
 			break ;
 		default :
-			alert( 'Error on file upload. Error number: ' + errorNumber ) ;
+			alert( '上传错错误，错误码是: ' + errorNumber ) ;
 			return ;
 	}
 
@@ -493,7 +493,7 @@ function CheckUpload()
 
 	if ( sFile.length == 0 )
 	{
-		alert( 'Please select a file to upload' ) ;
+		alert( '请选择一个上传文件' ) ;
 		return false ;
 	}
 

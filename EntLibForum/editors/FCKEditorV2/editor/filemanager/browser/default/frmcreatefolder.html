@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!--
  * FCKeditor - The text editor for Internet - http://www.fckeditor.net
  * Copyright (C) 2003-2009 Frederico Caldeira Knabben
@@ -41,12 +41,12 @@ function CreateFolder()
 
 	while ( true )
 	{
-		sFolderName = prompt( 'Type the name of the new folder:', '' ) ;
+		sFolderName = prompt( '新目录的名称为:', '' ) ;
 
 		if ( sFolderName == null )
 			return ;
 		else if ( sFolderName.length == 0 )
-			alert( 'Please type the folder name' ) ;
+			alert( '请输入目录的名称' ) ;
 		else
 			break ;
 	}
@@ -103,7 +103,7 @@ window.onload = function()
 							<tr>
 								<td><img height="16" alt="" src="images/Folder.gif" width="16"></td>
 								<td>&nbsp;</td>
-								<td nowrap>Create New Folder</td>
+								<td nowrap>创建一个新目录</td>
 							</tr>
 						</table>
 					</button>
