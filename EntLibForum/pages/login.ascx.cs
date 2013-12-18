@@ -149,7 +149,8 @@ namespace yaf.pages
 				else
 				{
 					FormsAuthentication.SetAuthCookie( idName, AutoLogin.Checked );
-					Forum.Redirect( Pages.forum );
+					//Forum.Redirect( Pages.forum );
+                    Response.Redirect("default.aspx");
 				}
 			}
 			else

@@ -48,7 +48,7 @@
     <div style="text-align: center;background: url('images/firstpage/top_back.jpg') repeat-x scroll 0% 0% transparent;">
         <img src="images/firstpage/banner.gif" alt="" style="height: 100px; width: 1002px;" />
     </div>
-    <div style=" width: 100%;background: url('images/firstpage/导航.gif') repeat-x scroll 0% 0% transparent; height:40px;">
+<%--    <div style=" width: 100%;background: url('images/firstpage/导航.gif') repeat-x scroll 0% 0% transparent; height:40px;margin-top:-3px;">
         <div  style="width: 1002px;margin: 0 auto;  text-align:left;">
             <div class="innerWrapper">
                 <ul id="navigator">
@@ -58,7 +58,8 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>--%>
+    <span id="Span1" runat="server"></span>
     <table width="1002px" cellpadding="3" cellspacing="0" style="background-color: White;"
         align="center">
         <tr>
